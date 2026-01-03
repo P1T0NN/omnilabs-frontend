@@ -5,6 +5,7 @@
     import HomeDifferentSection from '@/shared/components/pages/home/home-different-section.svelte';
     import HomeMeetYourTeamSection from '@/shared/components/pages/home/home-meet-your-team-section.svelte';
     import HomeSocialProofSection from '@/shared/components/pages/home/home-social-proof-section.svelte';
+    import HomePortfolioSection from '@/shared/components/pages/home/home-portfolio-section.svelte';
     import HomeWhyItWorksSection from '@/shared/components/pages/home/home-why-it-works-section.svelte';
     import HomeStrategicProcessSection from '@/shared/components/pages/home/home-strategic-process-section.svelte';
     import HomeMaintenanceSection from '@/shared/components/pages/home/home-maintenance-section.svelte';
@@ -19,6 +20,7 @@
 <HomeDifferentSection />
 <HomeMeetYourTeamSection />
 <HomeSocialProofSection />
+<HomePortfolioSection />
 <HomeWhyItWorksSection />
 <HomeStrategicProcessSection />
 <HomeMaintenanceSection />

@@ -4,7 +4,7 @@
 	import { browser } from '$app/environment';
 
 	// CONFIG
-	import { COMPANY_NAME } from '@/shared/constants/constants';
+	import { COMPANY_NAME, UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants/constants';
 
 	// CLASSES
 	import { headerClass } from './index.svelte.ts';
@@ -62,6 +62,10 @@
 				class="text-sm text-muted-foreground transition-colors hover:text-foreground">Results</button
 			>
 			<button
+				onclick={() => handleScrollTo('portfolio')}
+				class="text-sm text-muted-foreground transition-colors hover:text-foreground">Portfolio</button
+			>
+			<button
 				onclick={() => handleScrollTo('pricing')}
 				class="text-sm text-muted-foreground transition-colors hover:text-foreground">Pricing</button
 			>
@@ -73,12 +77,12 @@
 				onclick={() => handleScrollTo('faq')}
 				class="text-sm text-muted-foreground transition-colors hover:text-foreground">FAQ</button
 			>
-			<button
-				onclick={() => handleScrollTo('contact')}
+			<a
+				href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
 				class="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
 			>
 				Book a Call
-			</button>
+			</a>
 		</div>
 
 		<button onclick={toggleMenu} class="p-2 text-foreground md:hidden">
@@ -103,6 +107,10 @@
 				class="text-left text-muted-foreground transition-colors hover:text-foreground">Results</button
 			>
 			<button
+				onclick={() => handleScrollTo('portfolio')}
+				class="text-left text-muted-foreground transition-colors hover:text-foreground">Portfolio</button
+			>
+			<button
 				onclick={() => handleScrollTo('pricing')}
 				class="text-left text-muted-foreground transition-colors hover:text-foreground">Pricing</button
 			>
@@ -114,12 +122,12 @@
 				onclick={() => handleScrollTo('faq')}
 				class="text-left text-muted-foreground transition-colors hover:text-foreground">FAQ</button
 			>
-			<button
-				onclick={() => handleScrollTo('contact')}
-				class="w-full rounded-lg bg-primary px-4 py-2 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+			<a
+				href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
+				class="w-full rounded-lg bg-primary px-4 py-2 text-center font-medium text-primary-foreground transition-colors hover:bg-primary/90"
 			>
 				Book a Call
-			</button>
+			</a>
 		</div>
 	{/if}
 </nav>
