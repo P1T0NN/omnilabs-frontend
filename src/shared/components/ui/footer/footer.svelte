@@ -37,9 +37,8 @@
 			</div>
 
 			<p class="text-sm text-muted-foreground">
-				Strategic websites built for conversion. <span class="text-primary"
-					>Owned by you completely.</span
-				>
+				Strategic websites built for conversion. 
+				<span class="text-primary">Owned by you completely.</span>
 			</p>
 		</div>
 	</div>

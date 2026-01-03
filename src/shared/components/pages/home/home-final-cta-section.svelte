@@ -1,4 +1,7 @@
 <script lang="ts">
+	// CONFIG
+	import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants/constants';
+
 	// LUCIDE ICONS
 	import CalendarIcon from '@lucide/svelte/icons/calendar';
 	import MailIcon from '@lucide/svelte/icons/mail';
@@ -15,9 +18,7 @@
 
 		<div class="mb-8 flex flex-col justify-center gap-4 sm:flex-row">
 			<a
-				href="https://calendly.com"
-				target="_blank"
-				rel="noopener noreferrer"
+				href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
 				class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-bold text-primary-foreground transition-all hover:scale-105 hover:bg-primary/90"
 			>
 				<CalendarIcon class="h-5 w-5" />
