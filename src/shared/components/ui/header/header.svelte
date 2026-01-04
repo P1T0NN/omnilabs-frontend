@@ -58,12 +58,8 @@
 				class="text-sm text-muted-foreground transition-colors hover:text-foreground">Problem</button
 			>
 			<button
-				onclick={() => handleScrollTo('proof')}
-				class="text-sm text-muted-foreground transition-colors hover:text-foreground">Results</button
-			>
-			<button
-				onclick={() => handleScrollTo('portfolio')}
-				class="text-sm text-muted-foreground transition-colors hover:text-foreground">Portfolio</button
+				onclick={() => handleScrollTo('showcase')}
+				class="text-sm text-muted-foreground transition-colors hover:text-foreground">Our Work</button
 			>
 			<button
 				onclick={() => handleScrollTo('pricing')}
@@ -94,7 +90,7 @@
 		</button>
 	</div>
 
-	{#if headerClass.mobileMenuOpen}
+		{#if headerClass.mobileMenuOpen}
 		<div
 			class="flex flex-col gap-4 border-t border-border bg-background/95 px-6 py-4 backdrop-blur-md md:hidden"
 		>
@@ -103,12 +99,8 @@
 				class="text-left text-muted-foreground transition-colors hover:text-foreground">Problem</button
 			>
 			<button
-				onclick={() => handleScrollTo('proof')}
-				class="text-left text-muted-foreground transition-colors hover:text-foreground">Results</button
-			>
-			<button
-				onclick={() => handleScrollTo('portfolio')}
-				class="text-left text-muted-foreground transition-colors hover:text-foreground">Portfolio</button
+				onclick={() => handleScrollTo('showcase')}
+				class="text-left text-muted-foreground transition-colors hover:text-foreground">Our Work</button
 			>
 			<button
 				onclick={() => handleScrollTo('pricing')}
@@ -129,5 +121,5 @@
 				Book a Call
 			</a>
 		</div>
-	{/if}
+		{/if}
 </nav>

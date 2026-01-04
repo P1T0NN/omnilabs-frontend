@@ -1,45 +1,80 @@
 <script lang="ts">
-	// CONFIG
-	import { COMPANY_NAME } from '@/shared/constants/constants';
-
 	// LUCIDE ICONS
 	import LinkedinIcon from '@lucide/svelte/icons/linkedin';
 	import GithubIcon from '@lucide/svelte/icons/github';
+	import MailIcon from '@lucide/svelte/icons/mail';
+	import MapPinIcon from '@lucide/svelte/icons/map-pin';
 </script>
 
-<footer class="border-t border-border px-6 py-12">
+<footer class="border-t border-border bg-card px-6 py-12">
 	<div class="mx-auto max-w-6xl">
-		<div class="flex flex-col items-center justify-between gap-6 md:flex-row">
-			<div class="flex items-center gap-6">
-				<a href="/" class="text-xl font-bold text-foreground">
-					<span class="text-primary">●</span> {COMPANY_NAME}
-				</a>
-				<div class="flex items-center gap-4">
+		<div class="mb-8 grid gap-8 md:grid-cols-3">
+			<!-- Contact -->
+			<div>
+				<h3 class="mb-4 font-bold text-foreground">Contact</h3>
+				<div class="space-y-2 text-sm text-muted-foreground">
 					<a
-						href="https://linkedin.com"
+						href="mailto:hello@convertdev.com"
+						class="flex items-center gap-2 transition-colors hover:text-foreground"
+					>
+						<MailIcon class="h-4 w-4" />
+						hello@convertdev.com
+					</a>
+					<div class="flex items-center gap-2">
+						<MapPinIcon class="h-4 w-4" />
+						Valencia, Spain
+					</div>
+					<p class="text-xs">Response time: Within 24 hours</p>
+				</div>
+			</div>
+
+			<!-- Links -->
+			<div>
+				<h3 class="mb-4 font-bold text-foreground">Links</h3>
+				<div class="space-y-2 text-sm">
+					<a
+						href="https://linkedin.com/in/yourprofile"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="text-muted-foreground transition-colors hover:text-primary"
-						aria-label="LinkedIn"
+						class="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
 					>
-						<LinkedinIcon class="h-5 w-5" />
+						<LinkedinIcon class="h-4 w-4" />
+						LinkedIn (Developer)
 					</a>
 					<a
-						href="https://github.com"
+						href="https://github.com/yourusername"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="text-muted-foreground transition-colors hover:text-primary"
-						aria-label="GitHub"
+						class="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
 					>
-						<GithubIcon class="h-5 w-5" />
+						<GithubIcon class="h-4 w-4" />
+						GitHub
+					</a>
+					<a
+						href="https://linkedin.com/in/herprofile"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+					>
+						<LinkedinIcon class="h-4 w-4" />
+						LinkedIn (Marketing CEO)
 					</a>
 				</div>
 			</div>
 
-			<p class="text-sm text-muted-foreground">
-				Strategic websites built for conversion. 
-				<span class="text-primary">Owned by you completely.</span>
-			</p>
+			<!-- Statement -->
+			<div>
+				<h3 class="mb-4 font-bold text-foreground">About</h3>
+				<div class="space-y-2 text-sm text-muted-foreground">
+					<p>Strategic websites built for conversion.</p>
+					<p>You own everything. Forever.</p>
+					<p class="text-xs text-primary">Powered by Rust & Svelte</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+			<p>© 2025 [Your Business Name]. All rights reserved.</p>
 		</div>
 	</div>
 </footer>

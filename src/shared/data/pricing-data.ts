@@ -4,55 +4,78 @@ export const pricingTiers = [
         title: 'Starter',
         price: 997,
         priceDescription: 'one-time',
+        perfectFor: 'New businesses getting online fast',
         features: [
-            'Clean, professional 3-page website',
-            'Fast performance (under 1.5-second load)',
-            'Mobile-responsive design',
+            'Clean 3-page website',
+            'Fast (&lt;1.5s load time)',
+            'Mobile responsive',
             'Contact form',
             'Basic SEO setup',
-            '14-day post-launch support'
+            '14-day support'
         ],
-        monthlyMaintenance: '+$97/month',
+        monthlyMaintenance: '+$47/month',
+        maintenanceFeatures: [
+            'Unlimited text/image updates',
+            'Simple functionality changes',
+            'Priority 48hr response',
+            'No per-change fees'
+        ],
         buttonText: 'Get Started',
-        subtext: 'Perfect for new businesses getting online fast',
-        note: 'Note: This tier does NOT include marketing strategy consultation'
+        note: 'No marketing strategy included',
+        roiExample: 'Even at 1% conversion boost = $1,200+/year extra revenue'
     },
     {
         tier: 'Tier 2',
         title: 'Professional',
         price: 4997,
         priceDescription: 'one-time',
+        perfectFor: 'Growing businesses ready to scale',
         featuresPrefix: 'Everything in Starter, PLUS:',
         features: [
-            '<span class="font-medium text-foreground">Marketing strategy consultation included</span>',
-            'Professional 5-page website designed for conversion',
-            'Blazing-fast performance (under 1-second load)',
-            'Contact forms with advanced tracking',
-            'Email integration & automation setup',
-            '30-day post-launch support'
+            '<span class="font-medium text-foreground">Marketing strategy consultation</span>',
+            '5-page strategic website',
+            'Blazing fast (&lt;1s load)',
+            'Advanced form tracking',
+            'Email automation',
+            '30-day support'
         ],
         monthlyMaintenance: '+$197/month',
-        buttonText: 'Get Started'
+        maintenanceFeatures: [
+            'All Starter benefits',
+            'Optimization testing',
+            'Quarterly CEO strategy calls',
+            'Performance insights'
+        ],
+        buttonText: 'Get Started',
+        roiExample: '3% conversion boost on 1K visitors = $36,000+/year extra'
     },
     {
         tier: 'Tier 3',
         title: 'Business',
         price: 8997,
         priceDescription: 'one-time',
+        perfectFor: 'Serious businesses dominating their market',
         featuresPrefix: 'Everything in Professional, PLUS:',
         features: [
-            '<span class="font-medium text-foreground">Deep-dive strategy session with CEO marketing expert</span>',
-            'More complex design (up to 10 pages)',
-            'Advanced functionality & features',
-            'Custom forms and workflows optimized for conversion',
-            'Full analytics dashboard (see what\'s working)',
+            '<span class="font-medium text-foreground">Deep-dive CEO strategy session</span>',
+            'Up to 10 pages',
+            'Advanced features',
+            'Custom forms/workflows',
+            'Analytics dashboard',
             'Performance optimization',
-            '60-day post-launch support'
+            '60-day support'
         ],
         monthlyMaintenance: '+$297/month',
+        maintenanceFeatures: [
+            'All Professional benefits',
+            '<span class="font-medium text-foreground">Monthly CEO strategy calls</span>',
+            'Security monitoring',
+            'Performance monitoring',
+            'Unlimited simple features'
+        ],
         buttonText: 'Start Your Project',
-        subtext: 'For serious businesses ready to dominate online',
-        isHighlighted: true
+        isHighlighted: true,
+        roiExample: '5% conversion boost on 1K visitors = $60,000+/year extra'
     },
     {
         tier: 'Tier 4',
@@ -61,18 +84,26 @@ export const pricingTiers = [
         priceDescription: 'Pricing tailored to your specific needs',
         featuresPrefix: 'Everything in Business, PLUS:',
         features: [
-            '<span class="font-medium text-foreground">Comprehensive business & conversion strategy with our CEO marketing partner</span>',
-            'Fully custom design (unlimited pages)',
-            'Complex systems (booking, ecommerce, custom tools)',
-            'Custom business analytics & reporting',
-            'Advanced integrations (CRM, payment processors, APIs)',
+            '<span class="font-medium text-foreground">Comprehensive CEO strategy</span>',
+            'Unlimited pages',
+            'Complex systems (ecommerce, booking, custom tools)',
+            'Business analytics dashboards',
+            'CRM/API integrations',
             'Multi-user systems',
-            'Competitor analysis & positioning strategy',
-            '90-day post-launch support'
+            'Competitor analysis',
+            '90-day support'
         ],
         monthlyMaintenance: '+$497/month',
+        maintenanceFeatures: [
+            'Everything in Business',
+            'Unlimited feature additions',
+            '<span class="font-medium text-foreground">Bi-weekly CEO consulting</span>',
+            '24/7 emergency support',
+            'Quarterly conversion audits',
+            'Strategic roadmap planning'
+        ],
         buttonText: "Let's Talk",
-        subtext: 'For businesses doing $50K+ monthly revenue',
-        isCustom: true
+        isCustom: true,
+        roiExample: '7% conversion boost = $100,000+/year on existing traffic'
     }
 ];

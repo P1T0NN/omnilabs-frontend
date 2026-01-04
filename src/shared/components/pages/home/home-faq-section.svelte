@@ -16,9 +16,8 @@
 <section id="faq" class="bg-card px-6 py-24">
 	<div class="mx-auto max-w-3xl">
 		<div class="mb-16 text-center">
-			<p class="mb-4 text-sm font-medium tracking-wide text-primary uppercase">FAQ</p>
 			<h2 class="mb-4 text-3xl font-bold text-balance text-foreground md:text-4xl">
-				Questions? Answered.
+				Still Have Questions? We've Got Answers.
 			</h2>
 		</div>
 

@@ -18,7 +18,7 @@ export const sendContactFormEmail = form(
     async (data) => {
 		const { error } = await resend.emails.send({
 			from: `Website Contact Form <${data.email}>`,
-			to: [CONTACT_INFORMATIONS.EMAILl],
+			to: [CONTACT_INFORMATIONS.EMAIL],
 			subject: `Website Contact Form: ${data.subject}`,
 			html: `
                 <p>Name: ${data.name}</p>
