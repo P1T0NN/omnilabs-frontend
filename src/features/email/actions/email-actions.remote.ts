@@ -1,19 +1,19 @@
 // SVELTEKIT IMPORTS
 import { RESEND_API_KEY } from '$env/static/private'; // define in your .env file
-import { form } from '$app/server';
+import { command } from '$app/server';
 
 // LIBRARIES
 import { Resend } from 'resend';
 
 // CONFIG
-import { CONTACT_INFORMATIONS } from '@/shared/constants/constants';
+import { CONTACT_INFORMATIONS } from '@/shared/constants';
 
 // SCHEMAS
 import { sendContactFormEmailSchema } from '../schemas/email-schemas';
 
 const resend = new Resend(RESEND_API_KEY);
 
-export const sendContactFormEmail = form(
+export const sendContactFormEmail = command(
     sendContactFormEmailSchema,
     async (data) => {
 		const { error } = await resend.emails.send({

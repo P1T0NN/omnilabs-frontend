@@ -1,21 +1,15 @@
 <script lang="ts">
     // COMPONENTS
-	import ContactHeader from '@/shared/components/pages/(unprotected)/contact/contact-header.svelte';
-	import ContactInformation from '@/shared/components/pages/(unprotected)/contact/contact-information.svelte';
-	import ContactForm from '@/shared/components/pages/(unprotected)/contact/contact-form.svelte';
+	import ContactLeftContent from '@/shared/components/pages/(unprotected)/contact/contact-left-content.svelte';
+    import ContactRightContent from '@/shared/components/pages/(unprotected)/contact/contact-right-content.svelte';
 </script>
 
-<section class="min-h-screen px-6 pt-20 pb-24">
-	<div class="mx-auto w-full max-w-4xl">
-		<ContactHeader />
+<section id="contact" class="bg-background min-h-screen py-32">
+    <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-start">
+            <ContactLeftContent />
 
-		<div class="grid gap-12 lg:grid-cols-3">
-			<ContactInformation />
-
-			<div class="lg:col-span-2">
-				<ContactForm />
-			</div>
-		</div>
-	</div>
+            <ContactRightContent />
+        </div>
+    </div>
 </section>
-

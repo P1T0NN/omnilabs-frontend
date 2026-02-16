@@ -1,0 +1,39 @@
+---
+globs: "*.svelte"
+---
+# Svelte File Conventions
+
+## Import Organization
+
+Always organize imports in Svelte `<script>` blocks with categorized comment headers in this order:
+
+1. `// SVELTEKIT IMPORTS` — SvelteKit built-ins (`$app/*`, `$env/*`)
+2. `// LIBRARIES` — Third-party utilities, actions, helpers
+3. `// CLASSES` — Class instances and state management modules
+4. `// COMPONENTS` — UI components (shadcn-svelte, custom components)
+5. `// LUCIDE ICONS` — Icon imports from `@lucide/svelte`
+6. `// ACTIONS` — Server actions and remote functions
+7. `// TYPES` — TypeScript types and interfaces
+
+Only include category headers that are actually used. Use **tab** indentation.
+
+Example:
+```svelte
+<script lang="ts">
+	// SVELTEKIT IMPORTS
+	import { enhance } from '$app/forms';
+
+	// COMPONENTS
+	import Button from '@/shared/components/ui/button/button.svelte';
+
+	// LUCIDE ICONS
+	import ArrowRightIcon from '@lucide/svelte/icons/arrow-right';
+</script>
+```
+
+## Style Rules
+
+- Do not use neon or console/terminal aesthetics.
+- Prefer modern, premium, clean design language.
+- Use scoped `<style>` blocks with `:global()` only when necessary for child component overrides.
+- Custom colors should be defined as CSS variables inside the scoped style block.
