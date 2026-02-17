@@ -1,4 +1,7 @@
 <script lang="ts">
+	// UTILS
+	import { reveal } from '@/shared/actions/reveal';
+
 	// LUCIDE ICONS
 	import ArrowUpRight from '@lucide/svelte/icons/arrow-up-right';
 
@@ -21,6 +24,7 @@
 		href={href}
 		target="_blank"
 		rel="noopener noreferrer"
+		use:reveal
 		class="group relative flex flex-col {className}"
 	>
 		<!-- Top Meta -->
@@ -75,7 +79,7 @@
 		</div>
 	</a>
 {:else}
-	<div class="group relative flex flex-col {className}">
+	<div use:reveal class="group relative flex flex-col {className}">
 		<!-- Top Meta -->
 		<div
 			class="mb-2 flex items-center justify-between font-mono text-xs tracking-widest text-neutral-400 uppercase"

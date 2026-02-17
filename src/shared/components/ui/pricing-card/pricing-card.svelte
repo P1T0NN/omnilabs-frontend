@@ -1,8 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-
-	// COMPONENTS
-	import Button from '@/shared/components/ui/button/button.svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
 	interface Props {
 		title: string;
@@ -10,6 +8,7 @@
 		label: string;
 		variant?: 'light' | 'dark';
 		buttonText: string;
+		href?: string;
 		children?: Snippet;
 	}
 
@@ -19,6 +18,7 @@
 		label,
 		variant = 'light',
 		buttonText,
+		href = '/contact',
 		children
 	}: Props = $props();
 </script>
@@ -48,11 +48,13 @@
 		{@render children()}
 	{/if}
 
-	<Button
-		class="h-14 w-full rounded-none font-sans text-lg font-bold tracking-widest uppercase {variant === 'light'
+	<a
+		{href}
+		class="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-none font-sans text-lg font-bold tracking-widest uppercase transition-colors {variant === 'light'
 			? 'bg-black text-white hover:bg-primary'
-			: 'border-none bg-white text-black hover:bg-primary hover:text-white'}"
+			: 'bg-white text-black hover:bg-primary hover:text-white'}"
 	>
 		{buttonText}
-	</Button>
+		<ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
+	</a>
 </div>

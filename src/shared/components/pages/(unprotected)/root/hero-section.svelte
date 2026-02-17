@@ -1,27 +1,48 @@
 <script lang="ts">
-    // COMPONENTS
-    import Button from '@/shared/components/ui/button/button.svelte';
+    // SVELTEKIT IMPORTS
+    import { fly } from 'svelte/transition';
+    import { onMount } from 'svelte';
+
+    // LUCIDE ICONS
+    import ArrowRight from '@lucide/svelte/icons/arrow-right';
+
+    let mounted = $state(false);
+    onMount(() => (mounted = true));
 </script>
 
 <section class="relative flex min-h-screen flex-col justify-between pt-20">
     <div class="container mx-auto flex flex-1 items-center max-w-7xl px-6 md:px-12 lg:px-24">
         <div class="flex w-full flex-col items-center justify-center py-20 text-center">
-            <h1 class="mb-8 font-sans text-7xl leading-[0.85] font-black uppercase md:text-9xl">
-                Websites <br />
-                That <br />
-                <span class="font-serif text-primary lowercase italic">sell.</span>
-            </h1>
-            
-            <div class="mb-10 max-w-xl border-l-4 border-primary py-2 pl-6 text-left">
-                <p class="text-xl leading-tight text-neutral-600 italic md:text-2xl">
-                    "We combine marketing strategy with engineering precision to build websites that don't
-                    just look good — they turn visitors into customers."
-                </p>
-            </div>
+            {#if mounted}
+                <h1
+                    in:fly={{ y: 48, duration: 800, delay: 0 }}
+                    class="mb-8 font-sans text-7xl leading-[0.85] font-black uppercase md:text-9xl"
+                >
+                    Websites <br />
+                    That <br />
+                    <span class="font-serif text-primary lowercase italic">sell.</span>
+                </h1>
 
-            <Button class="h-14 rounded-none bg-black px-10 font-sans text-lg font-bold tracking-widest uppercase text-white hover:bg-primary">
-                Book a Strategy Call
-            </Button>
+                <div
+                    in:fly={{ y: 32, duration: 700, delay: 200 }}
+                    class="mb-10 max-w-xl border-l-4 border-primary py-2 pl-6 text-left"
+                >
+                    <p class="text-xl leading-tight text-neutral-600 italic md:text-2xl">
+                        "We combine marketing strategy with engineering precision to build websites that don't
+                        just look good — they turn visitors into customers. From focused micro-sites to full-scale enterprise platforms."
+                    </p>
+                </div>
+
+                <div in:fly={{ y: 24, duration: 600, delay: 400 }}>
+                    <a
+                        href="/contact"
+                        class="group inline-flex h-14 items-center justify-center rounded-none bg-black px-10 font-sans text-lg font-bold tracking-widest uppercase text-white transition-colors hover:bg-primary"
+                    >
+                        Book a Strategy Call
+                        <ArrowRight class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </a>
+                </div>
+            {/if}
         </div>
     </div>
 

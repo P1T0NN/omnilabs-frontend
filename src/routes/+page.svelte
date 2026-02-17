@@ -5,6 +5,7 @@
 	// COMPONENTS
 	import HeroSection from '@/shared/components/pages/(unprotected)/root/hero-section.svelte';
 	import WorkSection from '@/shared/components/pages/(unprotected)/root/work-section/work-section.svelte';
+	import TestimonialsSection from '@/shared/components/pages/(unprotected)/root/testimonials-section.svelte';
 	import StrategySection from '@/shared/components/pages/(unprotected)/root/strategy-section.svelte';
 	import ProcessSection from '@/shared/components/pages/(unprotected)/root/process-section.svelte';
 	import PricingSection from '@/shared/components/pages/(unprotected)/root/pricing-section/pricing-section.svelte';
@@ -22,9 +23,11 @@
 >
 	<HeroSection />
 
+	<StrategySection />
+
 	<WorkSection />
 
-	<StrategySection />
+	<TestimonialsSection />
 
 	<ProcessSection />
 

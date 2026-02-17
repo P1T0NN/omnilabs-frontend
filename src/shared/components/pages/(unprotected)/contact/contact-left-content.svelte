@@ -1,4 +1,7 @@
 <script lang="ts">
+    // CONFIG
+    import { COMPANY_DATA } from '@/shared/constants';
+
     // LUCIDE ICONS
     import ArrowRightIcon from "@lucide/svelte/icons/arrow-right";
     import CalendarIcon from "@lucide/svelte/icons/calendar";
@@ -21,14 +24,14 @@
 		respond within 24 hours.
 	</p>
 
-	<!-- Urgency badge -->
+	<!-- Intake notice -->
 	<div class="inline-flex items-center gap-3 border-2 border-black px-6 py-4 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-12">
 		<span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
         </span>
 		<span class="font-sans text-xs font-bold tracking-widest uppercase text-neutral-600">
-			2 spots remaining this month
+			We open 2 new project slots per quarter
 		</span>
 	</div>
 
@@ -46,9 +49,9 @@
 				<span>Book a 30-min discovery call</span>
 				<ArrowRightIcon size={16} class="transition-transform group-hover:translate-x-1" />
 			</a>
-			<a href="mailto:hello@vanta.studio" 
-			   class="group flex items-center gap-2 font-sans text-sm font-bold tracking-widest uppercase text-black transition-colors hover:text-primary">
-				<span>hello@vanta.studio</span>
+		<a href="mailto:{COMPANY_DATA.EMAIL}" 
+		   class="group flex items-center gap-2 font-sans text-sm font-bold tracking-widest uppercase text-black transition-colors hover:text-primary">
+			<span>{COMPANY_DATA.EMAIL}</span>
 				<ArrowRightIcon size={16} class="transition-transform group-hover:translate-x-1" />
 			</a>
 		</div>

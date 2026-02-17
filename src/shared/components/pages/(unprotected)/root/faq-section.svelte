@@ -1,4 +1,9 @@
 <script lang="ts">
+    // SVELTEKIT IMPORTS
+    import { slide } from 'svelte/transition';
+    import { reveal } from '@/shared/actions/reveal';
+
+    // LUCIDE ICONS
     import PlusIcon from '@lucide/svelte/icons/plus';
     import MinusIcon from '@lucide/svelte/icons/minus';
 
@@ -21,7 +26,7 @@
         },
         {
             question: 'What technologies do you use?',
-            answer: 'We choose the best technology stack for your specific needs — not whatever\'s trendy. Whether it\'s SvelteKit, Next.js, or something else entirely, we pick what gives your project the best performance, security, and scalability.'
+            answer: 'We choose the best technology stack for your specific needs — not whatever\'s trendy. We pick what gives your project the best performance, security, and scalability.'
         },
         {
             question: 'What makes you different from other agencies?',
@@ -39,7 +44,7 @@
 <section id="faq" class="py-32">
     <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
         <div class="grid grid-cols-1 gap-16 lg:grid-cols-12">
-            <div class="lg:col-span-4">
+            <div use:reveal class="lg:col-span-4">
                 <span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase">
                     FAQ
                 </span>
@@ -53,7 +58,7 @@
 
             <div class="lg:col-span-8">
                 {#each faqs as faq, i}
-                    <div class="border-b border-neutral-200">
+                    <div use:reveal={{ delay: i * 80 }} class="border-b border-neutral-200">
                         <button
                             class="flex w-full items-center justify-between py-6 text-left transition-colors hover:text-primary"
                             onclick={() => toggle(i)}
@@ -70,7 +75,7 @@
                             </div>
                         </button>
                         {#if openIndex === i}
-                            <div class="pb-6">
+                            <div transition:slide={{ duration: 300 }} class="pb-6">
                                 <p class="font-sans leading-relaxed text-neutral-600">
                                     {faq.answer}
                                 </p>

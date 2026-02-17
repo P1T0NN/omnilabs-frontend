@@ -9,7 +9,7 @@
 			issue: 'No. 01',
 			client: 'Real Estate',
 			description:
-				'Booking website, for listing your apartments, reserving bookings, managing bookings and more...',
+				'Full booking platform — apartment listings, reservation management, and owner dashboard. Bookings increased within the first month of launch.',
 			img: '/home/bgapartman-website.png',
 			href: 'https://www.bgapartman.com',
 			class: 'md:col-span-7'
@@ -18,8 +18,8 @@
 			id: '02',
 			title: 'FollowUs',
 			issue: 'No. 02',
-			client: 'Social',
-			description: 'Direct Marketing company',
+			client: 'Direct Marketing',
+			description: 'High-converting web presence for a direct marketing company operating across multiple markets.',
 			img: '/home/followus-website.png',
 			href: 'https://followusnyc.com',
 			class: 'md:col-span-5 md:mt-16'

@@ -25,11 +25,11 @@
 	});
 
 	const navLinks = [
-		{ href: '#volumes', label: 'Work' },
-		{ href: '#narrative', label: 'Strategy' },
-		{ href: '#process', label: 'Process' },
-		{ href: '#pricing', label: 'Pricing' },
-		{ href: '#faq', label: 'FAQ' }
+		{ href: '/#narrative', label: 'Strategy' },
+		{ href: '/#volumes', label: 'Work' },
+		{ href: '/#process', label: 'Process' },
+		{ href: '/#pricing', label: 'Pricing' },
+		{ href: '/#faq', label: 'FAQ' }
 	];
 </script>
 
@@ -105,7 +105,7 @@
 		<!-- Mobile CTA -->
 		<div class="mt-auto">
 			<a
-				href="#pricing"
+				href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
 				onclick={() => (headerClass.mobileOpen = false)}
 				class="flex items-center justify-center rounded-2xl bg-primary px-6 py-4 text-base font-bold text-white uppercase tracking-widest hover:bg-primary-hover transition-all duration-150"
 			>

@@ -2,6 +2,9 @@
     // LUCIDE ICONS
     import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
+    // ACTIONS
+    import { reveal } from '@/shared/actions/reveal';
+
     const steps = [
         {
             number: '01',
@@ -28,7 +31,7 @@
 
 <section id="process" class="bg-secondary py-32">
     <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-        <div class="mb-20 text-center">
+        <div use:reveal class="mb-20 text-center">
             <span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase">
                 How It Works
             </span>
@@ -39,7 +42,7 @@
 
         <div class="grid grid-cols-1 gap-0 md:grid-cols-4">
             {#each steps as step, i}
-                <div class="group relative border-t-2 border-black pt-8 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : ''}">
+                <div use:reveal={{ delay: i * 120 }} class="group relative border-t-2 border-black pt-8 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : ''}">
                     <span class="mb-4 block font-sans text-5xl font-black text-neutral-400 transition-colors group-hover:text-primary">
                         {step.number}
                     </span>
