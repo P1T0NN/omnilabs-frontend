@@ -17,7 +17,7 @@
 				>How We Work</span
 			>
 			<h2 class="mb-4 font-serif text-6xl italic md:text-8xl">Two paths. No middle.</h2>
-			<p class="mx-auto max-w-2xl font-sans text-lg text-neutral-500">
+			<p class="mx-auto max-w-2xl font-sans text-lg text-neutral-600">
 				We either build you a focused, high-converting micro-site or architect a full-scale digital
 				platform. We don't do "medium". Every project is a one-time investment with the option to
 				add ongoing partnership.
@@ -26,7 +26,7 @@
 
 		<div class="mb-16 flex items-center justify-center gap-3">
 			<div class="h-px w-12 bg-black"></div>
-			<span class="font-sans text-xs font-bold tracking-widest text-neutral-400 uppercase">One-time payment · Optional monthly partnership</span>
+			<span class="font-sans text-xs font-bold tracking-widest text-neutral-600 uppercase">One-time payment · Optional monthly partnership</span>
 			<div class="h-px w-12 bg-black"></div>
 		</div>
 
@@ -60,7 +60,7 @@
 
 				<!-- Partnership Toggle -->
 				<div class="mb-8 border-t border-neutral-200 pt-8">
-					<h4 class="mb-4 font-sans text-xs font-bold tracking-widest uppercase text-neutral-400">
+					<h4 class="mb-4 font-sans text-xs font-bold tracking-widest uppercase text-neutral-600">
 						After Delivery
 					</h4>
 
@@ -79,9 +79,9 @@
 								>
 									Ongoing Partnership
 								</span>
-								<span class="font-sans text-xs font-bold text-neutral-400">Monthly</span>
+								<span class="font-sans text-xs font-bold text-neutral-600">Monthly</span>
 							</div>
-							<p class="text-sm text-neutral-500">
+							<p class="text-sm text-neutral-600">
 								Text changes, small tweaks, and functionality updates — all included.
 							</p>
 
@@ -104,12 +104,12 @@
 								<span
 									class="font-sans text-sm font-bold uppercase {!partnershipSelected
 										? 'text-black'
-										: 'text-neutral-400'}"
+										: 'text-neutral-600'}"
 								>
 									One-time Only
 								</span>
 							</div>
-							<p class="text-sm text-neutral-400">
+							<p class="text-sm text-neutral-600">
 								Every future change billed separately per request.
 							</p>
 						</button>
@@ -121,9 +121,9 @@
 							{#if partnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 							{:else}
-								<XIcon class="h-4 w-4 shrink-0 text-neutral-300" />
+								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
-							<span class={partnershipSelected ? 'text-black' : 'text-neutral-400 line-through'}>
+							<span class={partnershipSelected ? 'text-black' : 'text-neutral-600 line-through'}>
 								Unlimited text & content updates
 							</span>
 						</div>
@@ -131,9 +131,9 @@
 							{#if partnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 							{:else}
-								<XIcon class="h-4 w-4 shrink-0 text-neutral-300" />
+								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
-							<span class={partnershipSelected ? 'text-black' : 'text-neutral-400 line-through'}>
+							<span class={partnershipSelected ? 'text-black' : 'text-neutral-600 line-through'}>
 								Small design & layout adjustments
 							</span>
 						</div>
@@ -141,9 +141,9 @@
 							{#if partnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 							{:else}
-								<XIcon class="h-4 w-4 shrink-0 text-neutral-300" />
+								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
-							<span class={partnershipSelected ? 'text-black' : 'text-neutral-400 line-through'}>
+							<span class={partnershipSelected ? 'text-black' : 'text-neutral-600 line-through'}>
 								Minor functionality changes
 							</span>
 						</div>
@@ -180,7 +180,7 @@
 
 				<!-- Partnership Toggle -->
 				<div class="mb-8 border-t border-neutral-800 pt-8">
-					<h4 class="mb-4 font-sans text-xs font-bold tracking-widest uppercase text-neutral-500">
+					<h4 class="mb-4 font-sans text-xs font-bold tracking-widest uppercase text-neutral-400">
 						After Delivery
 					</h4>
 
@@ -195,11 +195,11 @@
 								<span
 									class="font-sans text-sm font-bold uppercase {enterprisePartnershipSelected
 										? 'text-primary'
-										: 'text-neutral-500'}"
+										: 'text-neutral-400'}"
 								>
 									Ongoing Retainer
 								</span>
-								<span class="font-sans text-xs font-bold text-neutral-500">Monthly</span>
+								<span class="font-sans text-xs font-bold text-neutral-400">Monthly</span>
 							</div>
 							<p class="text-sm text-neutral-400">
 								All changes covered. Predictable costs. No surprises.
@@ -224,12 +224,12 @@
 								<span
 									class="font-sans text-sm font-bold uppercase {!enterprisePartnershipSelected
 										? 'text-white'
-										: 'text-neutral-600'}"
+										: 'text-neutral-400'}"
 								>
 									Per-Request
 								</span>
 							</div>
-							<p class="text-sm text-neutral-500">
+							<p class="text-sm text-neutral-400">
 								Every change billed separately. With complex multi-page sites, costs add up fast — most clients end up paying significantly more this way.
 							</p>
 						</button>
@@ -241,9 +241,9 @@
 							{#if enterprisePartnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 							{:else}
-								<XIcon class="h-4 w-4 shrink-0 text-neutral-600" />
+								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
-							<span class={enterprisePartnershipSelected ? 'text-white' : 'text-neutral-500 line-through'}>
+							<span class={enterprisePartnershipSelected ? 'text-white' : 'text-neutral-400 line-through'}>
 								Unlimited changes across all pages & features
 							</span>
 						</div>
@@ -251,9 +251,9 @@
 							{#if enterprisePartnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 							{:else}
-								<XIcon class="h-4 w-4 shrink-0 text-neutral-600" />
+								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
-							<span class={enterprisePartnershipSelected ? 'text-white' : 'text-neutral-500 line-through'}>
+							<span class={enterprisePartnershipSelected ? 'text-white' : 'text-neutral-400 line-through'}>
 								Priority support & fast turnaround
 							</span>
 						</div>
@@ -261,9 +261,9 @@
 							{#if enterprisePartnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 							{:else}
-								<XIcon class="h-4 w-4 shrink-0 text-neutral-600" />
+								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
-							<span class={enterprisePartnershipSelected ? 'text-white' : 'text-neutral-500 line-through'}>
+							<span class={enterprisePartnershipSelected ? 'text-white' : 'text-neutral-400 line-through'}>
 								Predictable monthly spend
 							</span>
 						</div>

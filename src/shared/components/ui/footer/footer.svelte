@@ -44,7 +44,7 @@
                 </ul>
             </div>
         </div>
-        <div class="mt-16 border-t border-white/10 pt-8 flex flex-col items-center justify-between gap-4 font-sans text-xs text-neutral-600 md:flex-row">
+        <div class="mt-16 border-t border-white/10 pt-8 flex flex-col items-center justify-between gap-4 font-sans text-xs text-neutral-400 md:flex-row">
             <span>© {new Date().getFullYear()} {COMPANY_DATA.NAME}. All rights reserved.</span>
             <span class="uppercase tracking-widest">No AI Slop. No Medium Ticket. No Compromises.</span>
         </div>

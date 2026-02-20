@@ -38,7 +38,7 @@
 		</span>
 		<h3 class="mb-2 font-sans text-4xl font-black uppercase">{title}</h3>
 		<p
-			class="font-serif text-xl italic {variant === 'light' ? 'text-neutral-500' : 'text-neutral-400'}"
+			class="font-serif text-xl italic {variant === 'light' ? 'text-neutral-600' : 'text-neutral-400'}"
 		>
 			{subtitle}
 		</p>

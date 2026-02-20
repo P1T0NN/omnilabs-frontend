@@ -53,7 +53,7 @@
                         </div>
                         <div>
                             <p class="font-sans font-black uppercase tracking-tight">{t.author}</p>
-                            <p class="font-sans text-xs text-neutral-500">{t.role}</p>
+                            <p class="font-sans text-xs text-neutral-600">{t.role}</p>
                         </div>
                     </div>
                 </div>

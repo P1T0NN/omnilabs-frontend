@@ -33,7 +33,7 @@
 	];
 </script>
 
-<nav
+<nav aria-label="Main navigation"
 	class="fixed top-0 left-0 right-0 z-50 flex justify-center pt-5 transition-all duration-300 {headerClass.scrolled
 		? 'pt-3'
 		: ''}"
@@ -56,7 +56,7 @@
 			{#each navLinks as link}
 				<a
 					href={link.href}
-					class="px-4 py-2 text-[0.82rem] font-bold uppercase tracking-widest text-foreground/55 hover:text-foreground/90 hover:bg-black/4 rounded-xl transition-all duration-150"
+					class="px-4 py-2 text-[0.82rem] font-bold uppercase tracking-widest text-neutral-600 hover:text-foreground hover:bg-black/4 rounded-xl transition-all duration-150"
 				>
 					{link.label}
 				</a>
@@ -78,9 +78,9 @@
 			aria-label="Toggle menu"
 		>
 			{#if headerClass.mobileOpen}
-				<XIcon class="h-5 w-5 text-foreground/80" />
+				<XIcon class="h-5 w-5 text-neutral-700" />
 			{:else}
-				<MenuIcon class="h-5 w-5 text-foreground/80" />
+				<MenuIcon class="h-5 w-5 text-neutral-700" />
 			{/if}
 		</button>
 	</div>
@@ -95,7 +95,7 @@
 				<a
 					href={link.href}
 					onclick={() => (headerClass.mobileOpen = false)}
-					class="px-4 py-4 text-lg font-bold uppercase tracking-widest text-foreground/60 hover:text-foreground hover:bg-black/3 rounded-xl transition-all duration-150 border-b border-black/6 last:border-none"
+					class="px-4 py-4 text-lg font-bold uppercase tracking-widest text-neutral-600 hover:text-foreground hover:bg-black/3 rounded-xl transition-all duration-150 border-b border-black/6 last:border-none"
 				>
 					{link.label}
 				</a>

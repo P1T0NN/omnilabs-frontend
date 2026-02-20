@@ -51,11 +51,11 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div class="border-2 border-black bg-black p-6 text-white">
                         <p class="mb-1 font-sans text-4xl font-black text-primary">73%</p>
-                        <p class="font-sans text-xs font-bold uppercase tracking-widest text-neutral-400">of visitors decide in under 8 seconds</p>
+                        <p class="font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">of visitors decide in under 8 seconds</p>
                     </div>
                     <div class="border-2 border-black bg-white p-6">
                         <p class="mb-1 font-sans text-4xl font-black">3×</p>
-                        <p class="font-sans text-xs font-bold uppercase tracking-widest text-neutral-500">higher conversion with strategic structure</p>
+                        <p class="font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">higher conversion with strategic structure</p>
                     </div>
                 </div>
                 <div class="border-2 border-black border-l-4 border-l-primary bg-white p-6">
@@ -71,15 +71,15 @@
                 <div class="grid grid-cols-3 gap-4">
                     <div class="border-2 border-black bg-black p-6 text-center text-white">
                         <p class="font-sans text-3xl font-black text-primary">100</p>
-                        <p class="mt-1 font-sans text-xs font-bold uppercase tracking-widest text-neutral-400">Performance</p>
+                        <p class="mt-1 font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">Performance</p>
                     </div>
                     <div class="border-2 border-black bg-black p-6 text-center text-white">
                         <p class="font-sans text-3xl font-black text-primary">100</p>
-                        <p class="mt-1 font-sans text-xs font-bold uppercase tracking-widest text-neutral-400">SEO</p>
+                        <p class="mt-1 font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">SEO</p>
                     </div>
                     <div class="border-2 border-black bg-black p-6 text-center text-white">
                         <p class="font-sans text-3xl font-black text-primary">100</p>
-                        <p class="mt-1 font-sans text-xs font-bold uppercase tracking-widest text-neutral-400">Best Practices</p>
+                        <p class="mt-1 font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">Best Practices</p>
                     </div>
                 </div>
                 <div class="border-2 border-black bg-white p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
@@ -87,7 +87,7 @@
                     <p class="font-sans leading-relaxed text-neutral-600">A 1-second delay in page load time reduces conversions by 7%. We build for perfect Lighthouse scores — not as a vanity metric, but because speed is the cheapest conversion optimization you can do.</p>
                 </div>
                 <div class="border-2 border-black bg-white p-6">
-                    <p class="mb-3 font-sans text-xs font-bold uppercase tracking-widest text-neutral-400">Stack chosen for your needs, not ours</p>
+                    <p class="mb-3 font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">Stack chosen for your needs, not ours</p>
                     <div class="flex flex-wrap gap-2">
                         {#each ['SvelteKit', 'TypeScript', 'PostgreSQL', 'Rust'] as tech}
                             <span class="border border-black px-3 py-1 font-sans text-xs font-bold uppercase tracking-widest">{tech}</span>
@@ -185,7 +185,7 @@
                 </div>
                 <div class="border-2 border-black bg-black p-6 text-white">
                     <p class="mb-2 font-sans text-xs font-bold uppercase tracking-widest text-primary">The Reality</p>
-                    <p class="font-sans text-sm leading-relaxed text-neutral-400">43% of cyberattacks target small businesses. Most are preventable with proper development practices. We treat security as a feature, not an afterthought.</p>
+                    <p class="font-sans text-sm leading-relaxed text-neutral-600">43% of cyberattacks target small businesses. Most are preventable with proper development practices. We treat security as a feature, not an afterthought.</p>
                 </div>
             </div>
         </div>

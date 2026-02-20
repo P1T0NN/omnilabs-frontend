@@ -30,14 +30,14 @@
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
         </span>
-		<span class="font-sans text-xs font-bold tracking-widest uppercase text-neutral-600">
+		<span class="font-sans text-xs font-bold tracking-widest uppercase text-neutral-700">
 			We open 2 new project slots per quarter
 		</span>
 	</div>
 
 	<!-- Secondary contact options -->
 	<div class="border-t border-neutral-200 pt-8">
-		<p class="mb-4 font-sans text-sm text-neutral-500">Prefer to talk first?</p>
+		<p class="mb-4 font-sans text-sm text-neutral-600">Prefer to talk first?</p>
 		<div class="flex flex-col gap-4 items-start">
 			<a
 				href="https://cal.com"

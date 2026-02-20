@@ -43,7 +43,7 @@
         <div class="grid grid-cols-1 gap-0 md:grid-cols-4">
             {#each steps as step, i}
                 <div use:reveal={{ delay: i * 120 }} class="group relative border-t-2 border-black pt-8 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : ''} {i === 0 ? 'z-40' : i === 1 ? 'z-30' : i === 2 ? 'z-20' : ''}">
-                    <span class="mb-4 block font-sans text-5xl font-black text-neutral-400 transition-colors group-hover:text-primary">
+                    <span class="mb-4 block font-sans text-5xl font-black text-neutral-600 transition-colors group-hover:text-primary">
                         {step.number}
                     </span>
                     <h3 class="mb-3 font-sans text-xl font-bold uppercase">

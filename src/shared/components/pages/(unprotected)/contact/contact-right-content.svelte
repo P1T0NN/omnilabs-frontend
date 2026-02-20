@@ -119,7 +119,7 @@
             {/if}
 		</Button>
 
-		<p class="mt-2 text-center font-sans text-xs leading-relaxed text-neutral-400">
+		<p class="mt-2 text-center font-sans text-xs leading-relaxed text-neutral-600">
 			We'll review your brief and respond with a custom strategy outline within 24 hours.
 			<br />No spam. No hard sell. Just an honest conversation.
 		</p>

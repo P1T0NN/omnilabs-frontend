@@ -16,7 +16,7 @@
 				Your next customer is one website away.
 			</h2>
 
-			<p class="mb-12 max-w-xl text-lg text-neutral-400">
+			<p class="mb-12 max-w-xl text-lg text-neutral-600">
 				Whether you need a high-converting micro-site or a full enterprise platform, we're ready to build the website your business actually deserves.
 			</p>
 
