@@ -194,7 +194,7 @@
 							<div class="flex w-full items-center justify-between">
 								<span
 									class="font-sans text-sm font-bold uppercase {enterprisePartnershipSelected
-										? 'text-primary'
+										? 'text-primary-soft'
 										: 'text-neutral-400'}"
 								>
 									Ongoing Retainer

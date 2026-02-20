@@ -19,6 +19,8 @@
   --primary: oklch(0.50 0.20 27);
   --primary-foreground: oklch(0.99 0 0);
   --primary-hover: oklch(0.40 0.18 27);
+  /* Lighter primary for dark backgrounds (WCAG contrast) */
+  --primary-soft: oklch(0.70 0.20 27);
   
   /* Secondary - Warm Stone / Surface Alt */
   --secondary: oklch(0.915 0.006 95);
@@ -155,6 +157,7 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary-hover: var(--primary-hover);
+  --color-primary-soft: var(--primary-soft);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);

@@ -32,7 +32,7 @@
 		<span
 			class="mb-3 inline-block font-sans text-xs font-bold tracking-widest uppercase {variant === 'light'
 				? 'text-primary'
-				: 'text-primary'}"
+				: 'text-primary-soft'}"
 		>
 			{label}
 		</span>
