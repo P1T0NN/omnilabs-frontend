@@ -7,7 +7,7 @@
 	<div class="container mx-auto flex flex-1 items-center max-w-7xl px-6 md:px-12 lg:px-24">
 		<div class="flex w-full flex-col items-center justify-center py-20 text-center hero-content">
 			<h1
-				class="mb-8 font-sans text-7xl leading-[0.85] font-black uppercase md:text-9xl hero-headline"
+				class="mb-8 font-sans text-7xl leading-[0.85] font-black uppercase md:text-9xl"
 			>
 				Websites <br />
 				That <br />
