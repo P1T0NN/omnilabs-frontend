@@ -10,7 +10,7 @@
 			client: 'Real Estate',
 			description:
 				'Full booking platform — apartment listings, reservation management, and owner dashboard. Bookings increased within the first month of launch.',
-			img: '/home/bgapartman-website.png',
+			img: '/home/opt/bgapartman-website-960w.webp',
 			href: 'https://www.bgapartman.com',
 			class: 'md:col-span-7'
 		},
@@ -20,7 +20,7 @@
 			issue: 'No. 02',
 			client: 'Direct Marketing',
 			description: 'High-converting web presence for a direct marketing company operating across multiple markets.',
-			img: '/home/followus-website.png',
+			img: '/home/opt/followus-website-960w.webp',
 			href: 'https://followusnyc.com',
 			class: 'md:col-span-5 md:mt-16'
 		},
@@ -30,7 +30,7 @@
 			issue: 'No. 03',
 			client: 'UGC',
 			description: 'The Leading UGC Company in whole Balkans',
-			img: '/home/kontentkolektiv-website.png',
+			img: '/home/opt/kontentkolektiv-website-960w.webp',
 			href: '#',
 			class: 'md:col-span-8 md:col-start-3 md:mt-12'
 		}

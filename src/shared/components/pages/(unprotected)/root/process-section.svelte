@@ -42,7 +42,7 @@
 
         <div class="grid grid-cols-1 gap-0 md:grid-cols-4">
             {#each steps as step, i}
-                <div use:reveal={{ delay: i * 120 }} class="group relative border-t-2 border-black pt-8 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : ''}">
+                <div use:reveal={{ delay: i * 120 }} class="group relative border-t-2 border-black pt-8 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : ''} {i === 0 ? 'z-40' : i === 1 ? 'z-30' : i === 2 ? 'z-20' : ''}">
                     <span class="mb-4 block font-sans text-5xl font-black text-neutral-400 transition-colors group-hover:text-primary">
                         {step.number}
                     </span>
@@ -54,7 +54,7 @@
                     </p>
 
                     {#if i < steps.length - 1}
-                        <div class="absolute -right-3 top-8 z-10 hidden h-6 w-6 items-center justify-center bg-background md:flex">
+                        <div class="absolute -right-3 top-8 z-20 isolate hidden h-6 w-6 items-center justify-center bg-background md:flex">
                             <ArrowRight class="h-4 w-4 text-primary" />
                         </div>
                     {/if}

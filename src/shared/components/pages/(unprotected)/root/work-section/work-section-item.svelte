@@ -1,6 +1,7 @@
 <script lang="ts">
 	// UTILS
 	import { reveal } from '@/shared/actions/reveal';
+	import { QualityImage } from '@/shared/components/ui/quality-image';
 
 	// LUCIDE ICONS
 	import ArrowUpRight from '@lucide/svelte/icons/arrow-up-right';
@@ -17,6 +18,18 @@
 	}
 
 	let { id, title, issue, client, description, img, href, class: className = '' }: Props = $props();
+
+	// Derive srcset for optimized /home/opt/*-960w.webp images
+	const srcset = $derived(
+		img.includes('/home/opt/') && img.endsWith('-960w.webp')
+			? img.replace(/-960w\.webp$/, '-640w.webp') +
+				' 640w, ' +
+				img +
+				' 960w, ' +
+				img.replace(/-960w\.webp$/, '-1280w.webp') +
+				' 1280w'
+			: undefined
+	);
 </script>
 
 {#if href}
@@ -42,9 +55,13 @@
 			></div>
 
 			<div class="relative aspect-video overflow-hidden border-2 border-white/20 bg-neutral-900">
-				<img
+				<QualityImage
 					src={img}
 					alt={title}
+					srcset={srcset}
+					sizes="(min-width: 768px) 50vw, 100vw"
+					width={1280}
+					height={720}
 					class="h-full w-full object-contain transition-all duration-700 group-hover:scale-105"
 				/>
 
@@ -97,9 +114,13 @@
 
 			<!-- Image -->
 			<div class="relative aspect-video overflow-hidden border-2 border-white/20 bg-neutral-900">
-				<img
+				<QualityImage
 					src={img}
 					alt={title}
+					srcset={srcset}
+					sizes="(min-width: 768px) 50vw, 100vw"
+					width={1280}
+					height={720}
 					class="h-full w-full object-contain transition-all duration-700 group-hover:scale-105"
 				/>
 

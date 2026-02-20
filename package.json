@@ -10,6 +10,7 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"optimize-images": "node scripts/optimize-images.mjs",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint ."
 	},
@@ -33,6 +34,7 @@
 		"prettier": "^3.7.4",
 		"prettier-plugin-svelte": "^3.4.0",
 		"prettier-plugin-tailwindcss": "^0.7.2",
+		"sharp": "^0.34.5",
 		"svelte": "^5.45.6",
 		"svelte-check": "^4.3.4",
 		"svelte-sonner": "^1.0.7",

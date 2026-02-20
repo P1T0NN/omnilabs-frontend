@@ -8,7 +8,7 @@
   --radius: 0.625rem;
   
   /* Base Colors - Light Mode */
-  --background: oklch(0.965 0.005 95);
+  --background: oklch(0.99 0 0);
   --foreground: oklch(0.15 0.01 30);
   --card: oklch(0.99 0 0);
   --card-foreground: oklch(0.10 0.01 30);
@@ -198,5 +198,29 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+/* Hero entrance: visible from first paint (LCP-friendly), slide-up uses transform only */
+@keyframes hero-slide-up {
+  from {
+    opacity: 0.96;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-headline {
+  animation: hero-slide-up 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.hero-quote {
+  animation: hero-slide-up 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s forwards;
+}
+
+.hero-cta {
+  animation: hero-slide-up 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
 }
 
