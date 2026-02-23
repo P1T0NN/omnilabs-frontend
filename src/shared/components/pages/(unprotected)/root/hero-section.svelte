@@ -9,15 +9,15 @@
 			<h1
 				class="mb-8 font-sans text-7xl leading-[0.85] font-black uppercase md:text-9xl"
 			>
-				Websites <br />
-				That <br />
-				<span class="font-serif text-primary lowercase italic">sell.</span>
+				Digital <br />
+				Products <br />
+				<span class="font-serif text-primary lowercase italic">That sell.</span>
 			</h1>
 
 			<div class="mb-10 max-w-xl border-l-4 border-primary py-2 pl-6 text-left hero-quote">
 				<p class="text-xl leading-tight text-neutral-600 italic md:text-2xl">
-					"We combine marketing strategy with engineering precision to build websites that don't
-					just look good — they turn visitors into customers. From focused micro-sites to full-scale enterprise platforms."
+					"We combine marketing strategy with engineering precision to build digital products that don't
+					just look good — they turn visitors into customers. Web platforms, mobile apps, or both — built to convert."
 				</p>
 			</div>
 

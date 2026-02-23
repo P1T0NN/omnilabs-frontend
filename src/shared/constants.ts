@@ -3,7 +3,7 @@ export const COMPANY_DATA = {
     ADDRESS: 'Valencia, Spain',
     PHONE: '+34 666 666 666',
     EMAIL: 'contact@example.com',
-    DESCRIPTION: 'We are a web development company that specializes in creating websites for businesses.',
+    DESCRIPTION: 'We are a digital product agency that builds websites and mobile apps that convert visitors into customers.',
 }
 
 export const CONTACT_INFORMATIONS = {

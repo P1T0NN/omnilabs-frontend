@@ -13,11 +13,11 @@
 	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
 		<div use:reveal class="flex flex-col items-center text-center">
 			<h2 class="mb-8 max-w-3xl font-serif text-5xl italic leading-tight md:text-7xl">
-				Your next customer is one website away.
+				Your next customer is one product away.
 			</h2>
 
 			<p class="mb-12 max-w-xl text-lg text-neutral-600">
-				Whether you need a high-converting micro-site or a full enterprise platform, we're ready to build the website your business actually deserves.
+				Whether you need a high-converting Micro-Launch or a full enterprise platform, we're ready to build the digital product your business actually deserves.
 			</p>
 
 			<a

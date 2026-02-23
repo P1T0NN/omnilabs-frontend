@@ -81,7 +81,7 @@
 					class="w-full appearance-none bg-neutral-50 border-2 border-black rounded-none p-4 pr-12 font-sans text-black focus:border-primary focus:ring-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] focus:shadow-[4px_4px_0px_0px_var(--primary)] transition-all duration-200"
 				>
 					<option value="" disabled selected>Select project type</option>
-					<option value="micro-site">Micro-Site (single page)</option>
+					<option value="micro-launch">Micro-Launch (single page / MVP)</option>
 					<option value="enterprise">Enterprise (multi-page platform)</option>
 					<option value="unsure">Not sure yet</option>
 				</select>

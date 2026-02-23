@@ -10,7 +10,7 @@
     const faqs = [
         {
             question: 'How long does a project typically take?',
-            answer: 'Micro-sites are usually delivered within 2–3 weeks. Enterprise projects vary based on scope, but most launch within 6–10 weeks. We\'ll give you a clear timeline on the strategy call.'
+            answer: 'Micro-Launches are usually delivered within 2–3 weeks. Enterprise projects vary based on scope, but most launch within 6–10 weeks. We\'ll give you a clear timeline on the strategy call.'
         },
         {
             question: 'What if I need changes after launch?',

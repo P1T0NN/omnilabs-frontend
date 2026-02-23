@@ -19,7 +19,7 @@
                 </span>
                 <h2 class="mb-8 text-5xl font-bold md:text-6xl">We Engineer Conversions.</h2>
                 <p class="mb-8 font-sans text-xl leading-relaxed text-neutral-600">
-                    We don't just build websites. We apply CEO-level marketing expertise so every page is
+                    We don't just build digital products. We apply CEO-level marketing expertise so every page and screen is
                     engineered for maximum potential to convert visitors into customers.
                 </p>
                 <p class="mb-8 font-sans text-lg leading-relaxed text-neutral-600">
@@ -89,7 +89,7 @@
                 <div class="border-2 border-black bg-white p-6">
                     <p class="mb-3 font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">Stack chosen for your needs, not ours</p>
                     <div class="flex flex-wrap gap-2">
-                        {#each ['SvelteKit', 'TypeScript', 'PostgreSQL', 'Rust'] as tech}
+                        {#each ['SvelteKit', 'TypeScript', 'React Native', 'PostgreSQL', 'Rust'] as tech}
                             <span class="border border-black px-3 py-1 font-sans text-xs font-bold uppercase tracking-widest">{tech}</span>
                         {/each}
                     </div>

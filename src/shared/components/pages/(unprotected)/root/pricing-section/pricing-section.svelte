@@ -18,7 +18,7 @@
 			>
 			<h2 class="mb-4 font-serif text-6xl italic md:text-8xl">Two paths. No middle.</h2>
 			<p class="mx-auto max-w-2xl font-sans text-lg text-neutral-600">
-				We either build you a focused, high-converting micro-site or architect a full-scale digital
+				We either build you a focused, high-converting Micro-Launch or architect a full-scale digital
 				platform. We don't do "medium". Every project is a one-time investment with the option to
 				add ongoing partnership.
 			</p>
@@ -31,9 +31,9 @@
 		</div>
 
 		<div class="grid grid-cols-1 items-start gap-12 md:grid-cols-2">
-			<!-- Micro-Site -->
+			<!-- Micro-Launch -->
 			<PricingCard
-				title="Micro-Site"
+				title="Micro-Launch"
 				subtitle="One page. Maximum impact."
 				label="For focused brands"
 				variant="light"

@@ -20,7 +20,7 @@
 
 	<p class="mb-12 max-w-md font-sans text-lg text-neutral-600 leading-relaxed">
 		We cap client intake deliberately — because every project deserves our full focus. If you're
-		serious about building a website that actually grows your business, fill out the form and we'll
+		serious about building a digital product that actually grows your business, fill out the form and we'll
 		respond within 24 hours.
 	</p>
 

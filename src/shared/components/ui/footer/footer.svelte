@@ -8,7 +8,7 @@
             <div class="col-span-2">
                 <h2 class="text-4xl font-bold mb-6 text-primary-soft uppercase tracking-tight">{COMPANY_DATA.NAME}</h2>
                 <p class="max-w-sm text-neutral-400 leading-relaxed">
-                    We build websites that convert visitors into customers — combining CEO-level marketing strategy with senior engineering and security expertise.
+                    We build digital products that convert visitors into customers — combining CEO-level marketing strategy with senior engineering and security expertise.
                 </p>
             </div>
             <div>
