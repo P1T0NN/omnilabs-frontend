@@ -1,5 +1,5 @@
 export const COMPANY_DATA = {
-    NAME: 'Company Name',
+    NAME: 'OmniLabs',
     ADDRESS: 'Valencia, Spain',
     PHONE: '+34 666 666 666',
     EMAIL: 'contact@example.com',
