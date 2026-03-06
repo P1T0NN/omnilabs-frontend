@@ -1,6 +1,11 @@
 <script lang="ts">
+	// COMPONENTS
+	import WordChange from '@/shared/components/ui/animations/word-change.svelte';
+
 	// LUCIDE ICONS
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+
+	const heroPhrases = ['That sell.', 'That convert.', 'That scale.', 'That sell.'] as const;
 </script>
 
 <section class="relative flex min-h-screen flex-col justify-between pt-20">
@@ -11,7 +16,9 @@
 			>
 				Digital <br />
 				Products <br />
-				<span class="font-serif text-primary lowercase italic">That sell.</span>
+				<span class="font-serif text-primary lowercase italic">
+					<WordChange words={heroPhrases} />
+				</span>
 			</h1>
 
 			<div class="mb-10 max-w-xl border-l-4 border-primary py-2 pl-6 text-left hero-quote">

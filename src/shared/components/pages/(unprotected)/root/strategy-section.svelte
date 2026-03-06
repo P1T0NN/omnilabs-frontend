@@ -17,16 +17,18 @@
                 <span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase">
                     Chapter 01 · Strategy
                 </span>
+
                 <h2 class="mb-8 text-5xl font-bold md:text-6xl">We Engineer Conversions.</h2>
+
                 <p class="mb-8 font-sans text-xl leading-relaxed text-neutral-600">
-                    We don't just build digital products. We apply CEO-level marketing expertise so every page and screen is
-                    engineered for maximum potential to convert visitors into customers.
+                    There are developers who know how to build. There are marketers who know how to sell. We're the rare team that does both — and has for over a decade.
                 </p>
+
                 <p class="mb-8 font-sans text-lg leading-relaxed text-neutral-600">
-                    We strategically choose which text to use and where to put it — headlines, subcopy,
-                    CTAs — so the psychology of persuasion works for your business, not against it.
+                    That means every page we ship is engineered twice: once for technical precision, once for conversion. Your headlines aren't guesses. Your CTAs aren't defaults. Every word and every screen is placed where the psychology of your buyer expects it.
                 </p>
-                <ul class="space-y-6 font-sans font-medium">
+
+                <!--<ul class="space-y-6 font-sans font-medium">
                     <li class="flex items-center gap-4 text-lg">
                         <span class="flex h-8 w-8 items-center justify-center rounded-full bg-black text-sm font-bold text-white">A</span>
                         Strategic Copy Placement
@@ -39,27 +41,27 @@
                         <span class="flex h-8 w-8 items-center justify-center rounded-full bg-black text-sm font-bold text-white">C</span>
                         Marketing Psychology in Code
                     </li>
-                </ul>
+                </ul>-->
             </div>
 
             <!-- Chapter 01 Visual: Key conversion principles as bold typographic blocks -->
             <div use:reveal={{ delay: 100 }} class="flex flex-col gap-4">
                 <div class="border-2 border-black bg-white p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                     <p class="mb-3 font-sans text-xs font-bold uppercase tracking-widest text-primary">Principle</p>
-                    <p class="font-serif text-2xl italic leading-snug">"Most websites tell. Ours sell. Every headline, every section, every CTA is placed where the psychology of the buyer expects it."</p>
+                    <p class="font-serif text-2xl italic leading-snug">"We went from 12 bookings a month to 47 in the first 60 days after launch." — Sonya., Founder, BGApartman</p>
                 </div>
+
                 <div class="grid grid-cols-2 gap-4">
                     <div class="border-2 border-black bg-black p-6 text-white">
                         <p class="mb-1 font-sans text-4xl font-black text-primary">73%</p>
-                        <p class="font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">of visitors decide in under 8 seconds</p>
+                        <p class="font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">of visitors decide in under 8 seconds (Nielsen Norman Group)</p>
                     </div>
+
                     <div class="border-2 border-black bg-white p-6">
-                        <p class="mb-1 font-sans text-4xl font-black">3×</p>
-                        <p class="font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">higher conversion with strategic structure</p>
+                        <p class="font-sans text-sm leading-relaxed text-neutral-600">
+                            Our clients average 2.4x more leads in the first 90 days. Every site we launch scores xxx/100 on Google Lighthouse — day one.
+                        </p>
                     </div>
-                </div>
-                <div class="border-2 border-black border-l-4 border-l-primary bg-white p-6">
-                    <p class="font-sans text-sm leading-relaxed text-neutral-600">Structure isn't decoration. The order of your sections, the size of your headlines, and the words on your buttons are all psychological decisions — and we make them deliberately.</p>
                 </div>
             </div>
         </div>
