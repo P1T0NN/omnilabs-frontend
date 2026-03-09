@@ -48,9 +48,11 @@
                 <span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase">
                     FAQ
                 </span>
+
                 <h2 class="mb-4 font-serif text-5xl italic md:text-6xl">
                     Questions?
                 </h2>
+
                 <p class="font-sans text-lg text-neutral-600">
                     Everything you need to know before we start working together.
                 </p>
@@ -74,6 +76,7 @@
                                 {/if}
                             </div>
                         </button>
+                        
                         {#if openIndex === i}
                             <div transition:slide={{ duration: 300 }} class="pb-6">
                                 <p class="font-sans leading-relaxed text-neutral-600">

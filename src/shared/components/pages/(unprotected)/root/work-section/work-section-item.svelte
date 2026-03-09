@@ -19,7 +19,6 @@
 
 	let { id, title, issue, client, description, img, href, class: className = '' }: Props = $props();
 
-	// Derive srcset for optimized /home/opt/*-960w.webp images
 	const srcset = $derived(
 		img.includes('/home/opt/') && img.endsWith('-960w.webp')
 			? img.replace(/-960w\.webp$/, '-640w.webp') +
@@ -40,7 +39,6 @@
 		use:reveal
 		class="group relative flex flex-col {className}"
 	>
-		<!-- Top Meta -->
 		<div
 			class="mb-2 flex items-center justify-between font-mono text-xs tracking-widest text-neutral-400 uppercase"
 		>
@@ -48,8 +46,8 @@
 			<span>{client}</span>
 		</div>
 
-		<!-- Image Container with "Rough" Offset Border -->
-		<div class="relative">
+			<!-- Image Container with "Rough" Offset Border -->
+			<div class="relative">
 			<div
 				class="absolute -right-3 -top-3 h-full w-full border-2 border-white/20 bg-transparent transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
 			></div>
@@ -97,7 +95,6 @@
 	</a>
 {:else}
 	<div use:reveal class="group relative flex flex-col {className}">
-		<!-- Top Meta -->
 		<div
 			class="mb-2 flex items-center justify-between font-mono text-xs tracking-widest text-neutral-400 uppercase"
 		>
@@ -105,14 +102,11 @@
 			<span>{client}</span>
 		</div>
 
-		<!-- Image Container with "Rough" Offset Border -->
 		<div class="relative">
-			<!-- Decorative Offset Border -->
 			<div
 				class="absolute -right-3 -top-3 h-full w-full border-2 border-white/20 bg-transparent transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
 			></div>
 
-			<!-- Image -->
 			<div class="relative aspect-video overflow-hidden border-2 border-white/20 bg-neutral-900">
 				<QualityImage
 					src={img}
@@ -124,7 +118,6 @@
 					class="h-full w-full object-contain transition-all duration-700 group-hover:scale-105"
 				/>
 
-				<!-- Hover Overlay with Issue No -->
 				<div
 					class="absolute inset-0 flex items-center justify-center bg-primary/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 mix-blend-multiply"
 				>
@@ -137,7 +130,6 @@
 			</div>
 		</div>
 
-		<!-- Bottom Info -->
 		<div class="mt-6 flex items-start justify-between gap-4 border-t border-white/20 pt-4">
 			<div class="min-w-0 flex-1">
 				<h3

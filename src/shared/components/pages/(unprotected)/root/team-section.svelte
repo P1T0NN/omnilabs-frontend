@@ -25,7 +25,7 @@
 		</div>
 
 		<div class="grid grid-cols-1 gap-12 md:grid-cols-2">
-			{#each team as member}
+			{#each team as member (member.name)}
 				<div class="group border-2 border-black bg-white p-8">
 						<span
 							class="mb-2 block font-sans text-sm font-bold tracking-widest text-primary uppercase"

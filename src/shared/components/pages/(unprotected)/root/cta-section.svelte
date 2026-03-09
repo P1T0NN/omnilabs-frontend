@@ -22,10 +22,10 @@
 
 			<a
 				href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
-				class="group inline-flex h-16 min-w-[280px] items-center justify-center bg-white px-12 font-sans text-xl font-bold tracking-widest uppercase text-black transition-colors hover:bg-primary hover:text-white"
+				class="group inline-flex h-14 min-w-[280px] items-center justify-center gap-2 bg-white px-10 font-sans text-base font-bold tracking-widest uppercase text-black transition-colors hover:bg-primary hover:text-white"
 			>
 				Start a Project
-				<ArrowRight class="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
+				<ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
 			</a>
 		</div>
 	</div>

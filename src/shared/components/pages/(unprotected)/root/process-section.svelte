@@ -35,6 +35,7 @@
             <span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase">
                 How It Works
             </span>
+
             <h2 class="font-serif text-5xl italic md:text-7xl">
                 From call to launch.
             </h2>
@@ -42,13 +43,15 @@
 
         <div class="grid grid-cols-1 gap-0 md:grid-cols-4">
             {#each steps as step, i}
-                <div use:reveal={{ delay: i * 120 }} class="group relative border-t-2 border-black pt-8 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : ''} {i === 0 ? 'z-40' : i === 1 ? 'z-30' : i === 2 ? 'z-20' : ''}">
+                <div use:reveal={{ delay: i * 120 }} class="group relative border-t-2 border-black py-8 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : ''} {i === 0 ? 'z-40' : i === 1 ? 'z-30' : i === 2 ? 'z-20' : ''}">
                     <span class="mb-4 block font-sans text-5xl font-black text-neutral-600 transition-colors group-hover:text-primary">
                         {step.number}
                     </span>
+
                     <h3 class="mb-3 font-sans text-xl font-bold uppercase">
                         {step.title}
                     </h3>
+                    
                     <p class="font-sans text-sm leading-relaxed text-neutral-600">
                         {step.description}
                     </p>

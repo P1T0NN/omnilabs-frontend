@@ -1,6 +1,6 @@
 <script lang="ts">
 	// CONFIG
-	import { COMPANY_DATA, UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
+	import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
 
 	// CLASSES
 	import { headerClass } from './header.svelte.ts';
@@ -8,6 +8,8 @@
 	// LUCIDE ICONS
 	import MenuIcon from '@lucide/svelte/icons/menu';
 	import XIcon from '@lucide/svelte/icons/x';
+	import HeaderMobile from './header-mobile.svelte';
+	import Logo from '../logo/logo.svelte';
 
 	function handleScroll() {
 		headerClass.scrolled = window.scrollY > 20;
@@ -45,15 +47,10 @@
 			? 'bg-background/88 backdrop-blur-xl border border-black/8 shadow-[0_8px_40px_rgba(0,0,0,0.08)]'
 			: 'bg-background/50 backdrop-blur-lg border border-black/5'}"
 	>
-		<!-- Logo -->
-		<a href="/" class="flex shrink-0 items-center">
-			<span class="text-2xl font-black tracking-tighter font-sans text-foreground"
-				>Omni<span class="text-primary">labs</span></span
-			>
-		</a>
+		<Logo />
 
 		<div class="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
-			{#each navLinks as link}
+			{#each navLinks as link (link.href)}
 				<a
 					href={link.href}
 					class="px-4 py-2 text-[0.82rem] font-bold uppercase tracking-widest text-neutral-600 hover:text-foreground hover:bg-black/4 rounded-xl transition-all duration-150"
@@ -86,31 +83,6 @@
 	</div>
 </nav>
 
-<!-- Mobile overlay menu -->
 {#if headerClass.mobileOpen}
-	<div class="fixed inset-0 z-40 flex flex-col bg-background/95 backdrop-blur-xl pt-24 px-6 pb-10">
-		<!-- Nav links -->
-		<div class="flex flex-col gap-1 mb-8">
-			{#each navLinks as link}
-				<a
-					href={link.href}
-					onclick={() => (headerClass.mobileOpen = false)}
-					class="px-4 py-4 text-lg font-bold uppercase tracking-widest text-neutral-600 hover:text-foreground hover:bg-black/3 rounded-xl transition-all duration-150 border-b border-black/6 last:border-none"
-				>
-					{link.label}
-				</a>
-			{/each}
-		</div>
-
-		<!-- Mobile CTA -->
-		<div class="mt-auto">
-			<a
-				href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
-				onclick={() => (headerClass.mobileOpen = false)}
-				class="flex items-center justify-center rounded-2xl bg-primary px-6 py-4 text-base font-bold text-white uppercase tracking-widest hover:bg-primary-hover transition-all duration-150"
-			>
-				Start a Project
-			</a>
-		</div>
-	</div>
+	<HeaderMobile navLinks={navLinks} />
 {/if}

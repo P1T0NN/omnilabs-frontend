@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
 	interface Props {
 		title: string;
@@ -50,11 +49,10 @@
 
 	<a
 		{href}
-		class="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-none font-sans text-lg font-bold tracking-widest uppercase transition-colors {variant === 'light'
+		class="inline-flex h-12 w-full items-center justify-center rounded-none font-sans text-sm font-bold tracking-widest uppercase transition-colors text-center {variant === 'light'
 			? 'bg-black text-white hover:bg-primary'
 			: 'bg-white text-black hover:bg-primary hover:text-white'}"
 	>
 		{buttonText}
-		<ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
 	</a>
 </div>

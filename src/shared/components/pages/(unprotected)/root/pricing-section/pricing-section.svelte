@@ -31,7 +31,6 @@
 		</div>
 
 		<div class="grid grid-cols-1 items-start gap-12 md:grid-cols-2">
-			<!-- Micro-Launch -->
 			<PricingCard
 				title="Micro-Launch"
 				subtitle="One page. Maximum impact."
@@ -44,21 +43,23 @@
 						<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 						<span>Strategic single-page architecture</span>
 					</li>
+
 					<li class="flex items-center gap-3">
 						<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 						<span>Psychologically optimized layout</span>
 					</li>
+
 					<li class="flex items-center gap-3">
 						<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 						<span>Blazing-fast performance (We choose the best technology based on your needs)</span>
 					</li>
+
 					<li class="flex items-center gap-3">
 						<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 						<span>SEO & mobile optimized</span>
 					</li>
 				</ul>
 
-				<!-- Partnership Toggle -->
 				<div class="mb-8 border-t border-neutral-200 pt-8">
 					<h4 class="mb-4 font-sans text-xs font-bold tracking-widest uppercase text-neutral-600">
 						After Delivery
@@ -115,7 +116,6 @@
 						</button>
 					</div>
 
-					<!-- Benefits -->
 					<div class="mt-6 space-y-2.5 font-sans text-sm">
 						<div class="flex items-center gap-3">
 							{#if partnershipSelected}
@@ -123,26 +123,31 @@
 							{:else}
 								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
+
 							<span class={partnershipSelected ? 'text-black' : 'text-neutral-600 line-through'}>
 								Unlimited text & content updates
 							</span>
 						</div>
+
 						<div class="flex items-center gap-3">
 							{#if partnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 							{:else}
 								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
+
 							<span class={partnershipSelected ? 'text-black' : 'text-neutral-600 line-through'}>
 								Small design & layout adjustments
 							</span>
 						</div>
+
 						<div class="flex items-center gap-3">
 							{#if partnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 							{:else}
 								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
+
 							<span class={partnershipSelected ? 'text-black' : 'text-neutral-600 line-through'}>
 								Minor functionality changes
 							</span>
@@ -151,7 +156,6 @@
 				</div>
 			</PricingCard>
 
-			<!-- Enterprise -->
 			<PricingCard
 				title="Enterprise"
 				subtitle="Full-scale digital dominance."
@@ -164,21 +168,23 @@
 						<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 						<span>Multi-page custom architecture</span>
 					</li>
+
 					<li class="flex items-center gap-3">
 						<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 						<span>Deep conversion strategy & user profiling</span>
 					</li>
+
 					<li class="flex items-center gap-3">
 						<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 						<span>Advanced interactions & animations</span>
 					</li>
+
 					<li class="flex items-center gap-3">
 						<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 						<span>Complete brand identity integration</span>
 					</li>
 				</ul>
 
-				<!-- Partnership Toggle -->
 				<div class="mb-8 border-t border-neutral-800 pt-8">
 					<h4 class="mb-4 font-sans text-xs font-bold tracking-widest uppercase text-neutral-400">
 						After Delivery
@@ -199,8 +205,10 @@
 								>
 									Ongoing Retainer
 								</span>
+
 								<span class="font-sans text-xs font-bold text-neutral-400">Monthly</span>
 							</div>
+
 							<p class="text-sm text-neutral-400">
 								All changes covered. Predictable costs. No surprises.
 							</p>
@@ -229,13 +237,13 @@
 									Per-Request
 								</span>
 							</div>
+
 							<p class="text-sm text-neutral-400">
 								Every change billed separately. With complex multi-page sites, costs add up fast — most clients end up paying significantly more this way.
 							</p>
 						</button>
 					</div>
 
-					<!-- Benefits -->
 					<div class="mt-6 space-y-2.5 font-sans text-sm">
 						<div class="flex items-center gap-3">
 							{#if enterprisePartnershipSelected}
@@ -243,26 +251,31 @@
 							{:else}
 								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
+
 							<span class={enterprisePartnershipSelected ? 'text-white' : 'text-neutral-400 line-through'}>
 								Unlimited changes across all pages & features
 							</span>
 						</div>
+
 						<div class="flex items-center gap-3">
 							{#if enterprisePartnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 							{:else}
 								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
+
 							<span class={enterprisePartnershipSelected ? 'text-white' : 'text-neutral-400 line-through'}>
 								Priority support & fast turnaround
 							</span>
 						</div>
+
 						<div class="flex items-center gap-3">
 							{#if enterprisePartnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 							{:else}
 								<XIcon class="h-4 w-4 shrink-0 text-neutral-500" />
 							{/if}
+							
 							<span class={enterprisePartnershipSelected ? 'text-white' : 'text-neutral-400 line-through'}>
 								Predictable monthly spend
 							</span>

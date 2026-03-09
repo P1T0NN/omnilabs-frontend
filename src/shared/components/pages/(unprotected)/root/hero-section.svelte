@@ -1,23 +1,27 @@
 <script lang="ts">
+	// CONFIG
+	import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
+
 	// COMPONENTS
 	import WordChange from '@/shared/components/ui/animations/word-change.svelte';
+	import TrustedBySection from '@/shared/components/pages/(unprotected)/root/trusted-by-section.svelte';
 
 	// LUCIDE ICONS
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
-	const heroPhrases = ['That sell.', 'That convert.', 'That scale.', 'That sell.'] as const;
+	const heroPhrases = ['sell.', 'convert.', 'scale.'] as const;
 </script>
 
-<section class="relative flex min-h-screen flex-col justify-between pt-20">
+<section class="relative flex min-h-screen flex-col justify-between pt-12 md:pt-20 overflow-hidden">
 	<div class="container mx-auto flex flex-1 items-center max-w-7xl px-6 md:px-12 lg:px-24">
-		<div class="flex w-full flex-col items-center justify-center py-20 text-center hero-content">
+		<div class="flex w-full flex-col items-center justify-center py-10 md:py-20 text-center hero-content">
 			<h1
-				class="mb-8 font-sans text-7xl leading-[0.85] font-black uppercase md:text-9xl"
+				class="mb-8 font-sans text-5xl leading-[0.85] font-black uppercase md:text-7xl lg:text-9xl"
 			>
 				Digital <br />
 				Products <br />
 				<span class="font-serif text-primary lowercase italic">
-					<WordChange words={heroPhrases} />
+					That <WordChange words={heroPhrases} />
 				</span>
 			</h1>
 
@@ -30,8 +34,8 @@
 
 			<div class="hero-cta">
 				<a
-					href="/contact"
-					class="group inline-flex h-14 items-center justify-center rounded-none bg-black px-10 font-sans text-lg font-bold tracking-widest uppercase text-white transition-colors hover:bg-primary"
+					href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
+					class="group inline-flex h-14 items-center justify-center rounded-none bg-black px-10 font-sans text-md font-bold tracking-widest uppercase text-white transition-colors hover:bg-primary"
 				>
 					Book a Strategy Call
 					<ArrowRight class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -40,28 +44,5 @@
 		</div>
 	</div>
 
-	<!-- Logos Footer -->
-	<div class="border-t border-neutral-200 py-6">
-		<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-			<div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 md:gap-x-16">
-				<span class="font-sans text-xs font-bold tracking-widest text-neutral-600 uppercase">Trusted by</span>
-				<a href="https://www.bgapartman.com" target="_blank" rel="noopener noreferrer"
-					class="font-sans text-lg font-black tracking-tight text-neutral-600 uppercase transition-colors hover:text-black md:text-xl">
-					BGApartman
-				</a>
-				<a href="https://followusnyc.com" target="_blank" rel="noopener noreferrer"
-					class="font-sans text-lg font-black tracking-tight text-neutral-600 uppercase transition-colors hover:text-black md:text-xl">
-					FollowUs
-				</a>
-				<a href="https://www.kontentkolektiv.com" target="_blank" rel="noopener noreferrer"
-					class="font-sans text-lg font-black tracking-tight text-neutral-600 uppercase transition-colors hover:text-black md:text-xl">
-					Kontent Kolektiv
-				</a>
-				<a href="https://www.crys-sports.com" target="_blank" rel="noopener noreferrer"
-					class="font-sans text-lg font-black tracking-tight text-neutral-600 uppercase transition-colors hover:text-black md:text-xl">
-					Crys Sports
-				</a>
-			</div>
-		</div>
-	</div>
+	<TrustedBySection />
 </section>

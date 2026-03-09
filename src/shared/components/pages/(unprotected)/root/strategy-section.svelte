@@ -8,10 +8,8 @@
     // Be aware these are real numbers — not made up.
 </script>
 
-<section id="narrative" class="py-32">
+<section id="narrative" class="py-16 md:py-24 lg:py-32">
     <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-
-        <!-- Chapter 01 -->
         <div class="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
             <div use:reveal class="lg:sticky lg:top-32 lg:h-fit">
                 <span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase">
@@ -69,30 +67,30 @@
         <!-- Chapter 02 -->
         <div class="mt-32 grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
             <!-- Chapter 02 Visual: Performance metrics -->
-            <div use:reveal class="order-2 flex flex-col gap-4 lg:order-1">
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="border-2 border-black bg-black p-6 text-center text-white">
+            <div use:reveal class="order-2 flex min-w-0 flex-col gap-4 lg:order-1">
+                <div class="grid min-w-0 grid-cols-2 gap-4 sm:grid-cols-3">
+                    <div class="min-w-0 overflow-hidden border-2 border-black bg-black p-4 text-center text-white sm:p-6">
                         <p class="font-sans text-3xl font-black text-primary">100</p>
-                        <p class="mt-1 font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">Performance</p>
+                        <p class="mt-1 wrap-break-words font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">Performance</p>
                     </div>
-                    <div class="border-2 border-black bg-black p-6 text-center text-white">
+                    <div class="min-w-0 overflow-hidden border-2 border-black bg-black p-4 text-center text-white sm:p-6">
                         <p class="font-sans text-3xl font-black text-primary">100</p>
-                        <p class="mt-1 font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">SEO</p>
+                        <p class="mt-1 wrap-break-words font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">SEO</p>
                     </div>
-                    <div class="border-2 border-black bg-black p-6 text-center text-white">
+                    <div class="min-w-0 col-span-2 overflow-hidden border-2 border-black bg-black p-4 text-center text-white sm:col-span-1 sm:p-6">
                         <p class="font-sans text-3xl font-black text-primary">100</p>
-                        <p class="mt-1 font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">Best Practices</p>
+                        <p class="mt-1 wrap-break-words font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">Best Practices</p>
                     </div>
                 </div>
-                <div class="border-2 border-black bg-white p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <div class="min-w-0 overflow-hidden border-2 border-black bg-white p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:p-8">
                     <p class="mb-3 font-sans text-xs font-bold uppercase tracking-widest text-primary">Why It Matters</p>
-                    <p class="font-sans leading-relaxed text-neutral-600">A 1-second delay in page load time reduces conversions by 7%. We build for perfect Lighthouse scores — not as a vanity metric, but because speed is the cheapest conversion optimization you can do.</p>
+                    <p class="wrap-break-words font-sans leading-relaxed text-neutral-600">A 1-second delay in page load time reduces conversions by 7%. We build for perfect Lighthouse scores — not as a vanity metric, but because speed is the cheapest conversion optimization you can do.</p>
                 </div>
-                <div class="border-2 border-black bg-white p-6">
-                    <p class="mb-3 font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">Stack chosen for your needs, not ours</p>
-                    <div class="flex flex-wrap gap-2">
+                <div class="min-w-0 overflow-hidden border-2 border-black bg-white p-4 sm:p-6">
+                    <p class="mb-3 wrap-break-words font-sans text-xs font-bold uppercase tracking-widest text-neutral-600">Stack chosen for your needs, not ours</p>
+                    <div class="flex min-w-0 flex-wrap gap-2">
                         {#each ['SvelteKit', 'TypeScript', 'React Native', 'PostgreSQL', 'Rust'] as tech}
-                            <span class="border border-black px-3 py-1 font-sans text-xs font-bold uppercase tracking-widest">{tech}</span>
+                            <span class="wrap-break-words border border-black px-3 py-1 font-sans text-xs font-bold uppercase tracking-widest">{tech}</span>
                         {/each}
                     </div>
                 </div>
@@ -169,6 +167,7 @@
             <div use:reveal={{ delay: 100 }} class="flex flex-col gap-4">
                 <div class="border-2 border-black bg-white p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                     <p class="mb-6 font-sans text-xs font-bold uppercase tracking-widest text-primary">Security Audit Checklist</p>
+                    
                     <ul class="space-y-3">
                         {#each [
                             'SQL injection vulnerabilities',
@@ -185,6 +184,7 @@
                         {/each}
                     </ul>
                 </div>
+
                 <div class="border-2 border-black bg-black p-6 text-white">
                     <p class="mb-2 font-sans text-xs font-bold uppercase tracking-widest text-primary">The Reality</p>
                     <p class="font-sans text-sm leading-relaxed text-neutral-600">43% of cyberattacks target small businesses. Most are preventable with proper development practices. We treat security as a feature, not an afterthought.</p>
