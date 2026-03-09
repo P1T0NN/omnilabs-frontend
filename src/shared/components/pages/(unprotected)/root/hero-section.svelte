@@ -25,13 +25,6 @@
 				</span>
 			</h1>
 
-			<div class="mb-10 max-w-xl border-l-4 border-primary py-2 pl-6 text-left hero-quote">
-				<p class="text-xl leading-tight text-neutral-600 italic md:text-2xl">
-					"We combine marketing strategy with engineering precision to build digital products that don't
-					just look good — they turn visitors into customers. Web platforms, mobile apps, or both — built to convert."
-				</p>
-			</div>
-
 			<div class="hero-cta">
 				<a
 					href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}

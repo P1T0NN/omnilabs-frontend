@@ -41,7 +41,7 @@
 		: ''}"
 >
 	<div
-		class="relative flex items-center justify-between rounded-2xl px-5 py-3 h-22 min-h-22 max-h-22 transition-all duration-300
+		class="relative flex items-center justify-between rounded-2xl px-5 py-2.5 h-17 min-h-17 max-h-17 transition-all duration-300
 		max-w-[1100px] w-[calc(100%-2rem)]
 		{headerClass.scrolled
 			? 'bg-background/88 backdrop-blur-xl border border-black/8 shadow-[0_8px_40px_rgba(0,0,0,0.08)]'
