@@ -12,7 +12,7 @@
 	const heroPhrases = ['sell.', 'convert.', 'scale.'] as const;
 </script>
 
-<section class="relative flex min-h-screen flex-col justify-between pt-12 md:pt-20 overflow-hidden">
+<section class="relative flex min-h-screen flex-col justify-between pt-24 md:pt-20 overflow-hidden">
 	<div class="container mx-auto flex flex-1 items-center max-w-7xl px-6 md:px-12 lg:px-24">
 		<div class="flex w-full flex-col items-center justify-center py-10 md:py-20 text-center hero-content">
 			<h1
