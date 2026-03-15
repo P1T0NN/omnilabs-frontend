@@ -37,26 +37,24 @@
 	];
 </script>
 
-<section id="volumes" class="bg-black py-32 text-white" style="clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);">
+<section id="volumes" class="bg-black py-32 text-background" style="clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);">
 	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
 		<div class="mb-24 flex flex-col items-end justify-between border-b-2 border-white/20 pb-8 md:flex-row">
 			<h2 class="stroke-text font-sans text-6xl font-black text-transparent uppercase md:text-8xl">
 				Archive
 			</h2>
-			
 			<style>
 				.stroke-text {
-					-webkit-text-stroke: 2px white;
+					-webkit-text-stroke: 2px var(--background);
 				}
 			</style>
 
 			<div class="flex items-end gap-4">
-				<div class="h-px w-24 bg-white"></div>
-				<p class="font-serif text-2xl italic">Selected works 2024-2026</p>
+				<div class="h-px w-24 bg-background"></div>
+				<p class="font-serif text-2xl text-background italic">Selected works 2024-2026</p>
 			</div>
 		</div>
 
-		<!-- Asymmetrical Grid -->
 		<div class="grid grid-cols-1 gap-x-12 gap-y-12 md:grid-cols-12">
 			{#each volumes as vol (vol.id)}
 				<WorkSectionItem

@@ -7,26 +7,40 @@
 
 	let { words }: Props = $props();
 
+	const extended = $derived([...words, words[0]]);
 	let index = $state(0);
-	let visible = $state(true);
+	let noTransition = $state(false);
 
 	onMount(() => {
 		const interval = setInterval(() => {
-			visible = false;
-			setTimeout(() => {
-				index = (index + 1) % words.length;
-				visible = true;
-			}, 300);
+			if (index === words.length - 1) {
+				index = words.length;
+				setTimeout(() => {
+					noTransition = true;
+					requestAnimationFrame(() => {
+						index = 0;
+						requestAnimationFrame(() => { noTransition = false; });
+					});
+				}, 500);
+			} else {
+				index++;
+			}
 		}, 2000);
-
 		return () => clearInterval(interval);
 	});
 </script>
 
-<span
-	class="transition-opacity duration-300"
-	class:opacity-0={!visible}
-	class:opacity-100={visible}
->
-	{words[index]}
+<span class="relative inline-block h-[1em] leading-none align-baseline">
+	<span class="invisible inline-block h-[1em] leading-[1em]">{words[index % words.length]}</span>
+	<span class="absolute top-0 left-0 h-[1em] w-full overflow-hidden">
+		<span
+			class="block transition-transform duration-500 ease-out"
+			class:transition-none={noTransition}
+			style="transform: translateY(-{index * 100 / extended.length}%){noTransition ? '; transition: none' : ''}"
+		>
+			{#each extended as word}
+				<span class="block h-[1em] leading-[1em]">{word}</span>
+			{/each}
+		</span>
+	</span>
 </span>

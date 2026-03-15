@@ -5,10 +5,9 @@
 	// COMPONENTS
 	import HeroSection from '@/shared/components/pages/(unprotected)/root/hero-section.svelte';
 	import WorkSection from '@/shared/components/pages/(unprotected)/root/work-section/work-section.svelte';
-	import TestimonialsSection from '@/shared/components/pages/(unprotected)/root/testimonials-section.svelte';
+	import TestimonialsSection from '@/shared/components/pages/(unprotected)/root/testimonials-section/testimonials-section.svelte';
 	import StrategySection from '@/shared/components/pages/(unprotected)/root/strategy-section.svelte';
 	import ProcessSection from '@/shared/components/pages/(unprotected)/root/process-section.svelte';
-	import PricingSection from '@/shared/components/pages/(unprotected)/root/pricing-section/pricing-section.svelte';
 	import FaqSection from '@/shared/components/pages/(unprotected)/root/faq-section.svelte';
 	import CtaSection from '@/shared/components/pages/(unprotected)/root/cta-section.svelte';
 </script>
@@ -30,8 +29,6 @@
 	<TestimonialsSection />
 
 	<ProcessSection />
-
-	<PricingSection />
 
 	<FaqSection />
 

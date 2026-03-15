@@ -78,7 +78,7 @@
 		<div class="mt-6 flex items-start justify-between gap-4 border-t border-white/20 pt-4">
 			<div class="min-w-0 flex-1">
 				<h3
-					class="font-sans text-4xl font-black text-white uppercase leading-none transition-colors group-hover:text-primary"
+					class="stroke-text font-sans text-4xl font-black text-transparent uppercase leading-none"
 				>
 					{title}
 				</h3>
@@ -133,7 +133,7 @@
 		<div class="mt-6 flex items-start justify-between gap-4 border-t border-white/20 pt-4">
 			<div class="min-w-0 flex-1">
 				<h3
-					class="font-sans text-4xl font-black text-white uppercase leading-none transition-colors group-hover:text-primary"
+					class="stroke-text font-sans text-4xl font-black text-transparent uppercase leading-none"
 				>
 					{title}
 				</h3>
@@ -149,3 +149,9 @@
 		</div>
 	</div>
 {/if}
+
+<style>
+	.stroke-text {
+		-webkit-text-stroke: 2px var(--background);
+	}
+</style>

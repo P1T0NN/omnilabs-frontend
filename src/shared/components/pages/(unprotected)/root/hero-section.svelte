@@ -25,6 +25,11 @@
 				</span>
 			</h1>
 
+			<p class="mb-8 font-sans text-lg leading-relaxed text-neutral-600">
+				<b>Booking platforms. Ecommerce stores. Custom web apps.</b> Built to convert from day one. 
+				We combine marketing strategy with engineering precision to build digital products that don't just look good
+			</p>
+
 			<div class="hero-cta">
 				<a
 					href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
