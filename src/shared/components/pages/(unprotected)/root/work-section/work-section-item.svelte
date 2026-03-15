@@ -1,6 +1,5 @@
 <script lang="ts">
 	// UTILS
-	import { reveal } from '@/shared/actions/reveal';
 	import { QualityImage } from '@/shared/components/ui/quality-image';
 
 	// LUCIDE ICONS
@@ -36,7 +35,6 @@
 		href={href}
 		target="_blank"
 		rel="noopener noreferrer"
-		use:reveal
 		class="group relative flex flex-col {className}"
 	>
 		<div
@@ -94,7 +92,7 @@
 		</div>
 	</a>
 {:else}
-	<div use:reveal class="group relative flex flex-col {className}">
+	<div class="group relative flex flex-col {className}">
 		<div
 			class="mb-2 flex items-center justify-between font-mono text-xs tracking-widest text-neutral-400 uppercase"
 		>

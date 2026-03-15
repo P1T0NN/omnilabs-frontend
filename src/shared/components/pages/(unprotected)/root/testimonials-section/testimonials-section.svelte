@@ -8,9 +8,6 @@
     // DATA
     import { TESTIMONIALS_DATA } from '@/shared/data/testimonialsData';
 
-    // UTILS
-    import { reveal } from '@/shared/actions/reveal';
-
     // TYPES
     import type { CarouselAPI } from '@/shared/components/ui/carousel/context';
 
@@ -26,7 +23,7 @@
 
 <section class="py-32 border-t border-neutral-200">
     <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-        <div use:reveal class="mb-20 text-center">
+        <div class="mb-20 text-center">
             <span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase">
                 Client Results
             </span>
@@ -36,7 +33,7 @@
             </h2>
         </div>
 
-        <div use:reveal class="relative px-14">
+        <div class="relative px-14">
             <Carousel
                 opts={{ loop: true, align: 'start' }}
                 setApi={(api) => { carouselApi = api; }}

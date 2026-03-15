@@ -1,9 +1,9 @@
 <script lang="ts">
+    // CONFIG
+    import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
+
     // LUCIDE ICONS
     import ArrowRight from '@lucide/svelte/icons/arrow-right';
-
-    // ACTIONS
-    import { reveal } from '@/shared/actions/reveal';
 
     const steps = [
         {
@@ -30,8 +30,8 @@
 </script>
 
 <section id="process" class="bg-secondary py-32">
-    <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-        <div use:reveal class="mb-20 text-center">
+    <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24 space-y-20">
+        <div class="text-center">
             <span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase">
                 How It Works
             </span>
@@ -43,7 +43,7 @@
 
         <div class="grid grid-cols-1 gap-0 md:grid-cols-4">
             {#each steps as step, i}
-                <div use:reveal={{ delay: i * 120 }} class="group relative border-t-2 border-black py-8 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : ''} {i === 0 ? 'z-40' : i === 1 ? 'z-30' : i === 2 ? 'z-20' : ''}">
+                <div class="group relative border-t-2 border-black py-8 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : ''} {i === 0 ? 'z-40' : i === 1 ? 'z-30' : i === 2 ? 'z-20' : ''}">
                     <span class="mb-4 block font-sans text-5xl font-black text-neutral-600 transition-colors group-hover:text-primary">
                         {step.number}
                     </span>
@@ -63,6 +63,16 @@
                     {/if}
                 </div>
             {/each}
+        </div>
+
+        <div class="flex hero-cta justify-center">
+            <a
+                href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
+                class="group inline-flex h-14 items-center justify-center rounded-none bg-primary px-10 font-sans text-md font-bold tracking-widest uppercase text-white transition-colors hover:bg-black"
+            >
+                Book a Strategy Call
+                <ArrowRight class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </a>
         </div>
     </div>
 </section>

@@ -2,27 +2,20 @@
 	// CONFIG
 	import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
 
-	// UTILS
-	import { reveal } from '@/shared/actions/reveal';
-
 	// LUCIDE ICONS
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 </script>
 
-<section class="bg-black py-32 text-white">
+<section class="bg-black py-32 text-background">
 	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-		<div use:reveal class="flex flex-col items-center text-center">
+		<div class="flex flex-col items-center text-center">
 			<h2 class="mb-8 max-w-3xl font-serif text-5xl italic leading-tight md:text-7xl">
 				Your next customer is one product away.
 			</h2>
-
-			<p class="mb-12 max-w-xl text-lg text-neutral-600">
-				Whether you need a high-converting Micro-Launch or a full enterprise platform, we're ready to build the digital product your business actually deserves.
-			</p>
-
+			
 			<a
 				href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
-				class="group inline-flex h-14 min-w-[280px] items-center justify-center gap-2 bg-white px-10 font-sans text-base font-bold tracking-widest uppercase text-black transition-colors hover:bg-primary hover:text-white"
+				class="group inline-flex h-14 min-w-[280px] items-center justify-center gap-2 bg-background px-10 font-sans text-base font-bold tracking-widest uppercase text-black transition-colors hover:bg-primary hover:text-white"
 			>
 				Start a Project
 				<ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />

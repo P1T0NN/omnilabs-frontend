@@ -1,7 +1,6 @@
 <script lang="ts">
     // SVELTEKIT IMPORTS
     import { slide } from 'svelte/transition';
-    import { reveal } from '@/shared/actions/reveal';
 
     // DATA
     import { FAQS_DATA } from '@/shared/data/faqsData';
@@ -20,7 +19,7 @@
 <section id="faq" class="py-32">
     <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
         <div class="grid grid-cols-1 gap-16 lg:grid-cols-12">
-            <div use:reveal class="lg:col-span-4">
+            <div class="lg:col-span-4">
                 <span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase">
                     FAQ
                 </span>
@@ -36,7 +35,7 @@
 
             <div class="lg:col-span-8">
                 {#each FAQS_DATA as faq, i}
-                    <div use:reveal={{ delay: i * 80 }} class="border-b border-neutral-200">
+                    <div class="border-b border-neutral-200">
                         <button
                             class="flex w-full items-center justify-between py-6 text-left transition-colors hover:text-primary"
                             onclick={() => toggle(i)}
