@@ -39,7 +39,7 @@
 	<div class="flex flex-col gap-8">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			<div class="flex flex-col gap-3">
-				<Label class="font-sans text-xs font-bold tracking-widest text-primary uppercase" for="name">
+				<Label class="text-xs font-bold tracking-widest text-primary uppercase" for="name">
 					Your Name
 				</Label>
 
@@ -49,12 +49,12 @@
 					type="text"
 					bind:value={contactPageClass.contactInputs.name}
 					placeholder="Jan Kowalski"
-					class="bg-neutral-50 border-2 border-black rounded-none p-4 font-sans text-black placeholder:text-neutral-400 focus:border-primary focus:ring-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] focus:shadow-[4px_4px_0px_0px_var(--primary)] transition-all duration-200"
+					class="bg-neutral-50 border-2 border-black rounded-none p-4 text-black placeholder:text-neutral-400 focus:border-primary focus:ring-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] focus:shadow-[4px_4px_0px_0px_var(--primary)] transition-all duration-200"
 				/>
 			</div>
 
 			<div class="flex flex-col gap-3">
-				<Label class="font-sans text-xs font-bold tracking-widest text-primary uppercase" for="email">
+				<Label class="text-xs font-bold tracking-widest text-primary uppercase" for="email">
 					Email Address
 				</Label>
 
@@ -64,13 +64,13 @@
 					type="email"
 					bind:value={contactPageClass.contactInputs.email}
 					placeholder="jan@company.com"
-					class="bg-neutral-50 border-2 border-black rounded-none p-4 font-sans text-black placeholder:text-neutral-400 focus:border-primary focus:ring-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] focus:shadow-[4px_4px_0px_0px_var(--primary)] transition-all duration-200"
+					class="bg-neutral-50 border-2 border-black rounded-none p-4 text-black placeholder:text-neutral-400 focus:border-primary focus:ring-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] focus:shadow-[4px_4px_0px_0px_var(--primary)] transition-all duration-200"
 				/>
 			</div>
 		</div>
 
 		<div class="flex flex-col gap-3">
-			<Label class="font-sans text-xs font-bold tracking-widest text-primary uppercase" for="budget">
+			<Label class="text-xs font-bold tracking-widest text-primary uppercase" for="budget">
 				Project Type
 			</Label>
 
@@ -78,7 +78,7 @@
 				<select
 					id="budget"
 					bind:value={contactPageClass.contactInputs.budget}
-					class="w-full appearance-none bg-neutral-50 border-2 border-black rounded-none p-4 pr-12 font-sans text-black focus:border-primary focus:ring-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] focus:shadow-[4px_4px_0px_0px_var(--primary)] transition-all duration-200"
+					class="w-full appearance-none bg-neutral-50 border-2 border-black rounded-none p-4 pr-12 text-black focus:border-primary focus:ring-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] focus:shadow-[4px_4px_0px_0px_var(--primary)] transition-all duration-200"
 				>
 					<option value="" disabled selected>Select project type</option>
 					<option value="micro-launch">Micro-Launch (single page / MVP)</option>
@@ -92,7 +92,7 @@
 		</div>
 
 		<div class="flex flex-col gap-3">
-			<Label class="font-sans text-xs font-bold tracking-widest text-primary uppercase" for="message">
+			<Label class="text-xs font-bold tracking-widest text-primary uppercase" for="message">
 				Tell Us About Your Project
 			</Label>
 
@@ -101,7 +101,7 @@
 				bind:value={contactPageClass.contactInputs.message}
 				rows={6}
 				placeholder="What do you do, who's your customer, and what's not working with your current site (or why you need one)?"
-				class="bg-neutral-50 border-2 border-black rounded-none p-4 font-sans text-black placeholder:text-neutral-400 focus:border-primary focus:ring-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] focus:shadow-[4px_4px_0px_0px_var(--primary)] transition-all duration-200 resize-none"
+				class="bg-neutral-50 border-2 border-black rounded-none p-4 text-black placeholder:text-neutral-400 focus:border-primary focus:ring-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] focus:shadow-[4px_4px_0px_0px_var(--primary)] transition-all duration-200 resize-none"
 			/>
 		</div>
 
@@ -109,7 +109,7 @@
 			type="button"
             onclick={handleContact}
 			disabled={contactPageClass.pendingStates.contactIsPending}
-			class="mt-4 h-16 w-full rounded-none bg-black text-lg font-bold tracking-widest uppercase text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] hover:bg-primary hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all duration-200"
+			class="mt-4 h-16 w-full rounded-none bg-black text-lg font-bold tracking-widest uppercase text-background shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] hover:bg-primary hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all duration-200"
 		>
             {#if contactPageClass.pendingStates.contactIsPending}
                 <Spinner />
@@ -119,7 +119,7 @@
             {/if}
 		</Button>
 
-		<p class="mt-2 text-center font-sans text-xs leading-relaxed text-neutral-600">
+		<p class="mt-2 text-center text-xs leading-relaxed text-neutral-600">
 			We'll review your brief and respond with a custom strategy outline within 24 hours.
 			<br />No spam. No hard sell. Just an honest conversation.
 		</p>

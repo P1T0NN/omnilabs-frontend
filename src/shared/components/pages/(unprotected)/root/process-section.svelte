@@ -1,78 +1,81 @@
 <script lang="ts">
+    import { onDestroy, onMount } from 'svelte';
+
     // CONFIG
     import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
+
+    // HOOKS
+    import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
+
+    // COMPONENTS
+    import CtaButton from '@/shared/components/ui/cta-button/cta-button.svelte';
+
+    // DATA
+    import { PROCESS_DATA } from '@/shared/data/processData';
 
     // LUCIDE ICONS
     import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
-    const steps = [
-        {
-            number: '01',
-            title: 'Strategy Call',
-            description: 'We learn your business, goals, and audience. Together we define the scope and the strategy that will drive conversions.'
-        },
-        {
-            number: '02',
-            title: 'Design & Build',
-            description: 'Our team architects the structure, writes conversion-optimized copy, and engineers a blazing-fast, secure website.'
-        },
-        {
-            number: '03',
-            title: 'Test & Launch',
-            description: 'We penetration-test, performance-audit, and stress-test everything before your site goes live. No surprises.'
-        },
-        {
-            number: '04',
-            title: 'Grow Together',
-            description: 'With our ongoing partnership, your site evolves with your business — updates, tweaks, and optimizations included.'
-        }
-    ];
+    let sectionRef: HTMLElement | undefined;
+    let inView = false;
+    let cleanup: (() => void) | undefined;
+
+    onMount(() => {
+        if (!sectionRef) return;
+        cleanup = useIntersectionObserver(sectionRef, () => {
+            inView = true;
+        });
+    });
+
+    onDestroy(() => cleanup?.());
 </script>
 
 <section id="process" class="bg-secondary py-32">
-    <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24 space-y-20">
-        <div class="text-center">
-            <span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase">
-                How It Works
-            </span>
+    <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
+        <div
+            bind:this={sectionRef}
+            class="animate-on-in-view space-y-20"
+            class:in-view={inView}
+        >
+            <div class="flex flex-col gap-4 text-center">
+                <span class="animate-slide-up block font-bold tracking-widest text-primary uppercase">
+                    How It Works
+                </span>
 
-            <h2 class="font-serif text-5xl italic md:text-7xl">
-                From call to launch.
-            </h2>
-        </div>
+                <h2 class="animate-slide-up-delay-150 italic">
+                    From call to launch.
+                </h2>
+            </div>
 
-        <div class="grid grid-cols-1 gap-0 md:grid-cols-4">
-            {#each steps as step, i}
-                <div class="group relative border-t-2 border-black py-8 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : ''} {i === 0 ? 'z-40' : i === 1 ? 'z-30' : i === 2 ? 'z-20' : ''}">
-                    <span class="mb-4 block font-sans text-5xl font-black text-neutral-600 transition-colors group-hover:text-primary">
-                        {step.number}
-                    </span>
+            <div class="grid grid-cols-1 gap-0 md:grid-cols-4">
+                {#each PROCESS_DATA as step, i}
+                    <div class="animate-slide-up-delay-300 group relative flex flex-col gap-4 border-t-2 border-black px-4 py-8 md:pr-6 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : 'md:pl-4'} {i === 0 ? 'z-40' : i === 1 ? 'z-30' : i === 2 ? 'z-20' : ''}">
+                        <span class="block text-5xl font-black text-neutral-600 transition-colors group-hover:text-primary">
+                            {step.number}
+                        </span>
 
-                    <h3 class="mb-3 font-sans text-xl font-bold uppercase">
-                        {step.title}
-                    </h3>
-                    
-                    <p class="font-sans text-sm leading-relaxed text-neutral-600">
-                        {step.description}
-                    </p>
+                        <h3 class="font-bold uppercase">
+                            {step.title}
+                        </h3>
+                        
+                        <p class="text-sm leading-relaxed text-neutral-600">
+                            {step.description}
+                        </p>
 
-                    {#if i < steps.length - 1}
-                        <div class="absolute -right-3 top-8 z-20 isolate hidden h-6 w-6 items-center justify-center bg-background md:flex">
-                            <ArrowRight class="h-4 w-4 text-primary" />
-                        </div>
-                    {/if}
-                </div>
-            {/each}
-        </div>
+                        {#if i < PROCESS_DATA.length - 1}
+                            <div class="absolute -right-3 top-8 z-20 isolate hidden h-6 w-6 items-center justify-center bg-background md:flex">
+                                <ArrowRight class="h-4 w-4 text-primary" />
+                            </div>
+                        {/if}
+                    </div>
+                {/each}
+            </div>
 
-        <div class="flex hero-cta justify-center">
-            <a
-                href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
-                class="group inline-flex h-14 items-center justify-center rounded-none bg-primary px-10 font-sans text-md font-bold tracking-widest uppercase text-white transition-colors hover:bg-black"
-            >
-                Book a Strategy Call
-                <ArrowRight class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
+            <div class="flex animate-slide-up-delay-300 justify-center">
+                <CtaButton href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}>
+                    Book a Strategy Call
+                </CtaButton>
+            </div>
         </div>
     </div>
 </section>

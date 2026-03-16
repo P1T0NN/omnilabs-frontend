@@ -65,7 +65,7 @@
 					class="absolute inset-0 flex items-center justify-center bg-primary/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 mix-blend-multiply"
 				>
 					<span
-						class="rotate-[-10deg] border-4 border-white px-6 py-2 font-sans text-4xl font-black tracking-tighter text-white uppercase"
+						class="rotate-[-10deg] border-4 border-white px-6 py-2 text-4xl font-black tracking-tighter text-white uppercase"
 					>
 						{issue}
 					</span>
@@ -76,16 +76,17 @@
 		<div class="mt-6 flex items-start justify-between gap-4 border-t border-white/20 pt-4">
 			<div class="min-w-0 flex-1">
 				<h3
-					class="stroke-text font-sans text-4xl font-black text-transparent uppercase leading-none"
+					class="text-4xl font-black text-background uppercase leading-none"
 				>
 					{title}
 				</h3>
+				
 				{#if description}
-					<p class="mt-2 font-sans text-sm leading-relaxed text-neutral-400">{description}</p>
+					<p class="mt-2 text-sm leading-relaxed text-neutral-400">{description}</p>
 				{/if}
 			</div>
 			<div
-				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-black text-white transition-all group-hover:border-primary group-hover:bg-primary group-hover:text-white"
+				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-black text-background transition-all group-hover:border-primary group-hover:bg-primary group-hover:text-background"
 			>
 				<ArrowUpRight class="h-6 w-6" />
 			</div>
@@ -120,7 +121,7 @@
 					class="absolute inset-0 flex items-center justify-center bg-primary/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 mix-blend-multiply"
 				>
 					<span
-						class="rotate-[-10deg] border-4 border-white px-6 py-2 font-sans text-4xl font-black tracking-tighter text-white uppercase"
+						class="rotate-[-10deg] border-4 border-white px-6 py-2 text-4xl font-black tracking-tighter text-white uppercase"
 					>
 						{issue}
 					</span>
@@ -131,25 +132,21 @@
 		<div class="mt-6 flex items-start justify-between gap-4 border-t border-white/20 pt-4">
 			<div class="min-w-0 flex-1">
 				<h3
-					class="stroke-text font-sans text-4xl font-black text-transparent uppercase leading-none"
+					class="text-4xl font-black text-background uppercase leading-none"
 				>
 					{title}
 				</h3>
+
 				{#if description}
-					<p class="mt-2 font-sans text-sm leading-relaxed text-neutral-400">{description}</p>
+					<p class="mt-2 text-sm leading-relaxed text-neutral-400">{description}</p>
 				{/if}
 			</div>
+			
 			<div
-				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-black text-white transition-all group-hover:border-primary group-hover:bg-primary group-hover:text-white"
+				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-black text-background transition-all group-hover:border-primary group-hover:bg-primary group-hover:text-background"
 			>
 				<ArrowUpRight class="h-6 w-6" />
 			</div>
 		</div>
 	</div>
 {/if}
-
-<style>
-	.stroke-text {
-		-webkit-text-stroke: 2px var(--background);
-	}
-</style>

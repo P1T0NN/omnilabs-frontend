@@ -27,11 +27,10 @@
 	});
 
 	const navLinks = [
-		{ href: '/#narrative', label: 'Strategy' },
-		{ href: '/#volumes', label: 'Work' },
-		{ href: '/#process', label: 'Process' },
-		{ href: '/#pricing', label: 'Pricing' },
-		{ href: '/#faq', label: 'FAQ' }
+		{ href: UNPROTECTED_PAGE_ENDPOINTS.STRATEGY, label: 'Strategy' },
+		{ href: UNPROTECTED_PAGE_ENDPOINTS.WORK, label: 'Work' },
+		{ href: UNPROTECTED_PAGE_ENDPOINTS.PROCESS, label: 'Process' },
+		{ href: UNPROTECTED_PAGE_ENDPOINTS.FAQ, label: 'FAQ' }
 	];
 </script>
 

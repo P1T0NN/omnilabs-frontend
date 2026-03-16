@@ -200,18 +200,40 @@
   * {
     @apply border-border outline-ring/50;
   }
-  
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background font-sans text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Global heading sizes – inherit font from body */
+  h1 {
+    @apply text-5xl md:text-7xl lg:text-8xl;
+  }
+  h2 {
+    @apply text-5xl md:text-7xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+  h6 {
+    @apply text-base;
   }
 }
 
-/* Hero entrance: visible from first paint (LCP-friendly), slide-up uses transform only */
-@keyframes hero-slide-up {
+/* ========== Animations ========== */
+
+/* Slide up + fade: transform + opacity only (compositor-friendly). Reusable. */
+@keyframes slide-up {
   from {
-    opacity: 0.96;
-    transform: translateY(24px);
+    opacity: 0;
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -219,16 +241,53 @@
   }
 }
 
-/* LCP element: no animation so it paints immediately */
-.hero-quote {
-  animation: hero-slide-up 0.95s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s forwards;
+.animate-slide-up {
+  animation: slide-up 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
 }
 
-.hero-cta {
-  animation: hero-slide-up 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+.animate-slide-up-delay-150 {
+  animation: slide-up 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
 }
 
-/* Word cycle: pure CSS, no JS. Words stack vertically and slide up. */
+.animate-slide-up-delay-300 {
+  animation: slide-up 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.animate-slide-up-delay-450 {
+  animation: slide-up 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
+}
+
+/* Scroll-triggered: only animate when parent has .in-view (e.g. hero with useIntersectionObserver) */
+.animate-on-in-view .animate-slide-up,
+.animate-on-in-view .animate-slide-up-delay-150,
+.animate-on-in-view .animate-slide-up-delay-300,
+.animate-on-in-view .animate-slide-up-delay-450 {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: none; /* wait for .in-view so base .animate-slide-up doesn't run on load */
+}
+.animate-on-in-view.in-view .animate-slide-up {
+  animation: slide-up 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
+}
+.animate-on-in-view.in-view .animate-slide-up-delay-150 {
+  animation: slide-up 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+.animate-on-in-view.in-view .animate-slide-up-delay-300 {
+  animation: slide-up 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+.animate-on-in-view.in-view .animate-slide-up-delay-450 {
+  animation: slide-up 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
+}
+
+/* Hover lift: transform only. Use on cards/buttons. */
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Word cycle: words stack and slide (e.g. word rotator) */
 .word-change-track {
   animation: word-cycle 7.5s ease-in-out infinite;
 }

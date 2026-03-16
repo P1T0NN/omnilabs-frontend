@@ -17,24 +17,24 @@
 
 <section id="team" class="border-t-2 border-black bg-background py-32">
 	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-		<div class="mb-16">
-			<span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase"
+		<div class="mb-16 flex flex-col gap-4">
+			<span class="block font-bold tracking-widest text-primary uppercase"
 				>The Minds Behind It</span
 			>
-			<h2 class="font-sans text-5xl font-bold md:text-6xl">Team.</h2>
+			<h2 class="font-bold">Team.</h2>
 		</div>
 
 		<div class="grid grid-cols-1 gap-12 md:grid-cols-2">
 			{#each team as member (member.name)}
-				<div class="group border-2 border-black bg-white p-8">
+				<div class="group flex flex-col gap-4 border-2 border-black bg-white p-8">
 						<span
-							class="mb-2 block font-sans text-sm font-bold tracking-widest text-primary uppercase"
+							class="block text-sm font-bold tracking-widest text-primary uppercase"
 							>{member.role}</span
 						>
-						<h3 class="mb-4 font-sans text-2xl font-black uppercase">{member.name}</h3>
-						<p class="mb-6 leading-relaxed text-neutral-600">{member.bio}</p>
+						<h3 class="font-black uppercase">{member.name}</h3>
+						<p class="leading-relaxed text-neutral-600">{member.bio}</p>
 						<span
-							class="inline-block border-l-4 border-primary px-4 py-1 font-sans text-sm font-bold uppercase tracking-widest"
+							class="inline-block border-l-4 border-primary px-4 py-1 text-sm font-bold uppercase tracking-widest"
 							>{member.focus}</span
 						>
 				</div>

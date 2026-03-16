@@ -1,63 +1,58 @@
 <script lang="ts">
+	// SVELTEKIT IMPORTS
+	import { onDestroy, onMount } from 'svelte';
+
+	// HOOKS
+	import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
+
 	// COMPONENTS
 	import WorkSectionItem from './work-section-item.svelte';
 
-	let volumes = [
-		{
-			id: '01',
-			title: 'BGApartman',
-			issue: 'No. 01',
-			client: 'Real Estate',
-			description:
-				'Full booking platform — apartment listings, reservation management, and owner dashboard. Bookings increased within the first month of launch.',
-			img: '/home/opt/bgapartman-website-960w.webp',
-			href: 'https://www.bgapartman.com',
-			class: 'md:col-span-7'
-		},
-		{
-			id: '02',
-			title: 'FollowUs',
-			issue: 'No. 02',
-			client: 'Direct Marketing',
-			description: 'High-converting web presence for a direct marketing company operating across multiple markets.',
-			img: '/home/opt/followus-website-960w.webp',
-			href: 'https://followusnyc.com',
-			class: 'md:col-span-5 md:mt-16'
-		},
-		{
-			id: '03',
-			title: 'To be Added',
-			issue: 'No. 03',
-			client: 'UGC',
-			description: 'The Leading UGC Company in whole Balkans',
-			img: '/home/opt/kontentkolektiv-website-960w.webp',
-			href: '#',
-			class: 'md:col-span-8 md:col-start-3 md:mt-12'
-		}
-	];
+	// DATA
+	import { WORK_DATA } from '@/shared/data/workData';
+
+	let sectionRef: HTMLElement | undefined;
+	let inView = false;
+	let cleanup: (() => void) | undefined;
+
+	onMount(() => {
+		if (!sectionRef) return;
+
+		cleanup = useIntersectionObserver(sectionRef, () => {
+			inView = true;
+		});
+	});
+
+	onDestroy(() => cleanup?.());
 </script>
 
-<section id="volumes" class="bg-black py-32 text-background" style="clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);">
+<section id="work" class="bg-black py-32 text-background" style="clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);">
 	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-		<div class="mb-24 flex flex-col items-end justify-between border-b-2 border-white/20 pb-8 md:flex-row">
-			<h2 class="stroke-text font-sans text-6xl font-black text-transparent uppercase md:text-8xl">
-				Archive
-			</h2>
-			<style>
-				.stroke-text {
-					-webkit-text-stroke: 2px var(--background);
-				}
-			</style>
+		<div
+			bind:this={sectionRef}
+			class="animate-on-in-view"
+			class:in-view={inView}
+		>
+			<div class="mb-16 flex flex-col items-end justify-between border-b-2 border-white/20 pb-8 md:flex-row">
+				<h2 class="animate-slide-up stroke-text font-black text-transparent uppercase">
+					Archive
+				</h2>
 
-			<div class="flex items-end gap-4">
-				<div class="h-px w-24 bg-background"></div>
-				<p class="font-serif text-2xl text-background italic">Selected works 2024-2026</p>
+				<style>
+					.stroke-text {
+						-webkit-text-stroke: 2px var(--background);
+					}
+				</style>
+
+				<div class="animate-slide-up-delay-150 flex items-end gap-4">
+					<div class="h-px w-24 bg-background"></div>
+					<p class="text-2xl text-background italic">Selected works 2024-2026</p>
+				</div>
 			</div>
-		</div>
 
-		<div class="grid grid-cols-1 gap-x-12 gap-y-12 md:grid-cols-12">
-			{#each volumes as vol (vol.id)}
-				<WorkSectionItem
+			<div class="grid grid-cols-1 gap-x-12 gap-y-12 md:grid-cols-12">
+				{#each WORK_DATA as vol (vol.id)}
+					<WorkSectionItem
 					id={vol.id}
 					title={vol.title}
 					issue={vol.issue}
@@ -66,8 +61,9 @@
 					img={vol.img}
 					href={vol.href}
 					class={vol.class}
-				/>
-			{/each}
+					/>
+				{/each}
+			</div>
 		</div>
 	</div>
 </section>

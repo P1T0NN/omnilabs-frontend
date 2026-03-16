@@ -1,6 +1,11 @@
+
 <script lang="ts">
     // SVELTEKIT IMPORTS
+    import { onDestroy, onMount } from 'svelte';
     import { slide } from 'svelte/transition';
+
+    // HOOKS
+    import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
 
     // DATA
     import { FAQS_DATA } from '@/shared/data/faqsData';
@@ -10,6 +15,18 @@
     import MinusIcon from '@lucide/svelte/icons/minus';
 
     let openIndex = $state<number | null>(null);
+    let sectionRef: HTMLElement | undefined;
+    let inView = $state(false);
+    let cleanup: (() => void) | undefined;
+
+    onMount(() => {
+        if (!sectionRef) return;
+        cleanup = useIntersectionObserver(sectionRef, () => {
+            inView = true;
+        });
+    });
+
+    onDestroy(() => cleanup?.());
 
     function toggle(index: number) {
         openIndex = openIndex === index ? null : index;
@@ -18,29 +35,33 @@
 
 <section id="faq" class="py-32">
     <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-        <div class="grid grid-cols-1 gap-16 lg:grid-cols-12">
-            <div class="lg:col-span-4">
-                <span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase">
+        <div
+            bind:this={sectionRef}
+            class="animate-on-in-view grid grid-cols-1 gap-16 lg:grid-cols-12"
+            class:in-view={inView}
+        >
+            <div class="flex flex-col gap-4 lg:col-span-4">
+                <span class="animate-slide-up block font-bold tracking-widest text-primary uppercase">
                     FAQ
                 </span>
 
-                <h2 class="mb-4 font-serif text-5xl italic md:text-6xl">
+                <h2 class="animate-slide-up-delay-150 italic">
                     Questions?
                 </h2>
 
-                <p class="font-sans text-lg text-neutral-600">
+                <p class="animate-slide-up-delay-300 text-lg text-neutral-600">
                     Everything you need to know before we start working together.
                 </p>
             </div>
 
-            <div class="lg:col-span-8">
+            <div class="animate-slide-up-delay-300 lg:col-span-8">
                 {#each FAQS_DATA as faq, i}
                     <div class="border-b border-neutral-200">
                         <button
                             class="flex w-full items-center justify-between py-6 text-left transition-colors hover:text-primary"
                             onclick={() => toggle(i)}
                         >
-                            <span class="pr-8 font-sans text-lg font-bold">
+                            <span class="pr-8 text-lg font-bold">
                                 {faq.question}
                             </span>
 
@@ -55,7 +76,7 @@
                         
                         {#if openIndex === i}
                             <div transition:slide={{ duration: 300 }} class="pb-6">
-                                <p class="font-sans leading-relaxed text-neutral-600">
+                                <p class="leading-relaxed text-neutral-600">
                                     {faq.answer}
                                 </p>
                             </div>

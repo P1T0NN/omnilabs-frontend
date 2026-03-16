@@ -13,7 +13,7 @@
 </script>
 
 <div class="rounded-xl border border-primary/30 bg-primary/10 p-6">
-	<h3 class="mb-6 text-2xl font-bold text-foreground">Calculate Your Potential ROI</h3>
+	<h3 class="mb-6 font-bold text-foreground">Calculate Your Potential ROI</h3>
 
 	<div class="mb-6 space-y-4">
 		<div>

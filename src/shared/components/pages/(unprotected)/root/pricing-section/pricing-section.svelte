@@ -12,12 +12,12 @@
 
 <section id="pricing" class="py-32">
 	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-		<div class="mb-8 text-center">
-			<span class="mb-4 block font-sans font-bold tracking-widest text-primary uppercase"
+		<div class="mb-16 flex flex-col gap-4 text-center">
+			<span class="block font-bold tracking-widest text-primary uppercase"
 				>How We Work</span
 			>
-			<h2 class="mb-4 font-serif text-6xl italic md:text-8xl">Two paths. No middle.</h2>
-			<p class="mx-auto max-w-2xl font-sans text-lg text-neutral-600">
+			<h2 class="italic">Two paths. No middle.</h2>
+			<p class="mx-auto max-w-2xl text-lg text-neutral-600">
 				We either build you a focused, high-converting Micro-Launch or architect a full-scale digital
 				platform. We don't do "medium". Every project is a one-time investment with the option to
 				add ongoing partnership.
@@ -26,7 +26,7 @@
 
 		<div class="mb-16 flex items-center justify-center gap-3">
 			<div class="h-px w-12 bg-black"></div>
-			<span class="font-sans text-xs font-bold tracking-widest text-neutral-600 uppercase">One-time payment · Optional monthly partnership</span>
+			<span class="text-xs font-bold tracking-widest text-neutral-600 uppercase">One-time payment · Optional monthly partnership</span>
 			<div class="h-px w-12 bg-black"></div>
 		</div>
 
@@ -38,7 +38,7 @@
 				variant="light"
 				buttonText="Book a Strategy Call"
 			>
-				<ul class="mb-8 space-y-3 font-sans text-sm font-medium">
+				<ul class="mb-8 space-y-3 text-sm font-medium">
 					<li class="flex items-center gap-3">
 						<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 						<span>Strategic single-page architecture</span>
@@ -61,7 +61,7 @@
 				</ul>
 
 				<div class="mb-8 border-t border-neutral-200 pt-8">
-					<h4 class="mb-4 font-sans text-xs font-bold tracking-widest uppercase text-neutral-600">
+					<h4 class="mb-4 text-xs font-bold tracking-widest uppercase text-neutral-600">
 						After Delivery
 					</h4>
 
@@ -74,13 +74,13 @@
 						>
 							<div class="flex w-full items-center justify-between">
 								<span
-									class="font-sans text-sm font-bold uppercase {partnershipSelected
+									class="text-sm font-bold uppercase {partnershipSelected
 										? 'text-primary'
 										: 'text-neutral-600'}"
 								>
 									Ongoing Partnership
 								</span>
-								<span class="font-sans text-xs font-bold text-neutral-600">Monthly</span>
+								<span class="text-xs font-bold text-neutral-600">Monthly</span>
 							</div>
 							<p class="text-sm text-neutral-600">
 								Text changes, small tweaks, and functionality updates — all included.
@@ -103,7 +103,7 @@
 						>
 							<div class="flex w-full items-center justify-between">
 								<span
-									class="font-sans text-sm font-bold uppercase {!partnershipSelected
+									class="text-sm font-bold uppercase {!partnershipSelected
 										? 'text-black'
 										: 'text-neutral-600'}"
 								>
@@ -116,7 +116,7 @@
 						</button>
 					</div>
 
-					<div class="mt-6 space-y-2.5 font-sans text-sm">
+					<div class="mt-6 space-y-2.5 text-sm">
 						<div class="flex items-center gap-3">
 							{#if partnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
@@ -163,7 +163,7 @@
 				variant="dark"
 				buttonText="Apply for a Project"
 			>
-				<ul class="mb-8 space-y-3 font-sans text-sm font-medium">
+				<ul class="mb-8 space-y-3 text-sm font-medium">
 					<li class="flex items-center gap-3">
 						<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
 						<span>Multi-page custom architecture</span>
@@ -186,7 +186,7 @@
 				</ul>
 
 				<div class="mb-8 border-t border-neutral-800 pt-8">
-					<h4 class="mb-4 font-sans text-xs font-bold tracking-widest uppercase text-neutral-400">
+					<h4 class="mb-4 text-xs font-bold tracking-widest uppercase text-neutral-400">
 						After Delivery
 					</h4>
 
@@ -199,14 +199,14 @@
 						>
 							<div class="flex w-full items-center justify-between">
 								<span
-									class="font-sans text-sm font-bold uppercase {enterprisePartnershipSelected
+									class="text-sm font-bold uppercase {enterprisePartnershipSelected
 										? 'text-primary-soft'
 										: 'text-neutral-400'}"
 								>
 									Ongoing Retainer
 								</span>
 
-								<span class="font-sans text-xs font-bold text-neutral-400">Monthly</span>
+								<span class="text-xs font-bold text-neutral-400">Monthly</span>
 							</div>
 
 							<p class="text-sm text-neutral-400">
@@ -230,7 +230,7 @@
 						>
 							<div class="flex w-full items-center justify-between">
 								<span
-									class="font-sans text-sm font-bold uppercase {!enterprisePartnershipSelected
+									class="text-sm font-bold uppercase {!enterprisePartnershipSelected
 										? 'text-white'
 										: 'text-neutral-400'}"
 								>
@@ -244,7 +244,7 @@
 						</button>
 					</div>
 
-					<div class="mt-6 space-y-2.5 font-sans text-sm">
+					<div class="mt-6 space-y-2.5 text-sm">
 						<div class="flex items-center gap-3">
 							{#if enterprisePartnershipSelected}
 								<CheckIcon class="h-4 w-4 shrink-0 text-primary" />
