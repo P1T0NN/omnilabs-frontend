@@ -35,11 +35,11 @@
 	] as const;
 </script>
 
-<section class="relative flex min-h-screen flex-col justify-between pt-24 pb-32 md:pt-20 md:pb-32 overflow-hidden">
+<section class="relative flex min-h-screen flex-col justify-center overflow-hidden pt-24 md:pt-0">
 	<div class="container mx-auto flex flex-1 items-center max-w-7xl px-6 md:px-12 lg:px-24">
 		<div
 			bind:this={heroContentRef}
-			class="animate-on-in-view flex w-full flex-col items-center justify-center gap-8 pt-10 pb-0 md:pt-20 md:pb-0 text-center hero-content"
+			class="animate-on-in-view flex w-full flex-col items-center justify-center gap-8 pt-10 pb-10 md:pt-20 md:pb-20 text-center hero-content"
 			class:in-view={heroInView}
 		>
 			<h1 class="animate-slide-up leading-[0.85] font-black uppercase">
@@ -60,26 +60,26 @@
 					Book a Strategy Call
 				</CtaButton>
 			</div>
+
+			<div class="flex w-full flex-col gap-4 pt-8 md:pt-4">
+				<p class="text-center text-lg font-bold text-neutral-500">
+					Trusted By
+				</p>
+
+				<Marquee>
+					{#each [...trustedByLinks, ...trustedByLinks] as link, i (link.href + '-' + i)}
+						<a
+							href={link.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-lg font-black tracking-tight text-neutral-400 uppercase transition-colors hover:text-black shrink-0"
+							aria-hidden={i >= trustedByLinks.length}
+						>
+							{link.label}
+						</a>
+					{/each}
+				</Marquee>
+			</div>
 		</div>
-	</div>
-
-	<div class="container mx-auto max-w-7xl flex flex-col gap-4 px-6 md:px-12 lg:px-24">
-		<p class="text-center text-lg font-bold text-neutral-500">
-			Trusted By
-		</p>
-
-		<Marquee>
-			{#each [...trustedByLinks, ...trustedByLinks] as link, i (link.href + '-' + i)}
-				<a
-					href={link.href}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="text-lg font-black tracking-tight text-neutral-400 uppercase transition-colors hover:text-black shrink-0"
-					aria-hidden={i >= trustedByLinks.length}
-				>
-					{link.label}
-				</a>
-			{/each}
-		</Marquee>
 	</div>
 </section>

@@ -33,7 +33,7 @@
     }
 </script>
 
-<section id="faq" class="py-32">
+<section id="faq">
     <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
         <div
             bind:this={sectionRef}

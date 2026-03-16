@@ -18,19 +18,13 @@
 </svelte:head>
 
 <div
-	class="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white"
+	class="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white flex flex-col gap-y-12 md:gap-y-24"
 >
 	<HeroSection />
-
 	<StrategySection />
-
 	<WorkSection />
-
 	<TestimonialsSection />
-
 	<ProcessSection />
-
 	<FaqSection />
-
 	<CtaSection />
 </div>

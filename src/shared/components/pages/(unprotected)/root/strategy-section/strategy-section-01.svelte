@@ -55,7 +55,7 @@
 			</p>
 		</div>
 
-		<div class="grid grid-cols-2 gap-4">
+		<div class="flex flex-col gap-4 sm:grid sm:grid-cols-2">
 			<div class="hover-lift border-2 border-black bg-black p-6 text-background">
 				<p class="mb-1 text-4xl font-black text-primary">73%</p>
 				<p class="text-xs font-bold uppercase tracking-widest text-background">of visitors decide in under 8 seconds <span class="italic">(Nielsen Norman Group)</span></p>

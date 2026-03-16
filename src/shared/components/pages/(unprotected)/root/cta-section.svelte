@@ -25,14 +25,14 @@
 	onDestroy(() => cleanup?.());
 </script>
 
-<section class="bg-black py-32 text-background">
+<section class="bg-black text-background py-12 md:py-32">
 	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
 		<div
 			bind:this={sectionRef}
 			class="animate-on-in-view flex flex-col items-center text-center space-y-20"
 			class:in-view={inView}
 		>
-			<h2 class="animate-slide-up max-w-3xl italic leading-tight">
+			<h2 class="animate-slide-up max-w-3xl text-5xl lg:text-6xl italic leading-tight">
 				Your next customer is one product away.
 			</h2>
 

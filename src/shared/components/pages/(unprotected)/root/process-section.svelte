@@ -30,11 +30,11 @@
     onDestroy(() => cleanup?.());
 </script>
 
-<section id="process" class="bg-secondary py-32">
+<section id="process" class="bg-secondary py-12 md:py-32">
     <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
         <div
             bind:this={sectionRef}
-            class="animate-on-in-view space-y-20"
+            class="animate-on-in-view space-y-10 md:space-y-20"
             class:in-view={inView}
         >
             <div class="flex flex-col gap-4 text-center">
@@ -72,7 +72,7 @@
             </div>
 
             <div class="flex animate-slide-up-delay-300 justify-center">
-                <CtaButton href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}>
+                <CtaButton href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} withArrow>
                     Book a Strategy Call
                 </CtaButton>
             </div>

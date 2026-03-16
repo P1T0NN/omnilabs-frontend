@@ -26,7 +26,7 @@
 
 <div
 	bind:this={sectionRef}
-	class="animate-on-in-view mt-32 grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24"
+	class="animate-on-in-view mt-12 md:mt-32 grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24"
 	class:in-view={inView}
 >
     <div class="flex flex-col gap-8 lg:sticky lg:top-32 lg:h-fit">

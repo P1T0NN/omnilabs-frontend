@@ -10,8 +10,8 @@
 	// Be aware these are real numbers — not made up.
 </script>
 
-<section id="strategy" class="py-32">
-	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24 flex flex-col gap-16">
+<section id="strategy">
+	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24 flex flex-col gap-6 md:gap-16">
 		<StrategySection01 />
 		<StrategySection02 />
 		<StrategySection03 />

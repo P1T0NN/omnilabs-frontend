@@ -26,7 +26,7 @@
 	onDestroy(() => cleanup?.());
 </script>
 
-<section id="work" class="bg-black py-32 text-background" style="clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);">
+<section id="work" class="bg-black text-background py-12 md:py-32" style="clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);">
 	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
 		<div
 			bind:this={sectionRef}
@@ -48,14 +48,14 @@
 			<div class="grid grid-cols-1 gap-x-12 gap-y-12 md:grid-cols-12">
 				{#each WORK_DATA as vol (vol.id)}
 					<WorkSectionItem
-					id={vol.id}
-					title={vol.title}
-					issue={vol.issue}
-					client={vol.client}
-					description={vol.description}
-					img={vol.img}
-					href={vol.href}
-					class={vol.class}
+						id={vol.id}
+						title={vol.title}
+						issue={vol.issue}
+						client={vol.client}
+						description={vol.description}
+						img={vol.img}
+						href={vol.href}
+						class={vol.class}
 					/>
 				{/each}
 			</div>

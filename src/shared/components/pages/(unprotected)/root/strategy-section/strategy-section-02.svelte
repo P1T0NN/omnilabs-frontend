@@ -21,7 +21,7 @@
 
 <div
 	bind:this={sectionRef}
-	class="animate-on-in-view mt-32 grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24"
+	class="animate-on-in-view mt-12 md:mt-32 grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24"
 	class:in-view={inView}
 >
     <!-- Chapter 02 Visual: Performance metrics -->
