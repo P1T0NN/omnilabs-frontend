@@ -5,7 +5,7 @@ export const WORK_DATA = [
         issue: 'No. 01',
         client: 'Real Estate',
         description:
-            'Full booking platform — apartment listings, reservation management, and owner dashboard. Bookings increased within the first month of launch.',
+            'Full booking platform — apartment listings, reservation management, and owner dashboard. Top 1 booking platform in Serbia.',
         img: '/home/opt/bgapartman-website-960w.webp',
         href: 'https://www.bgapartman.com',
         class: 'md:col-span-7'

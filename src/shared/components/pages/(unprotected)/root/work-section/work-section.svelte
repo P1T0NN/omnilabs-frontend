@@ -43,11 +43,6 @@
 						-webkit-text-stroke: 2px var(--background);
 					}
 				</style>
-
-				<div class="animate-slide-up-delay-150 flex items-end gap-4">
-					<div class="h-px w-24 bg-background"></div>
-					<p class="text-2xl text-background italic">Selected works 2024-2026</p>
-				</div>
 			</div>
 
 			<div class="grid grid-cols-1 gap-x-12 gap-y-12 md:grid-cols-12">
