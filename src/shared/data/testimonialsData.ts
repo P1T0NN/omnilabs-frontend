@@ -1,38 +1,11 @@
-export const TESTIMONIALS_DATA = [
-    {
-        quote: "They didn't just build us a website — they rethought how we present our listings entirely. Bookings went up significantly within the first month of launch.",
-        author: "BGApartman",
-        role: "Real Estate Platform",
-        initial: "B"
-    },
-    {
-        quote: "Working with this team was different from any agency we've tried before. They asked questions no other developer asked — about our customers, our funnel, our goals. The result speaks for itself.",
-        author: "FollowUs",
-        role: "Direct Marketing",
-        initial: "F"
-    },
-    {
-        quote: "We needed a site that positions us as the leading UGC company in the Balkans. They nailed it. The site converts cold traffic into inquiries every single week.",
-        author: "Kontent Kolektiv",
-        role: "UGC Agency",
-        initial: "K"
-    },
-    {
-        quote: "Fast, clear communication and a site that actually reflects our brand. We went from a patchwork of pages to one cohesive experience that our clients love.",
-        author: "Studio M",
-        role: "Creative Agency",
-        initial: "S"
-    },
-    {
-        quote: "Our conversion rate doubled in 90 days. They understood our audience better than we did at first — and built the journey to match.",
-        author: "Nexus Labs",
-        role: "SaaS",
-        initial: "N"
-    },
-    {
-        quote: "No fluff, no endless revisions. They delivered on time and the site performs. We get compliments on speed and clarity all the time.",
-        author: "Greenfield Co",
-        role: "Consulting",
-        initial: "G"
-    }
+export const TESTIMONIALS_CARDS = [
+	{ id: 1, name: 'Sarah M.', location: 'New York', rating: 5, text: 'My skin has never felt so soft and nourished. The Radiance Serum is now a permanent part of my morning routine.', product: 'Radiance Serum' },
+	{ id: 2, name: 'Emma L.', location: 'Los Angeles', rating: 5, text: 'Finally, skincare that actually feels natural. No more harsh chemicals. My sensitive skin loves Boty products.', product: 'Gentle Cleanser' },
+	{ id: 3, name: 'Jessica R.', location: 'Chicago', rating: 5, text: 'The Hydra Cream is absolutely divine. It absorbs beautifully and keeps my skin hydrated all day long.', product: 'Hydra Cream' },
+	{ id: 4, name: 'Maria K.', location: 'Miami', rating: 5, text: "I've tried countless serums but nothing compares to the glow I get from Boty. Absolutely transformative.", product: 'Glow Serum' },
+	{ id: 5, name: 'Sophie T.', location: 'Seattle', rating: 5, text: 'The packaging is beautiful and sustainable. I feel good knowing I\'m choosing eco-friendly skincare.', product: 'Night Cream' },
+	{ id: 6, name: 'Anna P.', location: 'Boston', rating: 5, text: 'My acne-prone skin has cleared up since switching to Boty. Natural ingredients really make a difference.', product: 'Gentle Cleanser' },
+	{ id: 7, name: 'Claire B.', location: 'Austin', rating: 5, text: 'The texture of the Renewal Oil is perfection. It absorbs quickly and leaves my skin glowing.', product: 'Renewal Oil' },
+	{ id: 8, name: 'Lily W.', location: 'Portland', rating: 5, text: 'I love that Boty is cruelty-free and vegan. Great products that align with my values.', product: 'Hydra Cream' },
+	{ id: 9, name: 'Rachel D.', location: 'Denver', rating: 5, text: 'The scent is so subtle and natural. No overpowering fragrances, just pure botanical goodness.', product: 'Radiance Serum' }
 ];

@@ -3,7 +3,7 @@
 	import { COMPANY_DATA } from '@/shared/constants';
 
 	// COMPONENTS
-	import HeroSection from '@/shared/components/pages/(unprotected)/root/hero-section.svelte';
+	import HeroSection from '@/shared/components/pages/(unprotected)/root/hero-section/hero-section.svelte';
 	import StrategySection from '@/shared/components/pages/(unprotected)/root/strategy-section/strategy-section.svelte';
 	import WorkSection from '@/shared/components/pages/(unprotected)/root/work-section/work-section.svelte';
 	import TestimonialsSection from '@/shared/components/pages/(unprotected)/root/testimonials-section/testimonials-section.svelte';

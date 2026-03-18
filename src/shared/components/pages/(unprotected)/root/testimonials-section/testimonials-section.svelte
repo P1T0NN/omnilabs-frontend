@@ -1,94 +1,106 @@
 <script lang="ts">
-    // SVELTEKIT IMPORTS
-    import { onDestroy, onMount } from 'svelte';
+	// COMPONENTS
+	import TestimonialsSectionItem from './testimonials-section-item.svelte';
 
-    // HOOKS
-    import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
+	// DATA
+	import { TESTIMONIALS_CARDS } from '@/shared/data/testimonialsData';
 
-    // COMPONENTS
-    import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/shared/components/ui/carousel';
+	const cardShadow =
+		'rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px';
 
-    // DATA
-    import { TESTIMONIALS_DATA } from '@/shared/data/testimonialsData';
-
-    // TYPES
-    import type { CarouselAPI } from '@/shared/components/ui/carousel/context';
-
-    let carouselApi = $state<CarouselAPI | undefined>(undefined);
-    let sectionRef: HTMLElement | undefined;
-    let inView = $state(false);
-    let cleanup: (() => void) | undefined;
-
-    onMount(() => {
-        const interval = setInterval(() => {
-            carouselApi?.scrollNext();
-        }, 5000);
-
-        if (sectionRef) {
-            cleanup = useIntersectionObserver(sectionRef, () => {
-                inView = true;
-            });
-        }
-
-        return () => clearInterval(interval);
-    });
-
-    onDestroy(() => cleanup?.());
+	const column1 = $derived([TESTIMONIALS_CARDS[0], TESTIMONIALS_CARDS[3], TESTIMONIALS_CARDS[6]]);
+	const column2 = $derived([TESTIMONIALS_CARDS[1], TESTIMONIALS_CARDS[4], TESTIMONIALS_CARDS[7]]);
+	const column3 = $derived([TESTIMONIALS_CARDS[2], TESTIMONIALS_CARDS[5], TESTIMONIALS_CARDS[8]]);
 </script>
 
-<section>
-    <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
-        <div
-            bind:this={sectionRef}
-            class="animate-on-in-view"
-            class:in-view={inView}
-        >
-            <div class="mb-10 md:mb-16 flex flex-col gap-4 text-center">
-                <span class="animate-slide-up block font-bold tracking-widest text-primary uppercase">
-                    Client Results
-                </span>
+<section class="overflow-hidden bg-background pt-12 pb-24">
+	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+		<div class="mb-16 text-center">
+			<span class="animate-slide-up block font-bold tracking-widest text-primary uppercase">
+				Client Results
+			</span>
 
-                <h2 class="animate-slide-up-delay-150 italic">
-                    Don't take our word for it.
-                </h2>
-            </div>
+			<h2 class="animate-slide-up-delay-150 italic">
+				Don't take our word for it.
+			</h2>
+		</div>
 
-            <div class="animate-slide-up-delay-300 relative overflow-visible px-4 md:px-14">
-            <Carousel
-                opts={{ loop: true, align: 'center' }}
-                setApi={(api) => { carouselApi = api; }}
-                class="w-full max-w-4xl mx-auto"
-            >
-                <CarouselPrevious class="-start-8 md:-start-12" />
-                <CarouselNext class="-end-8 md:-end-12" />
-                <CarouselContent class="-ml-2 md:-ml-4">
-                    {#each TESTIMONIALS_DATA as t}
-                        <CarouselItem class="pl-2 md:pl-4 flex-[0_0_85%] min-w-0 md:flex-none md:basis-1/2 lg:basis-1/3">
-                            <div
-                                class="group flex flex-col gap-3 md:gap-8 border-2 border-black bg-white p-4 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 hover:shadow-[10px_10px_0px_0px_var(--primary)] hover:-translate-y-1 h-full min-w-0"
-                            >
-                                <div class="text-3xl md:text-6xl leading-none text-primary">"</div>
+		<div class="relative">
+			<div
+				class="pointer-events-none absolute top-0 right-0 left-0 z-10 h-32 bg-linear-to-b from-background to-transparent"
+			></div>
+			<div
+				class="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-32 bg-linear-to-t from-background to-transparent"
+			></div>
 
-                                <p class="flex-1 text-sm md:text-lg italic leading-snug md:leading-relaxed text-neutral-700">
-                                    {t.quote}
-                                </p>
+			<div class="h-[600px] md:hidden">
+				<div class="relative h-full overflow-hidden">
+					<div class="testimonials-scroll-down testimonials-scroll-down-slow-hover">
+						{#each [...TESTIMONIALS_CARDS, ...TESTIMONIALS_CARDS] as testimonial}
+							<TestimonialsSectionItem {testimonial} {cardShadow} />
+						{/each}
+					</div>
+				</div>
+			</div>
 
-                                <div class="flex items-center gap-3 md:gap-4 border-t border-neutral-200 pt-4 md:pt-6">
-                                    <div class="flex h-8 w-8 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-black text-xs md:text-sm font-black text-background">
-                                        {t.initial}
-                                    </div>
+			<div class="hidden h-[600px] gap-4 md:grid md:grid-cols-3">
+				<div class="relative overflow-hidden">
+					<div class="testimonials-scroll-down testimonials-scroll-down-slow-hover">
+						{#each [...column1, ...column1] as testimonial}
+							<TestimonialsSectionItem {testimonial} {cardShadow} />
+						{/each}
+					</div>
+				</div>
 
-                                    <div>
-                                        <p class="font-black uppercase tracking-tight">{t.author}</p>
-                                        <p class="text-xs text-neutral-600">{t.role}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </CarouselItem>
-                    {/each}
-                </CarouselContent>
-            </Carousel>
-            </div>
-        </div>
-    </div>
+				<div class="relative overflow-hidden">
+					<div class="testimonials-scroll-up testimonials-scroll-up-slow-hover">
+						{#each [...column2, ...column2] as testimonial}
+							<TestimonialsSectionItem {testimonial} {cardShadow} />
+						{/each}
+					</div>
+				</div>
+
+				<div class="relative overflow-hidden">
+					<div class="testimonials-scroll-down testimonials-scroll-down-slow-hover">
+						{#each [...column3, ...column3] as testimonial}
+							<TestimonialsSectionItem {testimonial} {cardShadow} />
+						{/each}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
+
+<style>
+	@keyframes testimonials-scroll-down {
+		from {
+			transform: translateY(0);
+		}
+		to {
+			transform: translateY(-50%);
+		}
+	}
+
+	@keyframes testimonials-scroll-up {
+		from {
+			transform: translateY(-50%);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+
+	.testimonials-scroll-down {
+		animation: testimonials-scroll-down 30s linear infinite;
+	}
+
+	.testimonials-scroll-up {
+		animation: testimonials-scroll-up 30s linear infinite;
+	}
+
+	.testimonials-scroll-down-slow-hover:hover,
+	.testimonials-scroll-up-slow-hover:hover {
+		animation-play-state: paused;
+	}
+</style>

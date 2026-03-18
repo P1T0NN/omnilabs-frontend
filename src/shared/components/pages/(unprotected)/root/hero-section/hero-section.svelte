@@ -1,4 +1,5 @@
 <script lang="ts">
+	// SVELTEKIT IMPORTS
 	import { onDestroy, onMount } from 'svelte';
 
 	// CONFIG
@@ -10,7 +11,7 @@
 	// COMPONENTS
 	import WordChange from '@/shared/components/ui/animations/word-change.svelte';
 	import CtaButton from '@/shared/components/ui/cta-button/cta-button.svelte';
-	import Marquee from '@/shared/components/ui/marquee/marquee.svelte';
+	import HeroSectionTrustedBy from './hero-section-trusted-by.svelte';
 
 	const heroPhrases = ['sell.', 'convert.', 'scale.'] as const;
 
@@ -27,12 +28,6 @@
 
 	onDestroy(() => cleanup?.());
 
-	const trustedByLinks = [
-		{ href: 'https://www.bgapartman.com', label: 'BGApartman' },
-		{ href: 'https://followusnyc.com', label: 'FollowUs' },
-		{ href: 'https://www.kontentkolektiv.com', label: 'Kontent Kolektiv' },
-		{ href: 'https://www.crys-sports.com', label: 'Crys Sports' }
-	] as const;
 </script>
 
 <section class="relative flex min-h-screen flex-col justify-center overflow-hidden pt-24 md:pt-0">
@@ -61,25 +56,7 @@
 				</CtaButton>
 			</div>
 
-			<div class="flex w-full flex-col gap-4 pt-8 md:pt-4">
-				<p class="text-center text-lg font-bold text-neutral-500">
-					Trusted By
-				</p>
-
-				<Marquee>
-					{#each [...trustedByLinks, ...trustedByLinks] as link, i (link.href + '-' + i)}
-						<a
-							href={link.href}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="text-lg font-black tracking-tight text-neutral-400 uppercase transition-colors hover:text-black shrink-0"
-							aria-hidden={i >= trustedByLinks.length}
-						>
-							{link.label}
-						</a>
-					{/each}
-				</Marquee>
-			</div>
+			<HeroSectionTrustedBy />
 		</div>
 	</div>
 </section>

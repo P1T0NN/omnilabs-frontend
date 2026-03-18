@@ -16,8 +16,14 @@
 </script>
 
 <div class="marquee-wrap overflow-hidden py-2 {className}">
-	<div class="marquee-track flex w-max {gap} pr-12" style="animation-duration: {duration}s">
-		{@render children()}
+	<div class="marquee-track flex w-max" style="animation-duration: {duration}s">
+		<div class="flex shrink-0 {gap} pr-12">
+			{@render children()}
+		</div>
+		
+		<div class="flex shrink-0 {gap} pr-12" aria-hidden="true">
+			{@render children()}
+		</div>
 	</div>
 </div>
 
@@ -31,7 +37,7 @@
 		mask-image: linear-gradient(to right, transparent 0, black 2rem, black calc(100% - 2rem), transparent 100%);
 	}
 	.marquee-track {
-		animation: marquee 25s linear infinite;
+		animation: marquee linear infinite;
 	}
 	@media (prefers-reduced-motion: reduce) {
 		.marquee-track { animation: none; }

@@ -7,17 +7,17 @@ export const WORK_DATA = [
         description:
             'Full booking platform — apartment listings, reservation management, and owner dashboard. Top 1 booking platform in Serbia.',
         img: '/home/opt/bgapartman-website-960w.webp',
-        href: 'https://www.bgapartman.com',
+        href: 'https://www.bgapartman.com/en',
         class: 'md:col-span-7'
     },
     {
         id: '02',
-        title: 'FollowUs',
+        title: 'Luka Vukovic',
         issue: 'No. 02',
-        client: 'Direct Marketing',
-        description: 'High-converting web presence for a direct marketing company operating across multiple markets.',
-        img: '/home/opt/followus-website-960w.webp',
-        href: 'https://followusnyc.com',
+        client: 'Personal Website',
+        description: 'Personal website for one of the best video editors currently, working with the biggest YouTube channels.',
+        img: '/home/opt/lukavukovic-website-960w.webp',
+        href: 'https://lukaavukovic.com',
         class: 'md:col-span-5 md:mt-16'
     },
     {
