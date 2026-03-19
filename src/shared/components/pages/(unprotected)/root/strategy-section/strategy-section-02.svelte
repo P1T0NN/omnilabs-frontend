@@ -6,7 +6,7 @@
 	import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
 
 	let sectionRef: HTMLElement | undefined;
-	let inView = false;
+    let inView = $state(false);
 	let cleanup: (() => void) | undefined;
 
 	onMount(() => {

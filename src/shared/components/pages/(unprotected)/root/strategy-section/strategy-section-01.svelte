@@ -11,7 +11,7 @@
 	import CtaButton from '@/shared/components/ui/cta-button/cta-button.svelte';
 
 	let sectionRef: HTMLElement | undefined;
-	let inView = false;
+	let inView = $state(false);
 	let cleanup: (() => void) | undefined;
 
 	onMount(() => {
@@ -51,7 +51,7 @@
 			<p class="mb-3 text-xs font-bold uppercase tracking-widest text-primary">Hear it from our clients:</p>
 			<p class="text-2xl italic leading-snug">
 				"We went from 12 bookings a month to 47 in the first 60 days after launch." — Sonya., Founder,
-				<a href="https://bgapartman.com" target="_blank" class="text-primary hover:underline">BGApartman</a>
+				<a href="https://bgapartman.com" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">BGApartman</a>
 			</p>
 		</div>
 

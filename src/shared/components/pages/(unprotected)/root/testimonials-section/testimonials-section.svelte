@@ -36,7 +36,7 @@
 			<div class="h-[600px] md:hidden">
 				<div class="relative h-full overflow-hidden">
 					<div class="testimonials-scroll-down testimonials-scroll-down-slow-hover">
-						{#each [...TESTIMONIALS_CARDS, ...TESTIMONIALS_CARDS] as testimonial}
+						{#each [...TESTIMONIALS_CARDS, ...TESTIMONIALS_CARDS] as testimonial, i (i)}
 							<TestimonialsSectionItem {testimonial} {cardShadow} />
 						{/each}
 					</div>
@@ -46,7 +46,7 @@
 			<div class="hidden h-[600px] gap-4 md:grid md:grid-cols-3">
 				<div class="relative overflow-hidden">
 					<div class="testimonials-scroll-down testimonials-scroll-down-slow-hover">
-						{#each [...column1, ...column1] as testimonial}
+						{#each [...column1, ...column1] as testimonial, i (i)}
 							<TestimonialsSectionItem {testimonial} {cardShadow} />
 						{/each}
 					</div>
@@ -54,7 +54,7 @@
 
 				<div class="relative overflow-hidden">
 					<div class="testimonials-scroll-up testimonials-scroll-up-slow-hover">
-						{#each [...column2, ...column2] as testimonial}
+						{#each [...column2, ...column2] as testimonial, i (i)}
 							<TestimonialsSectionItem {testimonial} {cardShadow} />
 						{/each}
 					</div>
@@ -62,7 +62,7 @@
 
 				<div class="relative overflow-hidden">
 					<div class="testimonials-scroll-down testimonials-scroll-down-slow-hover">
-						{#each [...column3, ...column3] as testimonial}
+						{#each [...column3, ...column3] as testimonial, i (i)}
 							<TestimonialsSectionItem {testimonial} {cardShadow} />
 						{/each}
 					</div>

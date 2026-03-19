@@ -11,7 +11,7 @@ export const CONTACT_INFORMATIONS = {
 }
 
 export const UNPROTECTED_PAGE_ENDPOINTS = {
-    CONTACT: '/#contact',
+    CONTACT: 'https://calendly.com/mariafernandapadilla05/30min',
     STRATEGY: '/#strategy',
     WORK: '/#work',
     PROCESS: '/#process',

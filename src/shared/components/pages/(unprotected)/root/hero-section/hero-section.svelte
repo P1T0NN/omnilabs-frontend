@@ -16,7 +16,7 @@
 	const heroPhrases = ['sell.', 'convert.', 'scale.'] as const;
 
 	let heroContentRef: HTMLElement | undefined;
-	let heroInView = false;
+	let heroInView = $state(false);
 	let cleanup: (() => void) | undefined;
 
 	onMount(() => {

@@ -42,7 +42,7 @@
                     <li class="text-neutral-400">{COMPANY_DATA.ADDRESS}</li>
 
                     <li class="pt-2">
-                        <a href="/contact" class="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-primary text-xs hover:text-background transition-colors">
+                        <a href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} class="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-primary text-xs hover:text-background transition-colors">
                             Start a Project →
                         </a>
                     </li>

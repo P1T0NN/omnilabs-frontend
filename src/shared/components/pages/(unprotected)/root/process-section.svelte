@@ -17,7 +17,7 @@
     import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
     let sectionRef: HTMLElement | undefined;
-    let inView = false;
+    let inView = $state(false);
     let cleanup: (() => void) | undefined;
 
     onMount(() => {
@@ -48,7 +48,7 @@
             </div>
 
             <div class="grid grid-cols-1 gap-0 md:grid-cols-4">
-                {#each PROCESS_DATA as step, i}
+                {#each PROCESS_DATA as step, i (step.number)}
                     <div class="animate-slide-up-delay-300 group relative flex flex-col gap-4 border-t-2 border-black px-4 py-8 md:pr-6 {i > 0 ? 'md:border-l-2 md:border-t-2 md:pl-8' : 'md:pl-4'} {i === 0 ? 'z-40' : i === 1 ? 'z-30' : i === 2 ? 'z-20' : ''}">
                         <span class="block text-5xl font-black text-neutral-600 transition-colors group-hover:text-primary">
                             {step.number}

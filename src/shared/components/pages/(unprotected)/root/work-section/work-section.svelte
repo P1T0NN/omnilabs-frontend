@@ -12,7 +12,7 @@
 	import { WORK_DATA } from '@/shared/data/workData';
 
 	let sectionRef: HTMLElement | undefined;
-	let inView = false;
+	let inView = $state(false);
 	let cleanup: (() => void) | undefined;
 
 	onMount(() => {
@@ -35,14 +35,8 @@
 		>
 			<div class="mb-16 flex flex-col items-end justify-between border-b-2 border-white/20 pb-8 md:flex-row">
 				<h2 class="animate-slide-up stroke-text font-black text-transparent uppercase">
-					Archive
+					Case Studies
 				</h2>
-
-				<style>
-					.stroke-text {
-						-webkit-text-stroke: 2px var(--background);
-					}
-				</style>
 			</div>
 
 			<div class="grid grid-cols-1 gap-x-12 gap-y-12 md:grid-cols-12">
@@ -62,3 +56,9 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	.stroke-text {
+		-webkit-text-stroke: 2px var(--background);
+	}
+</style>

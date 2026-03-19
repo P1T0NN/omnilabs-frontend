@@ -11,7 +11,7 @@
 </script>
 
 {#if issues && issues.length > 0}
-    {#each issues as issue}
+    {#each issues as issue, i (`${issue.message}-${i}`)}
         <p class="text-red-500 text-sm mt-1">{issue.message}</p>
     {/each}
 {/if}

@@ -1,4 +1,7 @@
 <script lang="ts">
+	// SVELTEKIT IMPORTS
+	import { onMount } from 'svelte';
+
 	// CONFIG
 	import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
 
@@ -19,7 +22,8 @@
 		headerClass.mobileOpen = !headerClass.mobileOpen;
 	}
 
-	$effect(() => {
+	onMount(() => {
+		handleScroll();
 		window.addEventListener('scroll', handleScroll);
 		return () => {
 			window.removeEventListener('scroll', handleScroll);

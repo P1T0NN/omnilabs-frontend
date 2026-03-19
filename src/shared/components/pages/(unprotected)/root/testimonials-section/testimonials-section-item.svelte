@@ -13,7 +13,7 @@
 >
     <div
         class="group flex flex-col gap-3 md:gap-8 border-2 border-black bg-white p-4 md:p-8 transition-all duration-300 hover:shadow-[10px_10px_0px_0px_var(--primary)] hover:-translate-y-1 h-full min-w-0"
-        style={`box-shadow: ${cardShadow}`}
+        style={cardShadow ? `box-shadow: ${cardShadow}` : undefined}
     >
         <div class="text-3xl md:text-6xl leading-none text-primary">"</div>
 

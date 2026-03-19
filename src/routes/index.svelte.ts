@@ -1,5 +1,1 @@
-class RootPageClass {
-    
-}
-
-export const rootPageClass = new RootPageClass();
+export const rootPageClass = {};

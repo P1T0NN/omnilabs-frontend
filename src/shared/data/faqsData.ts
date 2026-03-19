@@ -1,4 +1,11 @@
-export const FAQS_DATA = [
+type FAQItem = {
+    question: string;
+    answer: string;
+    answerLinkText?: string;
+    answerLinkHref?: string;
+};
+
+export const FAQS_DATA: FAQItem[] = [
     {
         question: 'What types of digital products do you build?',
         answer:
@@ -27,6 +34,8 @@ export const FAQS_DATA = [
     {
         question: 'How do I get started?',
         answer:
-            'Book a free strategy call. We\'ll review your current situation, discuss your goals, and tell you exactly how we\'d approach your project — no obligation, no sales pressure. If it\'s a fit, we move fast.'
+            'We\'ll review your current situation, discuss your goals, and tell you exactly how we\'d approach your project — no obligation, no sales pressure. If it\'s a fit, we move fast.',
+        answerLinkText: 'Book a free strategy call.',
+        answerLinkHref: 'https://calendly.com/mariafernandapadilla05/30min'
     }
 ];

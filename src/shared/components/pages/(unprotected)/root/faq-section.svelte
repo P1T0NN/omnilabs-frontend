@@ -55,7 +55,7 @@
             </div>
 
             <div class="animate-slide-up-delay-300 lg:col-span-8">
-                {#each FAQS_DATA as faq, i}
+                {#each FAQS_DATA as faq, i (faq.question)}
                     <div class="border-b border-neutral-200">
                         <button
                             class="flex w-full items-center justify-between py-6 text-left transition-colors hover:text-primary"
@@ -77,6 +77,16 @@
                         {#if openIndex === i}
                             <div transition:slide={{ duration: 300 }} class="pb-6">
                                 <p class="leading-relaxed text-neutral-600">
+                                    {#if faq.answerLinkHref && faq.answerLinkText}
+                                        <a
+                                            href={faq.answerLinkHref}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="font-medium text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/80"
+                                        >
+                                            {faq.answerLinkText}
+                                        </a>
+                                    {/if}
                                     {faq.answer}
                                 </p>
                             </div>

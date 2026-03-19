@@ -5,14 +5,15 @@
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
 	interface Props {
-		href: string;
 		variant?: 'primary' | 'black' | 'light';
 		withArrow?: boolean;
+		href?: string;
 		class?: string;
 		children: import('svelte').Snippet;
 	}
 
-	let { href, variant = 'primary', withArrow = true, class: className = '', children }: Props = $props();
+	let { variant = 'primary', withArrow = true, href, class: className = '', children }: Props = $props();
+	const defaultCtaHref = 'https://calendly.com/mariafernandapadilla05/30min';
 
 	const variantClasses = {
 		primary: 'bg-primary text-white hover:bg-black',
@@ -25,7 +26,9 @@
 </script>
 
 <a
-	{href}
+	href={href ?? defaultCtaHref}
+	target="_blank"
+	rel="noopener noreferrer"
 	class={cn(className, baseClasses, variantClasses[variant])}
 >
 	{@render children()}

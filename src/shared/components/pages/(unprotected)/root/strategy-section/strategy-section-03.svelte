@@ -11,7 +11,7 @@
 	import CtaButton from '@/shared/components/ui/cta-button/cta-button.svelte';
 
 	let sectionRef: HTMLElement | undefined;
-	let inView = false;
+    let inView = $state(false);
 	let cleanup: (() => void) | undefined;
 
 	onMount(() => {
@@ -58,7 +58,7 @@
                     'Exposed API keys & secrets',
                     'CSRF vulnerabilities',
                     'Insecure data transmission',
-                ] as item}
+                ] as item (item)}
                     <li class="flex items-center gap-3 text-sm">
                         <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-white text-xs font-bold">✓</span>
                         <span>{item}</span>

@@ -38,7 +38,7 @@
 			class:transition-none={noTransition}
 			style="transform: translateY(-{index * 100 / extended.length}%){noTransition ? '; transition: none' : ''}"
 		>
-			{#each extended as word}
+			{#each extended as word, i (i)}
 				<span class="block h-[1em] leading-[1em]">{word}</span>
 			{/each}
 		</span>
