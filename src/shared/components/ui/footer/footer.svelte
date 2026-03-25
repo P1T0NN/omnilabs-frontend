@@ -1,6 +1,7 @@
 <script lang="ts">
     // CONFIG
     import { COMPANY_DATA, UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
+    import { Link } from '@/shared/components/ui/link';
 </script>
 
 <footer class="bg-black text-background py-20">
@@ -16,11 +17,11 @@
             <div class="flex flex-col gap-6">
                 <h3 class="font-bold uppercase tracking-widest text-background text-xs">Navigate</h3>
                 <ul class="space-y-4 text-neutral-400">
-                    <li><a href={UNPROTECTED_PAGE_ENDPOINTS.WORK} class="hover:text-background transition-colors">Work</a></li>
-                    <li><a href={UNPROTECTED_PAGE_ENDPOINTS.STRATEGY} class="hover:text-background transition-colors">Strategy</a></li>
-                    <li><a href={UNPROTECTED_PAGE_ENDPOINTS.PROCESS} class="hover:text-background transition-colors">Process</a></li>
-                    <li><a href={UNPROTECTED_PAGE_ENDPOINTS.FAQ} class="hover:text-background transition-colors">FAQ</a></li>
-                    <li><a href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} class="hover:text-background transition-colors">Contact</a></li>
+                    <li><Link href={UNPROTECTED_PAGE_ENDPOINTS.WORK} class="hover:text-background transition-colors">Work</Link></li>
+                    <li><Link href={UNPROTECTED_PAGE_ENDPOINTS.STRATEGY} class="hover:text-background transition-colors">Strategy</Link></li>
+                    <li><Link href={UNPROTECTED_PAGE_ENDPOINTS.PROCESS} class="hover:text-background transition-colors">Process</Link></li>
+                    <li><Link href={UNPROTECTED_PAGE_ENDPOINTS.FAQ} class="hover:text-background transition-colors">FAQ</Link></li>
+                    <li><Link href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} class="hover:text-background transition-colors">Contact</Link></li>
                 </ul>
             </div>
 
@@ -28,23 +29,23 @@
                 <h3 class="font-bold uppercase tracking-widest text-background text-xs">Get in Touch</h3>
                 <ul class="space-y-4 text-neutral-400">
                     <li>
-                        <a href="mailto:{COMPANY_DATA.EMAIL}" class="hover:text-background transition-colors">
+                        <Link href="mailto:{COMPANY_DATA.EMAIL}" class="hover:text-background transition-colors">
                             {COMPANY_DATA.EMAIL}
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
-                        <a href="tel:{COMPANY_DATA.PHONE}" class="hover:text-background transition-colors">
+                        <Link href="tel:{COMPANY_DATA.PHONE}" class="hover:text-background transition-colors">
                             {COMPANY_DATA.PHONE}
-                        </a>
+                        </Link>
                     </li>
 
                     <li class="text-neutral-400">{COMPANY_DATA.ADDRESS}</li>
 
                     <li class="pt-2">
-                        <a href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} class="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-primary text-xs hover:text-background transition-colors">
+                        <Link href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} class="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-primary text-xs hover:text-background transition-colors">
                             Start a Project →
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

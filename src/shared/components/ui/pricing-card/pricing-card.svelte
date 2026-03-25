@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import { Link } from '@/shared/components/ui/link';
 
 	interface Props {
 		title: string;
@@ -47,12 +48,12 @@
 		{@render children()}
 	{/if}
 
-	<a
+	<Link
 		{href}
 		class="inline-flex h-12 w-full items-center justify-center rounded-none text-sm font-bold tracking-widest uppercase transition-colors text-center {variant === 'light'
 			? 'bg-black text-background hover:bg-primary'
 			: 'bg-white text-black hover:bg-primary hover:text-white'}"
 	>
 		{buttonText}
-	</a>
+	</Link>
 </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	// UTILS
 	import { QualityImage } from '@/shared/components/ui/quality-image';
+	import { Link } from '@/shared/components/ui/link';
 
 	// LUCIDE ICONS
 	import ArrowUpRight from '@lucide/svelte/icons/arrow-up-right';
@@ -31,7 +32,7 @@
 </script>
 
 {#if href}
-	<a
+	<Link
 		href={href}
 		target="_blank"
 		rel="noopener noreferrer"
@@ -91,7 +92,7 @@
 				<ArrowUpRight class="h-6 w-6" />
 			</div>
 		</div>
-	</a>
+	</Link>
 {:else}
 	<div class="group relative flex flex-col {className}">
 		<div

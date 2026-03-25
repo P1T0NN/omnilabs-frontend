@@ -1,6 +1,7 @@
 <script lang="ts">
 	// SVELTEKIT IMPORTS
 	import { onDestroy, onMount } from 'svelte';
+	import { m } from '@/shared/lib/paraglide/messages';
 
 	// CONFIG
 	import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
@@ -33,12 +34,12 @@
 			class:in-view={inView}
 		>
 			<h2 class="animate-slide-up max-w-3xl text-5xl lg:text-6xl italic leading-tight">
-				Your next customer is one product away.
+				{m['RootPage.CtaSection.title']()}
 			</h2>
 
 			<div class="animate-slide-up-delay-150">
 				<CtaButton href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} variant="light">
-					Start a Project
+					{m['RootPage.CtaSection.cta']()}
 				</CtaButton>
 			</div>
 		</div>

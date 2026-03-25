@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { cn } from '@/shared/utils/utils';
+	import { Link } from '@/shared/components/ui/link';
 
 	// LUCIDE ICONS
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
@@ -25,7 +26,7 @@
 		'group inline-flex h-14 items-center justify-center gap-2 rounded-none px-10 text-sm font-bold tracking-widest uppercase transition-colors';
 </script>
 
-<a
+<Link
 	href={href ?? defaultCtaHref}
 	target="_blank"
 	rel="noopener noreferrer"
@@ -35,4 +36,4 @@
 	{#if withArrow}
 		<ArrowRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
 	{/if}
-</a>
+</Link>

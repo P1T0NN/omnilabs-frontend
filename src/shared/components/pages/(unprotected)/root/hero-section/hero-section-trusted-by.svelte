@@ -1,6 +1,10 @@
 <script lang="ts">
+    // LIBRARIES
+    import { m } from '@/shared/lib/paraglide/messages';
+
     // COMPONENTS
     import Marquee from '@/shared/components/ui/marquee/marquee.svelte';
+    import { Link } from '@/shared/components/ui/link';
     import LukavukovicLogo from '@/shared/svgs/lukavukovic-logo.svelte';
 
     // DATA
@@ -9,13 +13,13 @@
 
 <div class="flex w-full flex-col gap-4 pt-8 md:pt-4">
     <p class="text-center text-lg font-bold text-neutral-500">
-        Trusted By
+        {m['RootPage.HeroSection.trustedBy']()}
     </p>
 
     <Marquee>
         {#each [...TRUSTED_BY_DATA, ...TRUSTED_BY_DATA] as link, i (link.href + '-' + i)}
             {@const label = link.label}
-            <a
+            <Link
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,7 +58,7 @@
                 {:else}
                     <span>{label}</span>
                 {/if}
-            </a>
+            </Link>
         {/each}
     </Marquee>
 </div>

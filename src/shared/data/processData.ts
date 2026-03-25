@@ -1,22 +1,24 @@
+import { m } from '@/shared/lib/paraglide/messages';
+
 export const PROCESS_DATA = [
     {
         number: '01',
-        title: 'Strategy Call',
-        description: 'We learn your business, goals, and audience. Together we define the scope and the strategy that will drive conversions.'
+        title: m['RootPage.ProcessSection.item01Title'](),
+        description: m['RootPage.ProcessSection.item01Description']()
     },
     {
         number: '02',
-        title: 'Design & Build',
-        description: 'Our team architects the structure, writes conversion-optimized copy, and engineers a blazing-fast, secure website.'
+        title: m['RootPage.ProcessSection.item02Title'](),
+        description: m['RootPage.ProcessSection.item02Description']()
     },
     {
         number: '03',
-        title: 'Test & Launch',
-        description: 'We penetration-test, performance-audit, and stress-test everything before your site goes live. No surprises.'
+        title: m['RootPage.ProcessSection.item03Title'](),
+        description: m['RootPage.ProcessSection.item03Description']()
     },
     {
         number: '04',
-        title: 'Grow Together',
-        description: 'With our ongoing partnership, your site evolves with your business — updates, tweaks, and optimizations included.'
+        title: m['RootPage.ProcessSection.item04Title'](),
+        description: m['RootPage.ProcessSection.item04Description']()
     }
 ];

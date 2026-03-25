@@ -3,6 +3,10 @@
     // SVELTEKIT IMPORTS
     import { onDestroy, onMount } from 'svelte';
     import { slide } from 'svelte/transition';
+    import { m } from '@/shared/lib/paraglide/messages';
+
+    // COMPONENTS
+    import { Link } from '@/shared/components/ui/link';
 
     // HOOKS
     import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
@@ -31,6 +35,7 @@
     function toggle(index: number) {
         openIndex = openIndex === index ? null : index;
     }
+
 </script>
 
 <section id="faq">
@@ -42,15 +47,15 @@
         >
             <div class="flex flex-col gap-4 lg:col-span-4">
                 <span class="animate-slide-up block font-bold tracking-widest text-primary uppercase">
-                    FAQ
+                    {m['RootPage.FaqSection.eyebrow']()}
                 </span>
 
                 <h2 class="animate-slide-up-delay-150 italic">
-                    Questions?
+                    {m['RootPage.FaqSection.title']()}
                 </h2>
 
                 <p class="animate-slide-up-delay-300 text-lg text-neutral-600">
-                    Everything you need to know before we start working together.
+                    {m['RootPage.FaqSection.description']()}
                 </p>
             </div>
 
@@ -78,14 +83,14 @@
                             <div transition:slide={{ duration: 300 }} class="pb-6">
                                 <p class="leading-relaxed text-neutral-600">
                                     {#if faq.answerLinkHref && faq.answerLinkText}
-                                        <a
+                                        <Link
                                             href={faq.answerLinkHref}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             class="font-medium text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/80"
                                         >
                                             {faq.answerLinkText}
-                                        </a>
+                                        </Link>
                                     {/if}
                                     {faq.answer}
                                 </p>

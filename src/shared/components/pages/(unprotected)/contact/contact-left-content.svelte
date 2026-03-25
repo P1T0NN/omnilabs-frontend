@@ -1,6 +1,7 @@
 <script lang="ts">
     // CONFIG
     import { COMPANY_DATA } from '@/shared/constants';
+    import { Link } from '@/shared/components/ui/link';
 
     // LUCIDE ICONS
     import ArrowRightIcon from "@lucide/svelte/icons/arrow-right";
@@ -39,7 +40,7 @@
 	<div class="flex flex-col gap-4 border-t border-neutral-200 pt-8">
 		<p class="text-sm text-neutral-600">Prefer to talk first?</p>
 		<div class="flex flex-col gap-4 items-start">
-			<a
+			<Link
 				href="https://cal.com"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -48,12 +49,12 @@
 				<CalendarIcon size={16} />
 				<span>Book a 30-min discovery call</span>
 				<ArrowRightIcon size={16} class="transition-transform group-hover:translate-x-1" />
-			</a>
-		<a href="mailto:{COMPANY_DATA.EMAIL}" 
+			</Link>
+		<Link href="mailto:{COMPANY_DATA.EMAIL}" 
 		   class="group flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-black transition-colors hover:text-primary">
 			<span>{COMPANY_DATA.EMAIL}</span>
 				<ArrowRightIcon size={16} class="transition-transform group-hover:translate-x-1" />
-			</a>
+			</Link>
 		</div>
 	</div>
 </div>

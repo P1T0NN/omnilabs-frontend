@@ -1,5 +1,9 @@
 <script lang="ts">
+    // SVELTEKIT IMPORTS
     import { onDestroy, onMount } from 'svelte';
+
+    // LIBRARIES
+    import { m } from '@/shared/lib/paraglide/messages';
 
     // CONFIG
     import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
@@ -28,6 +32,7 @@
     });
 
     onDestroy(() => cleanup?.());
+
 </script>
 
 <section id="process" class="bg-secondary py-12 md:py-32">
@@ -39,11 +44,11 @@
         >
             <div class="flex flex-col gap-4 text-center">
                 <span class="animate-slide-up block font-bold tracking-widest text-primary uppercase">
-                    How It Works
+                    {m['RootPage.ProcessSection.eyebrow']()}
                 </span>
 
                 <h2 class="animate-slide-up-delay-150 italic">
-                    From call to launch.
+                    {m['RootPage.ProcessSection.title']()}
                 </h2>
             </div>
 
@@ -73,7 +78,7 @@
 
             <div class="flex animate-slide-up-delay-300 justify-center">
                 <CtaButton href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} withArrow>
-                    Book a Strategy Call
+                    {m['RootPage.ProcessSection.cta']()}
                 </CtaButton>
             </div>
         </div>

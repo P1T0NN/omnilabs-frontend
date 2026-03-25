@@ -1,6 +1,7 @@
 <script lang="ts">
 	// SVELTEKIT IMPORTS
 	import { onDestroy, onMount } from 'svelte';
+	import { m } from '@/shared/lib/paraglide/messages';
 
 	// HOOKS
 	import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
@@ -35,7 +36,7 @@
 		>
 			<div class="mb-16 flex flex-col items-end justify-between border-b-2 border-white/20 pb-8 md:flex-row">
 				<h2 class="animate-slide-up stroke-text font-black text-transparent uppercase">
-					Case Studies
+					{m['RootPage.WorkSection.title']()}
 				</h2>
 			</div>
 

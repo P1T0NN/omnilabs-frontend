@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { m } from '@/shared/lib/paraglide/messages';
+
 	// COMPONENTS
 	import TestimonialsSectionItem from './testimonials-section-item.svelte';
 
@@ -17,11 +19,11 @@
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mb-16 text-center">
 			<span class="animate-slide-up block font-bold tracking-widest text-primary uppercase">
-				Client Results
+				{m['RootPage.TestimonialsSection.eyebrow']()}
 			</span>
 
 			<h2 class="animate-slide-up-delay-150 italic">
-				Don't take our word for it.
+				{m['RootPage.TestimonialsSection.title']()}
 			</h2>
 		</div>
 

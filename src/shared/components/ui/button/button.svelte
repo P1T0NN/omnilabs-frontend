@@ -42,6 +42,8 @@
 </script>
 
 <script lang="ts">
+	import { Link } from "@/shared/components/ui/link";
+
 	let {
 		class: className,
 		variant = "default",
@@ -56,18 +58,19 @@
 </script>
 
 {#if href}
-	<a
-		bind:this={ref}
+	<Link
+		ref={ref}
 		data-slot="button"
 		class={cn(buttonVariants({ variant, size }), className)}
-		href={disabled ? undefined : href}
+		href={href}
 		aria-disabled={disabled}
 		role={disabled ? "link" : undefined}
 		tabindex={disabled ? -1 : undefined}
+		onclick={disabled ? (event) => event.preventDefault() : undefined}
 		{...restProps}
 	>
 		{@render children?.()}
-	</a>
+	</Link>
 {:else}
 	<button
 		bind:this={ref}

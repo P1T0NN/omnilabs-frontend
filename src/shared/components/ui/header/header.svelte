@@ -8,11 +8,16 @@
 	// CLASSES
 	import { headerClass } from './header.svelte.ts';
 
-	// LUCIDE ICONS
-	import MenuIcon from '@lucide/svelte/icons/menu';
-	import XIcon from '@lucide/svelte/icons/x';
+	// COMPONENTS
 	import HeaderMobile from './header-mobile.svelte';
 	import Logo from '../logo/logo.svelte';
+	import { Link } from '@/shared/components/ui/link';
+	import LanguageSelector from '../language-selector/language-selector.svelte';
+
+	// LUCIDE ICONS
+	import MenuIcon from '@lucide/svelte/icons/menu';
+	// @ts-expect-error - Icon not found
+	import XIcon from '@lucide/svelte/icons/x';
 
 	function handleScroll() {
 		headerClass.scrolled = window.scrollY > 20;
@@ -54,35 +59,43 @@
 
 		<div class="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
 			{#each navLinks as link (link.href)}
-				<a
+				<Link
 					href={link.href}
 					class="px-4 py-2 text-[0.82rem] font-bold uppercase tracking-widest text-neutral-600 hover:text-foreground hover:bg-black/4 rounded-xl transition-all duration-150"
 				>
 					{link.label}
-				</a>
+				</Link>
 			{/each}
 		</div>
 
-		<div class="hidden md:flex items-center shrink-0">
-			<a
+		<div class="hidden md:flex items-center gap-2 shrink-0">
+			<LanguageSelector />
+
+			<Link
 				href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
 				class="rounded-full bg-primary px-5 py-2.5 text-[0.82rem] font-bold text-white shadow-[0_2px_20px_color-mix(in_srgb,var(--primary)_20%,transparent)] hover:bg-primary-hover transition-all duration-150 whitespace-nowrap"
 			>
 				Start a Project
-			</a>
+			</Link>
 		</div>
 
-		<button
-			class="flex md:hidden rounded-xl bg-transparent p-1.5 transition-colors duration-150 hover:bg-black/5"
-			onclick={toggleMobile}
-			aria-label="Toggle menu"
-		>
-			{#if headerClass.mobileOpen}
-				<XIcon class="h-5 w-5 text-neutral-700" />
-			{:else}
-				<MenuIcon class="h-5 w-5 text-neutral-700" />
-			{/if}
-		</button>
+		<div class="flex md:hidden items-center gap-2">
+			<LanguageSelector />
+
+			<button
+				class="rounded-xl bg-transparent p-1.5 transition-colors duration-150 hover:bg-black/5"
+				onclick={toggleMobile}
+				aria-label="Toggle menu"
+			>
+				{#if headerClass.mobileOpen}
+					<span class="inline-flex h-5 w-5 items-center justify-center text-neutral-700" aria-hidden="true">
+						<XIcon class="h-5 w-5 text-neutral-700" />
+					</span>
+				{:else}
+					<MenuIcon class="h-5 w-5 text-neutral-700" />
+				{/if}
+			</button>
+		</div>
 	</div>
 </nav>
 

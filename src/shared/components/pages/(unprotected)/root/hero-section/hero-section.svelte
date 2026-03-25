@@ -2,6 +2,9 @@
 	// SVELTEKIT IMPORTS
 	import { onDestroy, onMount } from 'svelte';
 
+	// LIBRARIES
+	import { m } from '@/shared/lib/paraglide/messages';
+
 	// CONFIG
 	import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
 
@@ -13,7 +16,11 @@
 	import CtaButton from '@/shared/components/ui/cta-button/cta-button.svelte';
 	import HeroSectionTrustedBy from './hero-section-trusted-by.svelte';
 
-	const heroPhrases = ['sell.', 'convert.', 'scale.'] as const;
+	const heroPhrases = [
+		m['RootPage.HeroSection.sell'](), 
+		m['RootPage.HeroSection.convert'](), 
+		m['RootPage.HeroSection.scale']()
+	] as const;
 
 	let heroContentRef: HTMLElement | undefined;
 	let heroInView = $state(false);
@@ -38,21 +45,20 @@
 			class:in-view={heroInView}
 		>
 			<h1 class="animate-slide-up leading-[0.85] font-black uppercase">
-				Digital <br />
-				Products <br />
+				{m['RootPage.HeroSection.digital']()} <br />
+				{m['RootPage.HeroSection.products']()} <br />
 				<span class="text-primary lowercase italic">
-					That <WordChange words={heroPhrases} />
+					{m['RootPage.HeroSection.that']()} <WordChange words={heroPhrases} />
 				</span>
 			</h1>
 
 			<p class="animate-slide-up-delay-150 text-lg leading-relaxed text-neutral-600">
-				<b>Booking platforms. Ecommerce stores. Custom web apps.</b> Built to convert from day one.
-				We combine marketing strategy with engineering precision to build digital products that don't just look good
+				<b>{m['RootPage.HeroSection.offerings']()}</b> {m['RootPage.HeroSection.description']()}
 			</p>
 
 			<div class="animate-slide-up-delay-300">
 				<CtaButton href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} variant="black">
-					Book a Strategy Call
+					{m['RootPage.HeroSection.bookAStrategyCall']()}
 				</CtaButton>
 			</div>
 
