@@ -40,7 +40,7 @@
 <Select type="single" bind:value={selectedLanguage} onValueChange={handleLanguageChange}>
 	<SelectTrigger
 		class={cn(
-			'flex items-center space-x-2 w-auto',
+			'flex w-auto items-center gap-2 sm:min-h-10 sm:gap-3 sm:px-3 sm:py-2',
 			variant === 'header' &&
 				'border-hero-overlay-foreground/20 bg-hero-overlay-foreground/10 hover:bg-hero-overlay-foreground/20'
 		)}
@@ -64,15 +64,15 @@
 
 	<SelectContent>
 		{#each languages as language (language.locale)}
-			<SelectItem value={language.locale}>
-				<div class="flex items-center space-x-2">
+			<SelectItem value={language.locale} class="min-h-10 py-2">
+				<div class="flex items-center gap-3">
 					{#if language.locale === 'en'}
 						<UnitedKingdomFlag />
 					{:else}
 						<SpainFlag />
 					{/if}
 
-					<span class="font-dm-sans text-sm font-medium">
+					<span class="font-dm-sans text-sm font-medium leading-none">
 						<span class="sm:hidden">{language.shortName}</span>
 						<span class="hidden sm:inline">{language.name}</span>
 					</span>
