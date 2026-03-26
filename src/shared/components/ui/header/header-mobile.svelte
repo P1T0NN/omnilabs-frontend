@@ -2,6 +2,9 @@
     // SVELTEKIT IMPORTS
     import { onMount } from 'svelte';
 
+    // LIBRARIES
+    import { m } from '@/shared/lib/paraglide/messages';
+
     // CONFIG
     import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
     import { Link } from '@/shared/components/ui/link';
@@ -37,10 +40,12 @@
     <div class="mt-auto">
         <Link
             href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
+            target="_blank"
+            rel="noopener noreferrer"
             onclick={() => (headerClass.mobileOpen = false)}
             class="flex items-center justify-center rounded-2xl bg-primary px-6 py-4 text-base font-bold text-white uppercase tracking-widest hover:bg-primary-hover transition-all duration-150"
         >
-            Start a Project
+            {m['Header.cta']()}
         </Link>
     </div>
 </div>

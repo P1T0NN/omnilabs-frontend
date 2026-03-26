@@ -2,6 +2,9 @@
 	// SVELTEKIT IMPORTS
 	import { onMount } from 'svelte';
 
+	// LIBRARIES
+	import { m } from '@/shared/lib/paraglide/messages';
+
 	// CONFIG
 	import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
 
@@ -16,7 +19,6 @@
 
 	// LUCIDE ICONS
 	import MenuIcon from '@lucide/svelte/icons/menu';
-	// @ts-expect-error - Icon not found
 	import XIcon from '@lucide/svelte/icons/x';
 
 	function handleScroll() {
@@ -35,15 +37,15 @@
 		};
 	});
 
-	const navLinks = [
-		{ href: UNPROTECTED_PAGE_ENDPOINTS.STRATEGY, label: 'Strategy' },
-		{ href: UNPROTECTED_PAGE_ENDPOINTS.WORK, label: 'Work' },
-		{ href: UNPROTECTED_PAGE_ENDPOINTS.PROCESS, label: 'Process' },
-		{ href: UNPROTECTED_PAGE_ENDPOINTS.FAQ, label: 'FAQ' }
-	];
+	const navLinks = $derived([
+		{ href: UNPROTECTED_PAGE_ENDPOINTS.STRATEGY, label: m['Header.navStrategy']() },
+		{ href: UNPROTECTED_PAGE_ENDPOINTS.WORK, label: m['Header.navWork']() },
+		{ href: UNPROTECTED_PAGE_ENDPOINTS.PROCESS, label: m['Header.navProcess']() },
+		{ href: UNPROTECTED_PAGE_ENDPOINTS.FAQ, label: m['Header.navFaq']() }
+	]);
 </script>
 
-<nav aria-label="Main navigation"
+<nav aria-label={m['Header.ariaMainNavigation']()}
 	class="fixed top-0 left-0 right-0 z-50 flex justify-center pt-5 transition-all duration-300 {headerClass.scrolled
 		? 'pt-3'
 		: ''}"
@@ -69,14 +71,16 @@
 		</div>
 
 		<div class="hidden md:flex items-center gap-2 shrink-0">
-			<LanguageSelector />
-
 			<Link
 				href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
+				target="_blank"
+				rel="noopener noreferrer"
 				class="rounded-full bg-primary px-5 py-2.5 text-[0.82rem] font-bold text-white shadow-[0_2px_20px_color-mix(in_srgb,var(--primary)_20%,transparent)] hover:bg-primary-hover transition-all duration-150 whitespace-nowrap"
 			>
-				Start a Project
+				{m['Header.cta']()}
 			</Link>
+
+			<LanguageSelector />
 		</div>
 
 		<div class="flex md:hidden items-center gap-2">
@@ -85,7 +89,7 @@
 			<button
 				class="rounded-xl bg-transparent p-1.5 transition-colors duration-150 hover:bg-black/5"
 				onclick={toggleMobile}
-				aria-label="Toggle menu"
+				aria-label={m['Header.ariaToggleMenu']()}
 			>
 				{#if headerClass.mobileOpen}
 					<span class="inline-flex h-5 w-5 items-center justify-center text-neutral-700" aria-hidden="true">

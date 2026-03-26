@@ -31,8 +31,8 @@
 </script>
 
 <span class="relative inline-block h-[1em] leading-none align-baseline">
-	<span class="invisible inline-block h-[1em] leading-[1em]">{words[index % words.length]}</span>
-	<span class="absolute top-0 left-0 h-[1em] w-full overflow-hidden">
+	<span class="invisible inline-block h-[1em] leading-[1em] pr-[0.12em]">{words[index % words.length]}</span>
+	<span class="absolute top-0 left-0 h-[1em] w-full overflow-hidden pr-[0.12em]">
 		<span
 			class="block transition-transform duration-500 ease-out"
 			class:transition-none={noTransition}

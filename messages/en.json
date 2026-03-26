@@ -1,6 +1,17 @@
 {
+    "Header": {
+        "navStrategy": "Strategy",
+        "navWork": "Work",
+        "navProcess": "Process",
+        "navFaq": "FAQ",
+        "cta": "Start Now",
+        "ariaMainNavigation": "Main navigation",
+        "ariaToggleMenu": "Toggle menu"
+    },
+    
     "RootPage": {
         "HeroSection": {
+            "line1Prefix": "",
             "digital": "Digital",
             "products": "Products",
             "that": "that",

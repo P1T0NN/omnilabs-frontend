@@ -21,7 +21,7 @@
                     <li><Link href={UNPROTECTED_PAGE_ENDPOINTS.STRATEGY} class="hover:text-background transition-colors">Strategy</Link></li>
                     <li><Link href={UNPROTECTED_PAGE_ENDPOINTS.PROCESS} class="hover:text-background transition-colors">Process</Link></li>
                     <li><Link href={UNPROTECTED_PAGE_ENDPOINTS.FAQ} class="hover:text-background transition-colors">FAQ</Link></li>
-                    <li><Link href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} class="hover:text-background transition-colors">Contact</Link></li>
+                    <li><Link href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} target="_blank" rel="noopener noreferrer" class="hover:text-background transition-colors">Contact</Link></li>
                 </ul>
             </div>
 
@@ -43,7 +43,7 @@
                     <li class="text-neutral-400">{COMPANY_DATA.ADDRESS}</li>
 
                     <li class="pt-2">
-                        <Link href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} class="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-primary text-xs hover:text-background transition-colors">
+                        <Link href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-primary text-xs hover:text-background transition-colors">
                             Start a Project →
                         </Link>
                     </li>

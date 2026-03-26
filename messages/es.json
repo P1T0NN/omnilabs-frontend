@@ -1,6 +1,17 @@
 {
+    "Header": {
+        "navStrategy": "Estrategia",
+        "navWork": "Proyectos",
+        "navProcess": "Proceso",
+        "navFaq": "FAQ",
+        "cta": "Empieza Ahora",
+        "ariaMainNavigation": "Navegación principal",
+        "ariaToggleMenu": "Abrir o cerrar menú"
+    },
+
     "RootPage": {
         "HeroSection": {
+            "line1Prefix": "Creamos",
             "digital": "Productos",
             "products": "digitales",
             "that": "que",
@@ -8,9 +19,9 @@
             "convert": "convierten",
             "scale": "escalan",
             "trustedBy": "Confían en nosotros",
-            "bookAStrategyCall": "Reserva una llamada de estrategia",
-            "offerings": "Plataformas de reservas. Tiendas online. Aplicaciones web a medida.",
-            "description": "Construidos para convertir desde el primer día. Combinamos estrategia de marketing con ingeniería de precisión para crear productos digitales que no solo se ven bien"
+            "bookAStrategyCall": "Hablemos sobre tu proyecto",
+            "offerings": "Nos especializamos en Plataformas de reservas, Tiendas online y Aplicaciones web a medida.",
+            "description": "Construimos para vender desde el primer día. Combinamos estrategia de marketing con ingeniería de precisión para crear productos digitales que no solo se ven bien."
         },
         "StrategySection": {
             "chapter01Eyebrow": "Capítulo 01 · Estrategia",

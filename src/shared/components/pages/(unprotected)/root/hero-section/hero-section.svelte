@@ -37,14 +37,17 @@
 
 </script>
 
-<section class="relative flex min-h-screen flex-col justify-center overflow-hidden pt-24 md:pt-0">
+<section class="relative flex min-h-screen flex-col justify-center overflow-hidden pt-24">
 	<div class="container mx-auto flex flex-1 items-center max-w-7xl px-6 md:px-12 lg:px-24">
 		<div
 			bind:this={heroContentRef}
-			class="animate-on-in-view flex w-full flex-col items-center justify-center gap-8 pt-10 pb-10 md:pt-20 md:pb-20 text-center hero-content"
+			class="animate-on-in-view flex w-full flex-col items-center justify-center gap-8 pt-14 pb-10 md:pt-24 md:pb-20 text-center hero-content"
 			class:in-view={heroInView}
 		>
 			<h1 class="animate-slide-up leading-[0.85] font-black uppercase">
+				{#if m['RootPage.HeroSection.line1Prefix']()}
+					{m['RootPage.HeroSection.line1Prefix']()} <br />
+				{/if}
 				{m['RootPage.HeroSection.digital']()} <br />
 				{m['RootPage.HeroSection.products']()} <br />
 				<span class="text-primary lowercase italic">
