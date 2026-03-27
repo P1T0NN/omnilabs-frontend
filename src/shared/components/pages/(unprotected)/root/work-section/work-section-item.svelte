@@ -1,153 +1,59 @@
 <script lang="ts">
-	// UTILS
-	import { QualityImage } from '@/shared/components/ui/quality-image';
-	import { Link } from '@/shared/components/ui/link';
+	// COMPONENTS
+	import CtaButton from '@/shared/components/ui/cta-button/cta-button.svelte';
 
-	// LUCIDE ICONS
-	import ArrowUpRight from '@lucide/svelte/icons/arrow-up-right';
-
-	interface Props {
-		id: string;
+	interface Project {
 		title: string;
-		issue: string;
-		client: string;
-		description?: string;
-		img: string;
-		href?: string;
-		class?: string;
+		category: string;
+		description: string;
+		imgDesktop: string;
+		imgMobile: string;
+		link: string;
 	}
 
-	let { id, title, issue, client, description, img, href, class: className = '' }: Props = $props();
+	type WorkCtaVariant = 'primaryHoverLight' | 'light';
 
-	const srcset = $derived(
-		img.includes('/home/opt/') && img.endsWith('-960w.webp')
-			? img.replace(/-960w\.webp$/, '-640w.webp') +
-				' 640w, ' +
-				img +
-				' 960w, ' +
-				img.replace(/-960w\.webp$/, '-1280w.webp') +
-				' 1280w'
-			: undefined
-	);
+	interface Props {
+		project: Project;
+		reverse?: boolean;
+		ctaVariant: WorkCtaVariant;
+	}
+
+	let { project, reverse = false, ctaVariant }: Props = $props();
 </script>
 
-{#if href}
-	<Link
-		href={href}
-		target="_blank"
-		rel="noopener noreferrer"
-		class="group relative flex flex-col {className}"
-	>
-		<div
-			class="mb-2 flex items-center justify-between font-mono text-xs tracking-widest text-neutral-400 uppercase"
-		>
-			<span>(FIG. {id})</span>
-			<span>{client}</span>
-		</div>
-
-			<!-- Image Container with "Rough" Offset Border -->
-			<div class="relative">
-			<div
-				class="absolute -right-3 -top-3 h-full w-full border-2 border-white/20 bg-transparent transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-			></div>
-
-			<div class="relative aspect-video overflow-hidden border-2 border-white/20 bg-neutral-900">
-				<QualityImage
-					src={img}
-					alt={title}
-					srcset={srcset}
-					sizes="(min-width: 768px) 50vw, 100vw"
-					width={1280}
-					height={720}
-					class="h-full w-full object-contain transition-all duration-700 group-hover:scale-105"
+<div
+	class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:justify-items-stretch lg:gap-16"
+>
+	<div class="min-w-0 w-full {reverse ? 'lg:order-2' : ''}">
+		<div class="relative w-full">
+			<div class="w-full">
+				<img
+					src={project.imgDesktop}
+					alt="{project.title} desktop"
+					class="h-auto w-full object-contain drop-shadow-lg"
+					loading="lazy"
+					decoding="async"
 				/>
-
-				<div
-					class="absolute inset-0 flex items-center justify-center bg-primary/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 mix-blend-multiply"
-				>
-					<span
-						class="rotate-[-10deg] border-4 border-white px-6 py-2 text-4xl font-black tracking-tighter text-white uppercase"
-					>
-						{issue}
-					</span>
-				</div>
 			</div>
-		</div>
-
-		<div class="mt-6 flex items-start justify-between gap-4 border-t border-white/20 pt-4">
-			<div class="min-w-0 flex-1">
-				<h3
-					class="text-4xl font-black text-background uppercase leading-none"
-				>
-					{title}
-				</h3>
-				
-				{#if description}
-					<p class="mt-2 text-sm leading-relaxed text-neutral-400">{description}</p>
-				{/if}
-			</div>
-			<div
-				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-black text-background transition-all group-hover:border-primary group-hover:bg-primary group-hover:text-background"
-			>
-				<ArrowUpRight class="h-6 w-6" />
-			</div>
-		</div>
-	</Link>
-{:else}
-	<div class="group relative flex flex-col {className}">
-		<div
-			class="mb-2 flex items-center justify-between font-mono text-xs tracking-widest text-neutral-400 uppercase"
-		>
-			<span>(FIG. {id})</span>
-			<span>{client}</span>
-		</div>
-
-		<div class="relative">
-			<div
-				class="absolute -right-3 -top-3 h-full w-full border-2 border-white/20 bg-transparent transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-			></div>
-
-			<div class="relative aspect-video overflow-hidden border-2 border-white/20 bg-neutral-900">
-				<QualityImage
-					src={img}
-					alt={title}
-					srcset={srcset}
-					sizes="(min-width: 768px) 50vw, 100vw"
-					width={1280}
-					height={720}
-					class="h-full w-full object-contain transition-all duration-700 group-hover:scale-105"
+			<div class="absolute top-1/2 right-0 w-[22%] translate-y-[calc(-50%+1.25rem)]">
+				<img
+					src={project.imgMobile}
+					alt="{project.title} mobile"
+					class="h-auto w-full object-contain drop-shadow-lg"
+					loading="lazy"
+					decoding="async"
 				/>
-
-				<div
-					class="absolute inset-0 flex items-center justify-center bg-primary/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 mix-blend-multiply"
-				>
-					<span
-						class="rotate-[-10deg] border-4 border-white px-6 py-2 text-4xl font-black tracking-tighter text-white uppercase"
-					>
-						{issue}
-					</span>
-				</div>
-			</div>
-		</div>
-
-		<div class="mt-6 flex items-start justify-between gap-4 border-t border-white/20 pt-4">
-			<div class="min-w-0 flex-1">
-				<h3
-					class="text-4xl font-black text-background uppercase leading-none"
-				>
-					{title}
-				</h3>
-
-				{#if description}
-					<p class="mt-2 text-sm leading-relaxed text-neutral-400">{description}</p>
-				{/if}
-			</div>
-			
-			<div
-				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-black text-background transition-all group-hover:border-primary group-hover:bg-primary group-hover:text-background"
-			>
-				<ArrowUpRight class="h-6 w-6" />
 			</div>
 		</div>
 	</div>
-{/if}
+
+	<div class="flex min-w-0 flex-col gap-4 {reverse ? 'lg:order-1' : ''}">
+		<p class="text-xs font-bold tracking-widest text-neutral-400 uppercase">{project.category}</p>
+		<h3 class="text-3xl font-bold text-cream md:text-4xl">{project.title}</h3>
+		<p class="text-lg leading-relaxed text-neutral-400">{project.description}</p>
+		<CtaButton href={project.link} variant={ctaVariant} class="mt-2 min-w-0 self-start">
+			View project
+		</CtaButton>
+	</div>
+</div>

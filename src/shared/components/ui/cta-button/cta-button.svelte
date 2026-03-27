@@ -6,7 +6,7 @@
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
 	interface Props {
-		variant?: 'primary' | 'black' | 'light';
+		variant?: 'primary' | 'black' | 'light' | 'primaryHoverLight';
 		withArrow?: boolean;
 		href?: string;
 		class?: string;
@@ -19,7 +19,8 @@
 	const variantClasses = {
 		primary: 'bg-primary text-white hover:bg-black',
 		black: 'bg-black text-background hover:bg-primary',
-		light: 'min-w-[280px] bg-background text-black hover:bg-primary hover:text-white'
+		light: 'min-w-[280px] bg-background text-black hover:bg-primary hover:text-white',
+		primaryHoverLight: 'bg-primary text-white hover:bg-background hover:text-foreground'
 	};
 
 	const baseClasses =
@@ -30,7 +31,7 @@
 	href={href ?? defaultCtaHref}
 	target="_blank"
 	rel="noopener noreferrer"
-	class={cn(className, baseClasses, variantClasses[variant])}
+	class={cn(baseClasses, variantClasses[variant], className)}
 >
 	{@render children()}
 	{#if withArrow}

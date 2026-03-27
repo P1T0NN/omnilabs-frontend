@@ -46,7 +46,8 @@
 		>
 			<h1 class="animate-slide-up leading-[0.85] font-black uppercase">
 				{#if m['RootPage.HeroSection.line1Prefix']()}
-					{m['RootPage.HeroSection.line1Prefix']()} <br />
+					<span class="text-primary italic normal-case">{m['RootPage.HeroSection.line1Prefix']()}</span>
+					<br />
 				{/if}
 				{m['RootPage.HeroSection.digital']()} <br />
 				{m['RootPage.HeroSection.products']()} <br />

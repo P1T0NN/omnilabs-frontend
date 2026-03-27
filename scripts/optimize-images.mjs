@@ -34,6 +34,7 @@ async function optimizeImage(file) {
 
 	for (const w of GRID_SIZES) {
 		await sharp(src)
+			.trim() // Remove padding
 			.resize(w)
 			.webp({ quality: 75 })
 			.toFile(join(outDir, `${baseName}-${w}w.webp`));

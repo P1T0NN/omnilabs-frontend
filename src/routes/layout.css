@@ -194,6 +194,8 @@
   --color-growth: var(--color-growth);
   --color-warning: var(--color-warning);
   --color-info: var(--color-info);
+  --color-cream: var(--color-cream);
+  --color-charcoal: var(--color-charcoal);
 }
 
 @layer base {
