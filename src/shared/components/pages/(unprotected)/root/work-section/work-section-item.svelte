@@ -11,21 +11,17 @@
 		link: string;
 	}
 
-	type WorkCtaVariant = 'primaryHoverLight' | 'light';
-
 	interface Props {
 		project: Project;
-		reverse?: boolean;
-		ctaVariant: WorkCtaVariant;
 	}
 
-	let { project, reverse = false, ctaVariant }: Props = $props();
+	let { project }: Props = $props();
 </script>
 
 <div
 	class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:justify-items-stretch lg:gap-16"
 >
-	<div class="min-w-0 w-full {reverse ? 'lg:order-2' : ''}">
+	<div class="min-w-0 w-full">
 		<div class="relative w-full">
 			<div class="w-full">
 				<img
@@ -48,11 +44,11 @@
 		</div>
 	</div>
 
-	<div class="flex min-w-0 flex-col gap-4 {reverse ? 'lg:order-1' : ''}">
+	<div class="flex min-w-0 flex-col gap-4">
 		<p class="text-xs font-bold tracking-widest text-neutral-400 uppercase">{project.category}</p>
 		<h3 class="text-3xl font-bold text-cream md:text-4xl">{project.title}</h3>
 		<p class="text-lg leading-relaxed text-neutral-400">{project.description}</p>
-		<CtaButton href={project.link} variant={ctaVariant} class="mt-2 min-w-0 self-start">
+		<CtaButton href={project.link} variant="primaryHoverLight" class="mt-2 min-w-0 self-start">
 			View project
 		</CtaButton>
 	</div>
