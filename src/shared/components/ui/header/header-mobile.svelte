@@ -30,7 +30,7 @@
             <Link
                 href={link.href}
                 onclick={() => (headerClass.mobileOpen = false)}
-                class="px-4 py-4 text-lg font-bold uppercase tracking-widest text-neutral-600 hover:text-foreground hover:bg-black/3 rounded-xl transition-all duration-150 border-b border-black/6 last:border-none"
+                class="px-4 py-4 text-lg font-bold uppercase tracking-widest text-neutral-600 hover:text-foreground hover:bg-foreground/3 rounded-xl transition-all duration-150 border-b border-black/6 last:border-none"
             >
                 {link.label}
             </Link>

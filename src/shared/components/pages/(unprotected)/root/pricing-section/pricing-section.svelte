@@ -11,7 +11,7 @@
 </script>
 
 <section id="pricing" class="py-32">
-	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
+	<div class="container mx-auto max-w-8xl px-6 md:px-12 lg:px-24">
 		<div class="mb-16 flex flex-col gap-4 text-center">
 			<span class="block font-bold tracking-widest text-primary uppercase"
 				>How We Work</span
@@ -25,9 +25,9 @@
 		</div>
 
 		<div class="mb-16 flex items-center justify-center gap-3">
-			<div class="h-px w-12 bg-black"></div>
+			<div class="h-px w-12 bg-foreground"></div>
 			<span class="text-xs font-bold tracking-widest text-neutral-600 uppercase">One-time payment · Optional monthly partnership</span>
-			<div class="h-px w-12 bg-black"></div>
+			<div class="h-px w-12 bg-foreground"></div>
 		</div>
 
 		<div class="grid grid-cols-1 items-start gap-12 md:grid-cols-2">

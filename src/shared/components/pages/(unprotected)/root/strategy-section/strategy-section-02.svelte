@@ -28,17 +28,17 @@
     <!-- Chapter 02 Visual: Performance metrics -->
     <div class="animate-slide-up-delay-300 order-2 flex min-w-0 flex-col gap-4 lg:order-1">
         <div class="grid min-w-0 grid-cols-2 gap-4 sm:grid-cols-3">
-            <div class="hover-lift min-w-0 overflow-hidden border-2 border-black bg-black p-4 text-center text-background sm:p-6">
+            <div class="hover-lift min-w-0 overflow-hidden border-2 border-black bg-foreground p-4 text-center text-background sm:p-6">
                 <p class="text-3xl font-black text-primary">+34%</p>
                 <p class="mt-1 wrap-break-words text-xs font-bold uppercase text-background">{m['RootPage.StrategySection.chapter02Metric01Label']()} </p>
             </div>
 
-            <div class="hover-lift min-w-0 overflow-hidden border-2 border-black bg-black p-4 text-center text-background sm:p-6">
+            <div class="hover-lift min-w-0 overflow-hidden border-2 border-black bg-foreground p-4 text-center text-background sm:p-6">
                 <p class="text-3xl font-black text-primary">&lt; 1.2s</p>
                 <p class="mt-1 wrap-break-words text-xs font-bold uppercase text-background">{m['RootPage.StrategySection.chapter02Metric02Label']()}</p>
             </div>
 
-            <div class="hover-lift min-w-0 col-span-2 overflow-hidden border-2 border-black bg-black p-4 text-center text-background sm:col-span-1 sm:p-6">
+            <div class="hover-lift min-w-0 col-span-2 overflow-hidden border-2 border-black bg-foreground p-4 text-center text-background sm:col-span-1 sm:p-6">
                 <p class="text-3xl font-black text-primary">0</p>
                 <p class="mt-1 text-xs font-bold uppercase text-background">{m['RootPage.StrategySection.chapter02Metric03Label']()}</p>
             </div>
@@ -70,7 +70,7 @@
 
             <ul class="animate-slide-up-delay-450 space-y-6 text-lg">
                 <li class="flex gap-4">
-                    <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black text-sm font-bold text-background"></span>
+                    <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background"></span>
                     <span><span class="font-semibold">{m['RootPage.StrategySection.chapter02Point01Title']()}</span> — {m['RootPage.StrategySection.chapter02Point01Description']()}</span>
                 </li>
 

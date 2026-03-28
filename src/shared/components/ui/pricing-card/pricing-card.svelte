@@ -26,7 +26,7 @@
 <div
 	class="flex flex-col gap-8 border-2 border-black p-8 transition-all duration-300 md:p-12 {variant === 'light'
 		? 'bg-white shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:shadow-[15px_15px_0px_0px_var(--primary)]'
-		: 'bg-black text-background shadow-[10px_10px_0px_0px_var(--primary)] transition-transform hover:translate-x-1 hover:-translate-y-1'}"
+		: 'bg-foreground text-background shadow-[10px_10px_0px_0px_var(--primary)] transition-transform hover:translate-x-1 hover:-translate-y-1'}"
 >
 	<div class="flex flex-col gap-4 border-b pb-8 {variant === 'light' ? 'border-black' : 'border-neutral-800'}">
 		<span
@@ -51,7 +51,7 @@
 	<Link
 		{href}
 		class="inline-flex h-12 w-full items-center justify-center rounded-none text-sm font-bold tracking-widest uppercase transition-colors text-center {variant === 'light'
-			? 'bg-black text-background hover:bg-primary'
+			? 'bg-foreground text-background hover:bg-primary'
 			: 'bg-white text-black hover:bg-primary hover:text-white'}"
 	>
 		{buttonText}

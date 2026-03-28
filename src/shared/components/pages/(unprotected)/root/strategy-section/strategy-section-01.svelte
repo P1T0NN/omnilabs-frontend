@@ -58,7 +58,7 @@
 		</div>
 
 		<div class="flex flex-col gap-4 sm:grid sm:grid-cols-2">
-			<div class="hover-lift border-2 border-black bg-black p-6 text-background">
+			<div class="hover-lift border-2 border-black bg-foreground p-6 text-background">
 				<p class="mb-1 text-4xl font-black text-primary">73%</p>
 				<p class="text-xs font-bold uppercase tracking-widest text-background">{m['RootPage.StrategySection.chapter01Stat01Text']()} <span class="italic">{m['RootPage.StrategySection.chapter01Stat01Source']()}</span></p>
 			</div>

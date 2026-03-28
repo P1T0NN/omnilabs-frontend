@@ -4,6 +4,7 @@
 
 	// COMPONENTS
 	import HeroSection from '@/shared/components/pages/(unprotected)/root/hero-section/hero-section.svelte';
+	import TrustedBySection from '@/shared/components/pages/(unprotected)/root/trusted-by-section.svelte';
 	import StrategySection from '@/shared/components/pages/(unprotected)/root/strategy-section/strategy-section.svelte';
 	import WorkSection from '@/shared/components/pages/(unprotected)/root/work-section/work-section.svelte';
 	import TestimonialsSection from '@/shared/components/pages/(unprotected)/root/testimonials-section/testimonials-section.svelte';
@@ -21,6 +22,7 @@
 	class="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white flex flex-col gap-y-12 md:gap-y-24"
 >
 	<HeroSection />
+	<TrustedBySection />
 	<StrategySection />
 	<WorkSection />
 	<TestimonialsSection />

@@ -109,7 +109,7 @@
 			type="button"
             onclick={handleContact}
 			disabled={contactPageClass.pendingStates.contactIsPending}
-			class="mt-4 h-16 w-full rounded-none bg-black text-lg font-bold tracking-widest uppercase text-background shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] hover:bg-primary hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all duration-200"
+			class="mt-4 h-16 w-full rounded-none bg-foreground text-lg font-bold tracking-widest uppercase text-background shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] hover:bg-primary hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all duration-200"
 		>
             {#if contactPageClass.pendingStates.contactIsPending}
                 <Spinner />

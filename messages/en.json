@@ -82,7 +82,12 @@
             "item09Text": "The scent is so subtle and natural. No overpowering fragrances, just pure botanical goodness."
         },
         "WorkSection": {
-            "title": "Case Studies",
+            "eyebrow": "Selected Work",
+            "title": "Showcase",
+            "fallbackCategory": "Project",
+            "viewProject": "View project",
+            "screenshotDesktop": "desktop",
+            "screenshotMobile": "mobile",
             "item01Issue": "No. 01",
             "item01Client": "Real Estate",
             "item01Description": "Full booking platform — apartment listings, reservation management, and owner dashboard. Top 1 booking platform in Serbia.",

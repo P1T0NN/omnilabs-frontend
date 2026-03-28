@@ -82,7 +82,12 @@
             "item09Text": "El aroma es sutil y natural. Sin perfumes invasivos, solo bondad botánica."
         },
         "WorkSection": {
-            "title": "Casos de estudio",
+            "eyebrow": "Trabajos seleccionados",
+            "title": "Vitrina",
+            "fallbackCategory": "Proyecto",
+            "viewProject": "Ver proyecto",
+            "screenshotDesktop": "escritorio",
+            "screenshotMobile": "móvil",
             "item01Issue": "N.º 01",
             "item01Client": "Sector inmobiliario",
             "item01Description": "Plataforma de reservas completa: anuncios de apartamentos, gestión de reservas y panel del propietario. La plataforma de reservas n.º 1 en Serbia.",

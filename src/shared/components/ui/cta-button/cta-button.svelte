@@ -6,7 +6,7 @@
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
 	interface Props {
-		variant?: 'primary' | 'black' | 'light' | 'primaryHoverLight';
+		variant?: 'primary' | 'foreground' | 'light' | 'primaryHoverLight';
 		withArrow?: boolean;
 		href?: string;
 		class?: string;
@@ -17,8 +17,8 @@
 	const defaultCtaHref = 'https://calendly.com/mariafernandapadilla05/30min';
 
 	const variantClasses = {
-		primary: 'bg-primary text-white hover:bg-black',
-		black: 'bg-black text-background hover:bg-primary',
+		primary: 'bg-primary text-white hover:bg-foreground',
+		foreground: 'bg-foreground text-background hover:bg-primary',
 		light: 'min-w-[280px] bg-background text-black hover:bg-primary hover:text-white',
 		primaryHoverLight: 'bg-primary text-white hover:bg-background hover:text-foreground'
 	};

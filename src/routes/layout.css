@@ -196,6 +196,9 @@
   --color-info: var(--color-info);
   --color-cream: var(--color-cream);
   --color-charcoal: var(--color-charcoal);
+
+  /* Wider than default --container-7xl (80rem) for main section shells */
+  --container-8xl: 96rem;
 }
 
 @layer base {

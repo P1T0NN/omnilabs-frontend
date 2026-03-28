@@ -2,25 +2,12 @@
 	// SVELTEKIT IMPORTS
 	import { onDestroy, onMount } from 'svelte';
 
-	// LIBRARIES
-	import { m } from '@/shared/lib/paraglide/messages';
-
-	// CONFIG
-	import { UNPROTECTED_PAGE_ENDPOINTS } from '@/shared/constants';
-
 	// HOOKS
 	import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
 
 	// COMPONENTS
-	import WordChange from '@/shared/components/ui/animations/word-change.svelte';
-	import CtaButton from '@/shared/components/ui/cta-button/cta-button.svelte';
-	import HeroSectionTrustedBy from './hero-section-trusted-by.svelte';
-
-	const heroPhrases = [
-		m['RootPage.HeroSection.sell'](), 
-		m['RootPage.HeroSection.convert'](), 
-		m['RootPage.HeroSection.scale']()
-	] as const;
+	import HeroSectionLeftContent from './hero-section-left-content.svelte';
+	import HeroSectionRightContent from './hero-section-right-content.svelte';
 
 	let heroContentRef: HTMLElement | undefined;
 	let heroInView = $state(false);
@@ -33,40 +20,48 @@
 		});
 	});
 
-	onDestroy(() => cleanup?.());
-
+	onDestroy(() => {
+		cleanup?.();
+	});
 </script>
 
-<section class="relative flex min-h-screen flex-col justify-center overflow-hidden pt-24">
-	<div class="container mx-auto flex flex-1 items-center max-w-7xl px-6 md:px-12 lg:px-24">
+<!--
+	Layout strategy:
+	  - The section is full-viewport-width with NO outer horizontal padding.
+	  - Left (45%): has its own px-6/md:px-12/lg:px-24 padding so text lines up
+	    with the rest of the page content. max-w-8xl is preserved on the inner wrapper.
+	  - Right (55%): zero padding, zero margin, butts against the right viewport edge.
+	    The video inside fills this column 100% width + height.
+	  - Mobile: stacks vertically — text first, then video full-width.
+-->
+<section class="relative flex min-h-screen flex-col justify-center overflow-hidden pt-24 sm:p-0">
+	<div
+		bind:this={heroContentRef}
+		class="hero-content animate-on-in-view flex w-full flex-col
+		       lg:flex-row lg:items-stretch"
+		class:in-view={heroInView}
+	>
+
+		<!-- LEFT — 45% · padded · vertically centred -->
 		<div
-			bind:this={heroContentRef}
-			class="animate-on-in-view flex w-full flex-col items-center justify-center gap-8 pt-14 pb-10 md:pt-24 md:pb-20 text-center hero-content"
-			class:in-view={heroInView}
+			class="flex flex-col justify-center
+			       px-6 md:px-12 lg:px-24
+			       pt-14 pb-10 md:pt-24 md:pb-20
+			       lg:w-[45%] lg:py-0 lg:min-h-screen"
 		>
-			<h1 class="animate-slide-up leading-[0.85] font-black uppercase">
-				{#if m['RootPage.HeroSection.line1Prefix']()}
-					<span class="text-primary italic normal-case">{m['RootPage.HeroSection.line1Prefix']()}</span>
-					<br />
-				{/if}
-				{m['RootPage.HeroSection.digital']()} <br />
-				{m['RootPage.HeroSection.products']()} <br />
-				<span class="text-primary lowercase italic">
-					{m['RootPage.HeroSection.that']()} <WordChange words={heroPhrases} />
-				</span>
-			</h1>
-
-			<p class="animate-slide-up-delay-150 text-lg leading-relaxed text-neutral-600">
-				<b>{m['RootPage.HeroSection.offerings']()}</b> {m['RootPage.HeroSection.description']()}
-			</p>
-
-			<div class="animate-slide-up-delay-300">
-				<CtaButton href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT} variant="black">
-					{m['RootPage.HeroSection.bookAStrategyCall']()}
-				</CtaButton>
+			<!-- max-w-8xl keeps text from stretching too wide on ultra-wide screens -->
+			<div class="w-full max-w-8xl">
+				<HeroSectionLeftContent />
 			</div>
-
-			<HeroSectionTrustedBy />
 		</div>
+
+		<!-- RIGHT — 55% · no padding · video bleeds to viewport edge -->
+		<div
+			class="w-full lg:w-[55%] lg:shrink-0
+			       h-64 sm:h-80 lg:h-auto lg:min-h-screen"
+		>
+			<HeroSectionRightContent />
+		</div>
+
 	</div>
 </section>

@@ -26,8 +26,8 @@
 	onDestroy(() => cleanup?.());
 </script>
 
-<section class="bg-black text-background py-12 md:py-32">
-	<div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24">
+<section class="bg-foreground text-background py-12 md:py-32">
+	<div class="container mx-auto max-w-8xl px-6 md:px-12 lg:px-24">
 		<div
 			bind:this={sectionRef}
 			class="animate-on-in-view flex flex-col items-center text-center space-y-20"

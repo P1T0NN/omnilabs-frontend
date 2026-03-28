@@ -1,4 +1,7 @@
 <script lang="ts">
+	// LIBRARIES
+	import { m } from '@/shared/lib/paraglide/messages';
+
 	// COMPONENTS
 	import CtaButton from '@/shared/components/ui/cta-button/cta-button.svelte';
 
@@ -26,7 +29,7 @@
 			<div class="w-full">
 				<img
 					src={project.imgDesktop}
-					alt="{project.title} desktop"
+					alt="{project.title} ({m['RootPage.WorkSection.screenshotDesktop']()})"
 					class="h-auto w-full object-contain drop-shadow-lg"
 					loading="lazy"
 					decoding="async"
@@ -35,7 +38,7 @@
 			<div class="absolute top-1/2 right-0 w-[22%] translate-y-[calc(-50%+1.25rem)]">
 				<img
 					src={project.imgMobile}
-					alt="{project.title} mobile"
+					alt="{project.title} ({m['RootPage.WorkSection.screenshotMobile']()})"
 					class="h-auto w-full object-contain drop-shadow-lg"
 					loading="lazy"
 					decoding="async"
@@ -49,7 +52,7 @@
 		<h3 class="text-3xl font-bold text-cream md:text-4xl">{project.title}</h3>
 		<p class="text-lg leading-relaxed text-neutral-400">{project.description}</p>
 		<CtaButton href={project.link} variant="primaryHoverLight" class="mt-2 min-w-0 self-start">
-			View project
+			{m['RootPage.WorkSection.viewProject']()}
 		</CtaButton>
 	</div>
 </div>

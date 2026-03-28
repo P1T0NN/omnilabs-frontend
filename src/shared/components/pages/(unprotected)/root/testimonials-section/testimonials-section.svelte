@@ -16,7 +16,7 @@
 </script>
 
 <section class="overflow-hidden bg-background pt-12 pb-24">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+	<div class="mx-auto max-w-8xl px-6 lg:px-8">
 		<div class="mb-16 text-center">
 			<span class="animate-slide-up block font-bold tracking-widest text-primary uppercase">
 				{m['RootPage.TestimonialsSection.eyebrow']()}

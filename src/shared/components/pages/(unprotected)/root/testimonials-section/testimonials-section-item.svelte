@@ -23,7 +23,7 @@
         </p>
 
         <div class="flex items-center gap-3 md:gap-4 border-t border-neutral-200 pt-4 md:pt-6">
-            <div class="flex h-8 w-8 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-black text-xs md:text-sm font-black text-background">
+            <div class="flex h-8 w-8 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-foreground text-xs md:text-sm font-black text-background">
                 {testimonial.name.charAt(0)}
             </div>
 

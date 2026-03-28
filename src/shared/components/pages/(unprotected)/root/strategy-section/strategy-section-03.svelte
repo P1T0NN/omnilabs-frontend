@@ -68,7 +68,7 @@
             </ul>
         </div>
 
-        <div class="hover-lift flex flex-col gap-2 border-2 border-black bg-black p-6 text-background">
+        <div class="hover-lift flex flex-col gap-2 border-2 border-black bg-foreground p-6 text-background">
             <p class="text-3xl font-black text-primary">{m['RootPage.StrategySection.chapter03RealityTitle']()}</p>
             <p class="wrap-break-words text-xs font-bold uppercase tracking-widest text-background">{m['RootPage.StrategySection.chapter03RealityDescription']()}</p>
         </div>
