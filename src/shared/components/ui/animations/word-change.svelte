@@ -3,13 +3,18 @@
 
 	interface Props {
 		words: readonly string[];
+		activeIndex?: number;
 	}
 
-	let { words }: Props = $props();
+	let { words, activeIndex = $bindable(0) }: Props = $props();
 
 	const extended = $derived([...words, words[0]]);
 	let index = $state(0);
 	let noTransition = $state(false);
+
+	$effect(() => {
+		activeIndex = index % words.length;
+	});
 
 	onMount(() => {
 		const interval = setInterval(() => {
@@ -19,7 +24,9 @@
 					noTransition = true;
 					requestAnimationFrame(() => {
 						index = 0;
-						requestAnimationFrame(() => { noTransition = false; });
+						requestAnimationFrame(() => {
+							noTransition = false;
+						});
 					});
 				}, 500);
 			} else {

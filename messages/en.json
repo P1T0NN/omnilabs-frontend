@@ -11,14 +11,13 @@
     
     "RootPage": {
         "HeroSection": {
-            "line1Prefix": "",
             "digital": "Digital",
             "products": "Products",
             "that": "that",
             "sell": "sell",
             "convert": "convert",
             "scale": "scale",
-            "trustedBy": "Trusted By",
+            "trustedBy": "Trusted by",
             "bookAStrategyCall": "Book a Strategy Call",
             "offerings": "Booking platforms. Ecommerce stores. Custom web apps.",
             "description": "Built to convert from day one. We combine marketing strategy with engineering precision to build digital products that don't just look good"
@@ -71,8 +70,8 @@
         "TestimonialsSection": {
             "eyebrow": "Client Results",
             "title": "Don't take our word for it.",
-            "item01Text": "My skin has never felt so soft and nourished. The Radiance Serum is now a permanent part of my morning routine.",
-            "item02Text": "Finally, skincare that actually feels natural. No more harsh chemicals. My sensitive skin loves Boty products.",
+            "item01Text": "Omnilabs turned years of agency growth into a clear, modern website that finally matches our level. Fast, structured, and incredibly clear—he simplified complexity into something powerful and easy to communicate.",
+            "item02Text": "Before Omnilabs built my portfolio, everything I did was scattered across random links and folders, it didn’t look professional at all. Now I have one website that immediately makes the right impression on clients. What surprised me the most was the communication—always available, understood what I wanted even when I couldn’t clearly explain it, and proactively suggested solutions I hadn’t even thought of. Now, when I send a single link instead of random files, I get more serious responses and close deals more easily. If you’re looking for someone who builds a website that actually works for you—I highly recommend him.",
             "item03Text": "The Hydra Cream is absolutely divine. It absorbs beautifully and keeps my skin hydrated all day long.",
             "item04Text": "I've tried countless serums but nothing compares to the glow I get from Boty. Absolutely transformative.",
             "item05Text": "The packaging is beautiful and sustainable. I feel good knowing I'm choosing eco-friendly skincare.",

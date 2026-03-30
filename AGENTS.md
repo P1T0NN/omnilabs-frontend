@@ -1,5 +1,9 @@
 You are able to use the Svelte MCP server, where you have access to comprehensive Svelte 5 and SvelteKit documentation. Here's how to use the available tools effectively:
 
+## CLI
+
+When running one-off package executables from the terminal (e.g. `@sveltejs/mcp`), use **`bunx`** instead of `npx`.
+
 ## Available MCP Tools:
 
 ### 1. list-sections

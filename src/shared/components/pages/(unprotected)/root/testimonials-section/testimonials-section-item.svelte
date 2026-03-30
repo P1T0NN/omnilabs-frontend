@@ -29,7 +29,6 @@
 
             <div>
                 <p class="font-black uppercase tracking-tight">{testimonial.name}</p>
-                <p class="text-xs text-neutral-600">{testimonial.location}</p>
             </div>
         </div>
     </div>
