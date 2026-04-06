@@ -19,8 +19,7 @@
             "scale": "escalan",
             "trustedBy": "Confían en nosotros",
             "bookAStrategyCall": "Hablemos sobre tu proyecto",
-            "offerings": "Nos especializamos en Plataformas de reservas, Tiendas online y Aplicaciones web a medida.",
-            "description": "Construimos para vender desde el primer día. Combinamos estrategia de marketing con ingeniería de precisión para crear productos digitales que no solo se ven bien."
+            "subheadline": "Nos especializamos en Plataformas de reservas, Tiendas online y Aplicaciones web a medida. Construimos para vender desde el primer día. Combinamos estrategia de marketing con ingeniería de precisión para crear productos digitales que no solo se ven bien."
         },
         "StrategySection": {
             "chapter01Eyebrow": "Capítulo 01 · Estrategia",
@@ -73,12 +72,7 @@
             "item01Text": "Nunca había tenido la piel tan suave e hidratada. El sérum Radiance forma ya parte de mi rutina de mañana.",
             "item02Text": "Por fin un cuidado de la piel que se siente natural. Sin químicos agresivos. Mi piel sensible adora los productos Boty.",
             "item03Text": "La crema Hydra es divina. Se absorbe de maravilla y mantiene la hidratación todo el día.",
-            "item04Text": "He probado infinitos sérumes y ninguno iguala el brillo que me da Boty. Transformador.",
-            "item05Text": "El envase es bonito y sostenible. Me siento bien eligiendo cuidado de la piel respetuoso con el medio ambiente.",
-            "item06Text": "Mi piel con tendencia al acné ha mejorado desde que uso Boty. Los ingredientes naturales marcan la diferencia.",
-            "item07Text": "La textura del aceite Renewal es perfecta. Se absorbe rápido y deja la piel luminosa.",
-            "item08Text": "Me encanta que Boty sea cruelty-free y vegano. Productos alineados con mis valores.",
-            "item09Text": "El aroma es sutil y natural. Sin perfumes invasivos, solo bondad botánica."
+            "item04Text": "¡Estoy orgulloso de recomendar Omnilabs! Son un equipo excelente de profesionales, totalmente comprometidos con cualquier objetivo que se les plantee. Una empresa súper proactiva, entusiasta, orientada a soluciones y apasionada por procesos claros que mantienen todo funcionando sin fricciones. Los recomiendo al 200%."
         },
         "WorkSection": {
             "eyebrow": "Trabajos seleccionados",

@@ -10,9 +10,9 @@
 	const cardShadow =
 		'rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px';
 
-	const column1 = $derived([TESTIMONIALS_CARDS[0], TESTIMONIALS_CARDS[3], TESTIMONIALS_CARDS[6]]);
-	const column2 = $derived([TESTIMONIALS_CARDS[1], TESTIMONIALS_CARDS[4], TESTIMONIALS_CARDS[7]]);
-	const column3 = $derived([TESTIMONIALS_CARDS[2], TESTIMONIALS_CARDS[5], TESTIMONIALS_CARDS[8]]);
+	const column1 = $derived([TESTIMONIALS_CARDS[0], TESTIMONIALS_CARDS[3]]);
+	const column2 = $derived([TESTIMONIALS_CARDS[1]]);
+	const column3 = $derived([TESTIMONIALS_CARDS[2]]);
 </script>
 
 <section class="overflow-hidden bg-background pt-12 pb-24">

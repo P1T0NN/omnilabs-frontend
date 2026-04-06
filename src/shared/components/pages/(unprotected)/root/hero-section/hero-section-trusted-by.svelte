@@ -51,7 +51,7 @@
                             />
                         {/if}
 
-                        <span class="trusted-by-normal-case text-foreground">{label}</span>
+                        <span class="normal-case text-foreground">{label}</span>
                     </Link>
                 {/each}
             </Marquee>

@@ -18,17 +18,8 @@
 		m['RootPage.HeroSection.scale']()
 	] as const;
 
-	const digitalClasses = ['text-foreground', 'text-primary', 'text-muted-foreground'] as const;
-
-	/** Foreground only while “Digital products” is primary (index 1); otherwise primary. */
-	const thatLineClass = (idx: number) =>
-		digitalClasses[idx] === 'text-primary' ? 'text-foreground' : 'text-primary';
-
 	let heroContentRef: HTMLElement | undefined;
 	let heroInView = $state(false);
-	let activeIndex = $state(0);
-	/** Previous phrase index; lags `activeIndex` until the color fill animation finishes. */
-	let prevIndex = $state(0);
 	let cleanup: (() => void) | undefined;
 
 	onMount(() => {
@@ -40,15 +31,6 @@
 
 	onDestroy(() => {
 		cleanup?.();
-	});
-
-	$effect(() => {
-		const next = activeIndex;
-		if (next === prevIndex) return;
-		const timer = setTimeout(() => {
-			prevIndex = next;
-		}, 500);
-		return () => clearTimeout(timer);
 	});
 </script>
 
@@ -64,39 +46,25 @@
 			class="hero-content animate-on-in-view flex w-full flex-col items-center justify-center lg:max-w-2xl lg:flex-none lg:items-start"
 			class:in-view={heroInView}
 		>
-			<h1 class="animate-slide-up text-center font-black leading-none uppercase lg:text-left">
+			<h1 class="text-center font-black leading-none uppercase lg:text-left">
 				<span class="inline-flex max-w-full flex-col items-center gap-0.5 lg:items-start">
-					{#if prevIndex === activeIndex}
-						<span class="block leading-none {digitalClasses[activeIndex]}">
-							{m['RootPage.HeroSection.digital']()} <br />
-							{m['RootPage.HeroSection.products']()} <br />
-						</span>
-					{:else}
-						<span class="relative block leading-none">
-							<span
-								class="pointer-events-none absolute inset-0 block select-none leading-none {digitalClasses[prevIndex]}"
-								aria-hidden="true"
-							>
-								{m['RootPage.HeroSection.digital']()} <br />
-								{m['RootPage.HeroSection.products']()} <br />
-							</span>
-							{#key activeIndex}
-								<span class="hero-digital-fill relative block leading-none {digitalClasses[activeIndex]}">
-									{m['RootPage.HeroSection.digital']()} <br />
-									{m['RootPage.HeroSection.products']()} <br />
-								</span>
-							{/key}
-						</span>
-					{/if}
+					<span class="block leading-none text-foreground">
+						{m['RootPage.HeroSection.digital']()} <br />
+						{m['RootPage.HeroSection.products']()} <br />
+					</span>
 
-					<span
-						class="inline lowercase italic leading-none transition-colors duration-500 ease-out {thatLineClass(activeIndex)}"
-					>
+					<span class="animate-slide-up inline lowercase italic leading-none text-primary">
 						{m['RootPage.HeroSection.that']()}
-						<WordChange words={heroPhrases} bind:activeIndex={activeIndex} />
+						<WordChange words={heroPhrases} />
 					</span>
 				</span>
 			</h1>
+
+			<p
+				class="animate-slide-up-delay-150 mt-4 max-w-xl text-center text-base leading-relaxed text-muted-foreground md:text-lg lg:mt-6 lg:text-left"
+			>
+				{m['RootPage.HeroSection.subheadline']()}
+			</p>
 		</div>
 
 		<div class="flex min-h-0 w-full shrink justify-center lg:w-1/2 lg:max-w-2xl lg:translate-y-14 lg:justify-end xl:max-w-3xl">
@@ -107,43 +75,21 @@
 				decoding="async"
 				fetchpriority="high"
 			/>
+			<!--
+			<video
+				class="h-auto max-h-full w-full max-w-xs object-contain sm:max-w-sm md:max-w-md lg:max-w-full"
+				autoplay
+				muted
+				loop
+				playsinline
+				preload="metadata"
+				aria-hidden="true"
+			>
+				<source src="/home/hero-video.webm" type="video/webm" />
+			</video>
+			-->
 		</div>
 	</div>
 
 	<HeroSectionTrustedBy />
 </section>
-
-<style>
-	@keyframes hero-digital-clip-up {
-		from {
-			clip-path: inset(0 0 100% 0);
-		}
-		to {
-			clip-path: inset(0 0 0 0);
-		}
-	}
-
-	.hero-digital-fill {
-		clip-path: inset(0 0 100% 0);
-		animation: hero-digital-clip-up 500ms ease-out forwards;
-	}
-
-	.trusted-by-normal-case {
-		text-transform: none;
-	}
-	.trusted-by-gradient-text {
-		background: linear-gradient(135deg, #e94590 0%, #6c63ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-	}
-	.trusted-by-bgapartman {
-		color: oklch(0.7 0.18 65);
-	}
-	.trusted-by-followus {
-		white-space: nowrap;
-	}
-	.trusted-by-followus-us {
-		color: oklch(0.42 0.12 25);
-	}
-</style>
