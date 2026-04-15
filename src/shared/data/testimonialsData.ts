@@ -1,6 +1,7 @@
 // LIBRARIES
 import { m } from '@/shared/lib/paraglide/messages';
 
+
 export const TESTIMONIALS_CARDS = [
 	{
 		id: 1,
