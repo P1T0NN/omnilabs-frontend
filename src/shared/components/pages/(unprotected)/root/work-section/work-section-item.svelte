@@ -4,6 +4,7 @@
 
 	// COMPONENTS
 	import CtaButton from '@/shared/components/ui/cta-button/cta-button.svelte';
+	import QualityImage from '@/shared/components/ui/quality-image/quality-image.svelte';
 
 	interface Project {
 		title: string;
@@ -25,23 +26,19 @@
 	class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:justify-items-stretch lg:gap-16"
 >
 	<div class="min-w-0 w-full">
-		<div class="relative w-full">
+		<div class="relative mx-auto w-full max-w-3xl">
 			<div class="w-full">
-				<img
+				<QualityImage
 					src={project.imgDesktop}
-					alt="{project.title} ({m['RootPage.WorkSection.screenshotDesktop']()})"
+					alt={`${project.title} (${m['RootPage.WorkSection.screenshotDesktop']()})`}
 					class="h-auto w-full object-contain drop-shadow-lg"
-					loading="lazy"
-					decoding="async"
 				/>
 			</div>
 			<div class="absolute top-1/2 right-0 w-[22%] translate-y-[calc(-50%+1.25rem)]">
-				<img
+				<QualityImage
 					src={project.imgMobile}
-					alt="{project.title} ({m['RootPage.WorkSection.screenshotMobile']()})"
+					alt={`${project.title} (${m['RootPage.WorkSection.screenshotMobile']()})`}
 					class="h-auto w-full object-contain drop-shadow-lg"
-					loading="lazy"
-					decoding="async"
 				/>
 			</div>
 		</div>

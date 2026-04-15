@@ -38,8 +38,8 @@
 
 </script>
 
-<section id="faq">
-    <div class="container mx-auto max-w-8xl px-6 md:px-12 lg:px-24">
+<section id="faq" class="flex items-center justify-center">
+    <div class="max-w-8xl mx-auto px-6 md:px-12 lg:px-24">
         <div
             bind:this={sectionRef}
             class="animate-on-in-view grid grid-cols-1 gap-16 lg:grid-cols-12"

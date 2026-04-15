@@ -5,25 +5,25 @@ export const TESTIMONIALS_CARDS = [
 	{
 		id: 1,
 		name: 'Krasimir D.',
-		text: m['RootPage.TestimonialsSection.item01Text'](),
+		text: m['RootPage.TestimonialsSection.krasimirDText'](),
 		imgPath: '/home/opt/krasimir-testimonial-1280w.webp'
 	},
 	{
 		id: 2,
 		name: 'Luka V.',
-		text: m['RootPage.TestimonialsSection.item02Text'](),
+		text: m['RootPage.TestimonialsSection.lukaVText'](),
 		imgPath: '/home/opt/vukovic-testimonial-1280w.webp'
 	},
 	{
 		id: 3,
-		name: 'Jessica R.',
-		text: m['RootPage.TestimonialsSection.item03Text'](),
-		imgPath: '/home/opt/jessica-testimonial-1280w.webp'
+		name: 'Jazmin',
+		text: m['RootPage.TestimonialsSection.jessicaRText'](),
+		imgPath: '/home/opt/jazmin-testimonial-1280w.webp'
 	},
 	{
 		id: 4,
 		name: 'Alex Ruiz',
-		text: m['RootPage.TestimonialsSection.item04Text'](),
+		text: m['RootPage.TestimonialsSection.alexRuizText'](),
 		imgPath: '/home/opt/alex-testimonial-1280w.webp'
 	}
 ];

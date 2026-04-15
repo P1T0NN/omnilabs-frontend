@@ -35,7 +35,9 @@
             {m['RootPage.StrategySection.chapter03Eyebrow']()}
         </span>
 
-        <h2 class="animate-slide-up-delay-150 font-bold">{m['RootPage.StrategySection.chapter03Title']()}</h2>
+        <h2 class="animate-slide-up-delay-150 text-4xl font-bold md:text-6xl">
+            {m['RootPage.StrategySection.chapter03Title']()}
+        </h2>
 
         <p class="animate-slide-up-delay-300 text-lg leading-relaxed text-neutral-600">
             {m['RootPage.StrategySection.chapter03Description01']()}

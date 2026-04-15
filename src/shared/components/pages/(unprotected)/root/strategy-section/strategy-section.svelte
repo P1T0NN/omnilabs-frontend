@@ -10,8 +10,8 @@
 	// Be aware these are real numbers — not made up.
 </script>
 
-<section id="strategy">
-	<div class="container mx-auto max-w-8xl px-6 md:px-12 lg:px-24 flex flex-col gap-6 md:gap-16">
+<section id="strategy" class="flex items-center justify-center max-w-8xl mx-auto px-6 md:px-12 lg:px-24">
+	<div class="flex flex-col gap-6 md:gap-16">
 		<StrategySection01 />
 		<StrategySection02 />
 		<StrategySection03 />

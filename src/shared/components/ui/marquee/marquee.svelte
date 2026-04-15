@@ -15,7 +15,7 @@
 	} = $props();
 </script>
 
-<div class="marquee-wrap overflow-hidden py-2 {className}">
+<div class="marquee-wrap w-full min-w-0 overflow-hidden py-2 {className}">
 	<div class="marquee-track flex w-max" style="animation-duration: {duration}s">
 		<div class="flex shrink-0 {gap} pr-12">
 			{@render children()}

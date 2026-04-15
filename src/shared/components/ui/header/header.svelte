@@ -59,7 +59,7 @@
 		>
 			<Logo />
 
-			<div class="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
+			<div class="hidden items-center gap-1 absolute left-1/2 -translate-x-1/2 xl:flex">
 				{#each navLinks as link (link.href)}
 					<Link
 						href={link.href}
@@ -70,7 +70,7 @@
 				{/each}
 			</div>
 
-			<div class="hidden md:flex items-center gap-2 shrink-0">
+			<div class="hidden shrink-0 items-center gap-2 xl:flex">
 				<Link
 					href={UNPROTECTED_PAGE_ENDPOINTS.CONTACT}
 					target="_blank"
@@ -83,7 +83,7 @@
 				<LanguageSelector />
 			</div>
 
-			<div class="flex md:hidden items-center gap-2">
+			<div class="flex items-center gap-2 xl:hidden">
 				<LanguageSelector />
 
 				<button

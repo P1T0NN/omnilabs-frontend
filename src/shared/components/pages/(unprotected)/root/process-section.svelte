@@ -35,8 +35,8 @@
 
 </script>
 
-<section id="process" class="bg-secondary py-12 md:py-32">
-    <div class="container mx-auto max-w-8xl px-6 md:px-12 lg:px-24">
+<section id="process" class="flex items-center justify-center bg-secondary py-12 md:py-32">
+    <div class="max-w-8xl mx-auto px-6 md:px-12 lg:px-24">
         <div
             bind:this={sectionRef}
             class="animate-on-in-view space-y-10 md:space-y-20"

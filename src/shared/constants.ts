@@ -13,3 +13,9 @@ export const UNPROTECTED_PAGE_ENDPOINTS = {
     PROCESS: '/#process',
     FAQ: '/#faq'
 }
+
+export const LOGO = "/logo/opt/logo-transparent-1280w.webp";
+export const LOGO_SHORT = "/logo/opt/logo-short-transparent-1280w.webp";
+
+export const HERO_IMAGE_VERTICAL = "/home/opt/hero-image-1280w.webp";
+export const HERO_IMAGE_HORIZONTAL = "/home/opt/hero-image-horizontal-1280w.webp";

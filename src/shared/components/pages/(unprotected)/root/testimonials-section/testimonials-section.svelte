@@ -10,13 +10,12 @@
 	const cardShadow =
 		'rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px';
 
-	const column1 = $derived([TESTIMONIALS_CARDS[0], TESTIMONIALS_CARDS[3]]);
-	const column2 = $derived([TESTIMONIALS_CARDS[1]]);
-	const column3 = $derived([TESTIMONIALS_CARDS[2]]);
+	const column1 = $derived([TESTIMONIALS_CARDS[0], TESTIMONIALS_CARDS[2]]);
+	const column2 = $derived([TESTIMONIALS_CARDS[1], TESTIMONIALS_CARDS[3]]);
 </script>
 
-<section class="overflow-hidden bg-background pt-12 pb-24">
-	<div class="mx-auto max-w-8xl px-6 lg:px-8">
+<section class="flex flex-col items-center justify-center overflow-hidden bg-background pt-12 pb-24">
+	<div class="max-w-8xl mx-auto px-6 md:px-12 lg:px-24">
 		<div class="mb-16 text-center">
 			<span class="animate-slide-up block font-bold tracking-widest text-primary uppercase">
 				{m['RootPage.TestimonialsSection.eyebrow']()}
@@ -45,7 +44,7 @@
 				</div>
 			</div>
 
-			<div class="hidden h-[600px] gap-4 md:grid md:grid-cols-3">
+			<div class="hidden h-[600px] gap-4 md:grid md:grid-cols-2">
 				<div class="relative overflow-hidden">
 					<div class="testimonials-scroll-down testimonials-scroll-down-slow-hover">
 						{#each [...column1, ...column1] as testimonial, i (i)}
@@ -57,14 +56,6 @@
 				<div class="relative overflow-hidden">
 					<div class="testimonials-scroll-up testimonials-scroll-up-slow-hover">
 						{#each [...column2, ...column2] as testimonial, i (i)}
-							<TestimonialsSectionItem {testimonial} {cardShadow} />
-						{/each}
-					</div>
-				</div>
-
-				<div class="relative overflow-hidden">
-					<div class="testimonials-scroll-down testimonials-scroll-down-slow-hover">
-						{#each [...column3, ...column3] as testimonial, i (i)}
 							<TestimonialsSectionItem {testimonial} {cardShadow} />
 						{/each}
 					</div>
