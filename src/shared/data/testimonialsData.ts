@@ -17,7 +17,7 @@ export const TESTIMONIALS_CARDS = [
 	{
 		id: 3,
 		name: 'Jazmin',
-		text: m['RootPage.TestimonialsSection.jessicaRText'](),
+		text: m['RootPage.TestimonialsSection.jazminText'](),
 		imgPath: '/home/opt/jazmin-testimonial-1280w.webp'
 	},
 	{
