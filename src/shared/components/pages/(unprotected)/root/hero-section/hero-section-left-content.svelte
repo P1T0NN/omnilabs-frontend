@@ -47,6 +47,8 @@
 	<p
 		class="animate-slide-up-delay-150 mt-4 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground md:text-lg lg:mt-6 lg:text-left"
 	>
-		{m['RootPage.HeroSection.subheadline']()}
+		{m['RootPage.HeroSection.subheadlinePrefix']()}
+		<span class="font-semibold text-foreground">{m['RootPage.HeroSection.subheadlineBold']()}</span>
+		{m['RootPage.HeroSection.subheadlineRest']()}
 	</p>
 </div>

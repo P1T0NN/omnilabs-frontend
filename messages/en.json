@@ -20,7 +20,9 @@
             "scale": "scale",
             "trustedBy": "Trusted by",
             "bookAStrategyCall": "Book a Strategy Call",
-            "subheadline": "Booking platforms. Ecommerce stores. Custom web apps. Built to convert from day one. We combine marketing strategy with engineering precision to build digital products that don't just look good."
+            "subheadlinePrefix": "",
+            "subheadlineBold": "Booking platforms. Ecommerce stores. Custom web apps.",
+            "subheadlineRest": " Built to convert from day one. We combine marketing strategy with engineering precision to build digital products that don't just look good."
         },
         "StrategySection": {
             "chapter01Eyebrow": "Chapter 01 · Strategy",

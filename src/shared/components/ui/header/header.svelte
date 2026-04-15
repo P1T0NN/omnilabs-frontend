@@ -57,7 +57,7 @@
 				? 'bg-background/88 backdrop-blur-xl border border-black/8 shadow-[0_8px_40px_rgba(0,0,0,0.08)]'
 				: 'bg-background/50 backdrop-blur-lg border border-black/5'}"
 		>
-			<Logo />
+			<Logo compact />
 
 			<div class="hidden items-center gap-1 absolute left-1/2 -translate-x-1/2 xl:flex">
 				{#each navLinks as link (link.href)}

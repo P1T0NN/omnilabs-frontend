@@ -20,7 +20,9 @@
             "scale": "escalan",
             "trustedBy": "Sitios que hemos construido:",
             "bookAStrategyCall": "Hablemos sobre tu proyecto",
-            "subheadline": "Nos especializamos en plataformas de reservas, tiendas online y aplicaciones web a medida. Construimos para vender desde el primer día. Combinamos estrategia de marketing con ingeniería de precisión para crear productos digitales que no solo se ven bien — sino que convierten."
+            "subheadlinePrefix": "Nos especializamos en ",
+            "subheadlineBold": "plataformas de reservas, tiendas online y aplicaciones web a medida",
+            "subheadlineRest": ". Construimos para vender desde el primer día. Combinamos estrategia de marketing con ingeniería de precisión para crear productos digitales que no solo se ven bien — sino que convierten."
         },
         "StrategySection": {
             "chapter01Eyebrow": "Capítulo 01 · Estrategia",
