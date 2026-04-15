@@ -39,11 +39,11 @@
                         </Link>
                     </li>
 
-                    <li>
+                    <!-- <li>
                         <Link href="tel:{COMPANY_DATA.PHONE}" class="hover:text-background transition-colors">
                             {COMPANY_DATA.PHONE}
                         </Link>
-                    </li>
+                    </li>-->
 
                     <li class="text-neutral-400">{COMPANY_DATA.ADDRESS}</li>
 
