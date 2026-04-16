@@ -6,6 +6,8 @@
 
 :root {
   --radius: 0.625rem;
+  /* Fixed header clearance; keep in sync with header + safe visual gap */
+  --site-header-offset: 7rem;
 
   /* Brand palette */
   --color-cream: #F2F1ED;

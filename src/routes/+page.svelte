@@ -18,7 +18,7 @@
 </svelte:head>
 
 <div
-	class="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white flex flex-col gap-y-12 md:gap-y-24"
+	class="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white flex flex-col gap-y-8 md:gap-y-24"
 >
 	<HeroSection />
 	<StrategySection />

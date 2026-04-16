@@ -27,16 +27,27 @@
 </script>
 
 <section
-	class="relative isolate flex min-h-screen flex-col bg-background lg:h-screen lg:max-h-screen lg:overflow-hidden"
+	class="relative isolate flex max-lg:h-svh flex-col gap-8 overflow-hidden bg-background lg:h-screen lg:max-h-screen"
 	aria-labelledby="trusted-by-heading"
 >
 	<div
-		class="container relative z-10 mx-auto flex min-h-0 w-full max-w-8xl flex-1 flex-col justify-center gap-10 px-6 pt-32 pb-6 md:gap-12 md:px-12 md:pb-8 lg:flex-row lg:items-center lg:justify-start lg:gap-8 lg:px-24 lg:pb-0 lg:pt-0 xl:gap-10"
+		class="container relative z-10 mx-auto box-border flex min-h-0 w-full max-w-8xl flex-1 flex-col items-center px-6 pb-0 pt-(--site-header-offset) md:px-12 md:pb-8 lg:px-24 lg:pb-0 lg:pt-(--site-header-offset)"
 	>
-		<HeroSectionLeftContent bind:heroContentRef {heroInView} />
+		<div
+			class="flex w-full min-h-0 flex-1 flex-col items-center justify-center gap-10 md:gap-12 lg:flex-row lg:items-center lg:justify-center lg:gap-8 xl:gap-10"
+		>
+			<HeroSectionLeftContent bind:heroContentRef {heroInView} />
 
-		<HeroSectionRightContent />
+			<HeroSectionRightContent />
+		</div>
+
+		<div
+			class="w-full shrink-0 md:hidden min-h-[min(32vw,14rem)]"
+			aria-hidden="true"
+		></div>
 	</div>
 
-	<HeroSectionTrustedBy />
+	<div class="shrink-0">
+		<HeroSectionTrustedBy />
+	</div>
 </section>
